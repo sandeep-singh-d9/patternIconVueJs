@@ -12,7 +12,7 @@
   </div> -->
     <div v-for="(Svgs , index) in dataSvgComponent" :key="index">
        <div v-for="(itemsName , key) in Svgs" :key="key"  @click="getIndex(index)">
-        <component :dynamicIndex="index" :ValueId="'Svg_'+index"  :is="itemsName.name" :dynamicBackground="itemsName.background"  :dynamicBackgroundOne="itemsName.background1" :dynamicBackgroundTwo="itemsName.background2" :NavClicked="true"></component>
+        <component :dynamicIndex="index" :ValueId="'Svg_'+index" :svgName="itemsName.name" :is="itemsName.name" :dynamicBackground="itemsName.background"  :dynamicBackgroundOne="itemsName.background1" :dynamicBackgroundTwo="itemsName.background2" :NavClicked="true"></component>
        </div>
     </div>
   </div>
@@ -22,6 +22,7 @@
 import ColorButton from './ColorButton'
 import HoverEdit from './common/hoverEdit' 
 import BullDogSvg from './bulldog'
+import Hippo from './animalSvg/hippopotamusComponent'
 import {
     mapState,
     mapActions,
@@ -32,7 +33,8 @@ export default {
    components:{
        ColorButton,
        HoverEdit,
-       BullDogSvg
+       BullDogSvg,
+       Hippo
    },
    data(){
      return {
@@ -45,7 +47,8 @@ export default {
       ...mapState([
           'divData',
           'SvgComponent',
-          'dynamicIndex'
+          'dynamicIndex',
+          'dynamicName'
       ]),
       data:{
           get(){
@@ -114,6 +117,8 @@ export default {
     },
     getIndex(value){
      this.ACTION_CHANGE_STATE(['dynamicIndex' ,value ])
+      this.ACTION_CHANGE_STATE(['dynamicName' ,this.$store.state.SvgComponent[this.$store.state.dynamicIndex][0].name+value ])
+    //  console.log(this.$store.state.SvgComponent[this.$store.state.dynamicIndex][0].name+value)
      this.ACTION_CHANGE_STATE(['editSvgClicked' ,true])
     }
   }

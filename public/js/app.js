@@ -2231,7 +2231,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ColorButton__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ColorButton */ "./resources/js/components/ColorButton.vue");
 /* harmony import */ var _common_hoverEdit__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./common/hoverEdit */ "./resources/js/components/common/hoverEdit.vue");
 /* harmony import */ var _bulldog__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./bulldog */ "./resources/js/components/bulldog.vue");
-/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
+/* harmony import */ var _animalSvg_hippopotamusComponent__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./animalSvg/hippopotamusComponent */ "./resources/js/components/animalSvg/hippopotamusComponent.vue");
+/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(source, true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(source).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
@@ -2262,11 +2263,13 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
+
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
     ColorButton: _ColorButton__WEBPACK_IMPORTED_MODULE_0__["default"],
     HoverEdit: _common_hoverEdit__WEBPACK_IMPORTED_MODULE_1__["default"],
-    BullDogSvg: _bulldog__WEBPACK_IMPORTED_MODULE_2__["default"]
+    BullDogSvg: _bulldog__WEBPACK_IMPORTED_MODULE_2__["default"],
+    Hippo: _animalSvg_hippopotamusComponent__WEBPACK_IMPORTED_MODULE_3__["default"]
   },
   data: function data() {
     return {
@@ -2275,7 +2278,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       id: ''
     };
   },
-  computed: _objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_3__["mapState"])(['divData', 'SvgComponent', 'dynamicIndex']), {
+  computed: _objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_4__["mapState"])(['divData', 'SvgComponent', 'dynamicIndex', 'dynamicName']), {
     data: {
       get: function get() {
         return this.$store.state.AnimalIconArray;
@@ -2317,7 +2320,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       }
     }
   }),
-  methods: _objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_3__["mapActions"])(['ACTION_CHANGE_STATE']), {}, Object(vuex__WEBPACK_IMPORTED_MODULE_3__["mapMutations"])([]), {
+  methods: _objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_4__["mapActions"])(['ACTION_CHANGE_STATE']), {}, Object(vuex__WEBPACK_IMPORTED_MODULE_4__["mapMutations"])([]), {
     openPop: function openPop(value, e) {
       var clickedElement = e.target;
       var test = $(clickedElement).find('class');
@@ -2337,7 +2340,238 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     valueStore: function valueStore() {},
     getIndex: function getIndex(value) {
       this.ACTION_CHANGE_STATE(['dynamicIndex', value]);
+      this.ACTION_CHANGE_STATE(['dynamicName', this.$store.state.SvgComponent[this.$store.state.dynamicIndex][0].name + value]); //  console.log(this.$store.state.SvgComponent[this.$store.state.dynamicIndex][0].name+value)
+
       this.ACTION_CHANGE_STATE(['editSvgClicked', true]);
+    }
+  })
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/animalSvg/hippopotamusComponent.vue?vue&type=script&lang=js&":
+/*!******************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/animalSvg/hippopotamusComponent.vue?vue&type=script&lang=js& ***!
+  \******************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _ColorButton__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../ColorButton */ "./resources/js/components/ColorButton.vue");
+/* harmony import */ var _colorPickerComponent__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../colorPickerComponent */ "./resources/js/components/colorPickerComponent.vue");
+/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(source, true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(source).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  props: ['dynamicBackground', 'dynamicBackgroundOne', 'dynamicBackgroundTwo', 'dynamicIndex', 'ValueId', 'svgName'],
+  components: {
+    ColorButton: _ColorButton__WEBPACK_IMPORTED_MODULE_0__["default"],
+    Colorpicker: _colorPickerComponent__WEBPACK_IMPORTED_MODULE_1__["default"]
+  },
+  computed: _objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_2__["mapState"])(['background', 'background1', 'background2']), {
+    getterHippoBg1: {
+      get: function get() {
+        console.log(this.$store.state.SvgComponent[this.$store.state.dynamicIndex][0]);
+
+        if (this.$store.state.SvgComponent[this.$store.state.dynamicIndex][0].name === 'Hippo') {
+          return this.$store.state.SvgComponent[this.$store.state.dynamicIndex][0].background;
+        }
+      },
+      set: function set(newValue) {
+        console.log(newValue);
+      }
+    },
+    getterHippoBg2: {
+      get: function get() {
+        if (this.$store.state.SvgComponent[this.$store.state.dynamicIndex][0].name === 'Hippo') {
+          return this.$store.state.SvgComponent[this.$store.state.dynamicIndex][0].background1;
+        }
+      },
+      set: function set(newValue) {
+        console.log(newValue);
+      }
+    },
+    getterHippoBg3: {
+      get: function get() {
+        if (this.$store.state.SvgComponent[this.$store.state.dynamicIndex][0].name === 'Hippo') {
+          return this.$store.state.SvgComponent[this.$store.state.dynamicIndex][0].background2;
+        }
+      },
+      set: function set(newValue) {
+        console.log(newValue);
+      }
+    }
+  }),
+  data: function data() {
+    return {
+      colorValue: '',
+      showColorPicker: false,
+      clickedInput: ''
+    };
+  },
+  methods: _objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_2__["mapActions"])(['ACTION_CHANGE_STATE']), {}, Object(vuex__WEBPACK_IMPORTED_MODULE_2__["mapMutations"])([]), {
+    ShowElement: function ShowElement(value) {
+      //   this.colorValue = value
+      console.log(value, 'ssss');
+      var ColorValue = this.$store.state.SvgComponent[this.$store.state.dynamicIndex][0].background;
+      this.colorValue = 'rgba(' + ColorValue + ')';
+      this.showColorPicker = true;
+      this.clickedInput = 'One'; //  console.log( , 'value')
+    },
+    ShowElement1: function ShowElement1(value) {
+      this.colorValue = 'rgba(' + this.$store.state.SvgComponent[this.$store.state.dynamicIndex][0].background1 + ')';
+      console.log('sjahsja');
+      this.clickedInput = 'Two';
+      this.showColorPicker = true;
+    },
+    ShowElement2: function ShowElement2(value) {
+      this.colorValue = 'rgba(' + this.$store.state.SvgComponent[this.$store.state.dynamicIndex][0].background2 + ')';
+      console.log('sjahsja');
+      this.clickedInput = 'Third';
+      this.showColorPicker = true;
+    },
+    hideElement: function hideElement() {
+      this.showColorPicker = false;
     }
   })
 });
@@ -2502,11 +2736,14 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
 
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  props: ['dynamicBackground', 'dynamicBackgroundOne', 'dynamicBackgroundTwo', 'dynamicIndex', 'ValueId'],
+  props: ['dynamicBackground', 'dynamicBackgroundOne', 'dynamicBackgroundTwo', 'dynamicIndex', 'ValueId', 'svgName'],
   components: {
     ColorButton: _ColorButton__WEBPACK_IMPORTED_MODULE_0__["default"],
     Colorpicker: _colorPickerComponent__WEBPACK_IMPORTED_MODULE_1__["default"]
@@ -2514,7 +2751,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
   computed: _objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_2__["mapState"])(['background', 'background1', 'background2']), {
     getterBg1: {
       get: function get() {
-        console.log(this.$store.state.SvgComponent);
+        console.log(this.$store.state.SvgComponent[this.$store.state.dynamicIndex][0].name);
         return this.$store.state.SvgComponent[this.$store.state.dynamicIndex][0].background;
       },
       set: function set(newValue) {
@@ -2625,8 +2862,9 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       // console.log(value.rgba  ,'ss')
       if (this.valueElement == "One") {
         //  This.required
-        //   this.$store.state.SvgComponent[this.$store.state.dynamicIndex][0].background = value.rgba.r+','+value.rgba.g+','+value.rgba.b+','+value.rgba.a
+        this.$store.state.SvgComponent[this.$store.state.dynamicIndex][0].background = value.rgba.r + ',' + value.rgba.g + ',' + value.rgba.b + ',' + value.rgba.a;
         this.ACTION_CHANGE_STATE(['background', value.rgba.r + ',' + value.rgba.g + ',' + value.rgba.b + ',' + value.rgba.a]);
+        console.log(this.$store.state.SvgComponent[this.$store.state.dynamicIndex][0].background = value.rgba.r + ',' + value.rgba.g + ',' + value.rgba.b + ',' + value.rgba.a);
         $('.Svg_' + this.$store.state.dynamicIndex + '_color1').css({
           fill: 'rgba(' + value.rgba.r + ',' + value.rgba.g + ',' + value.rgba.b + ',' + value.rgba.a + ')'
         });
@@ -2634,7 +2872,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
           background: 'rgba(' + value.rgba.r + ',' + value.rgba.g + ',' + value.rgba.b + ',' + value.rgba.a + ')'
         });
       } else if (this.valueElement == "Two") {
-        // this.$store.state.SvgComponent[this.$store.state.dynamicIndex][0].background1 = value.rgba.r+','+value.rgba.g+','+value.rgba.b+','+value.rgba.a
+        this.$store.state.SvgComponent[this.$store.state.dynamicIndex][0].background1 = value.rgba.r + ',' + value.rgba.g + ',' + value.rgba.b + ',' + value.rgba.a;
         $('.Svg_' + this.$store.state.dynamicIndex + '_color2').css({
           fill: 'rgba(' + value.rgba.r + ',' + value.rgba.g + ',' + value.rgba.b + ',' + value.rgba.a + ')'
         });
@@ -2643,7 +2881,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         });
         this.ACTION_CHANGE_STATE(['background1', value.rgba.r + ',' + value.rgba.g + ',' + value.rgba.b + ',' + value.rgba.a]);
       } else if (this.valueElement == "Third") {
-        // this.$store.state.SvgComponent[this.$store.state.dynamicIndex][0].background2 = value.rgba.r+','+value.rgba.g+','+value.rgba.b+','+value.rgba.a
+        this.$store.state.SvgComponent[this.$store.state.dynamicIndex][0].background2 = value.rgba.r + ',' + value.rgba.g + ',' + value.rgba.b + ',' + value.rgba.a;
         $('.Svg_' + this.$store.state.dynamicIndex + '_color3').css({
           fill: 'rgba(' + value.rgba.r + ',' + value.rgba.g + ',' + value.rgba.b + ',' + value.rgba.a + ')'
         });
@@ -41830,7 +42068,7 @@ var render = function() {
                   },
                   on: {
                     click: function($event) {
-                      return _vm.getSvgName($event)
+                      return _vm.addSvg("Hippo")
                     }
                   }
                 }),
@@ -42416,6 +42654,7 @@ var render = function() {
                   attrs: {
                     dynamicIndex: index,
                     ValueId: "Svg_" + index,
+                    svgName: itemsName.name,
                     dynamicBackground: itemsName.background,
                     dynamicBackgroundOne: itemsName.background1,
                     dynamicBackgroundTwo: itemsName.background2,
@@ -42431,6 +42670,472 @@ var render = function() {
       })
     ],
     2
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/animalSvg/hippopotamusComponent.vue?vue&type=template&id=faac9c2c&":
+/*!**********************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/animalSvg/hippopotamusComponent.vue?vue&type=template&id=faac9c2c& ***!
+  \**********************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    [
+      _c(
+        "svg",
+        {
+          staticStyle: { display: "none" },
+          attrs: {
+            version: "1.1",
+            baseProfile: "basic",
+            xmlns: "http://www.w3.org/2000/svg",
+            "xmlns:xlink": "http://www.w3.org/1999/xlink"
+          }
+        },
+        [
+          _c("symbol", { attrs: { id: "ic" + this.ValueId } }, [
+            _c("g", [
+              _c("g", [
+                _c("path", {
+                  class: this.ValueId + "_color1",
+                  style: { fill: "rgba(95, 117, 133,1)" },
+                  attrs: {
+                    d:
+                      "M167.081, \n          347.743c-1.031-7.29-7.258-12.904-14.811-12.987V231.018\n              c0-8.123-6.645-14.769-14.77-14.769H93.196c-8.123,0-14.77,6.646-14.77,14.769v104.375c0,7.998,6.484,14.481,14.483,14.481h72.529\n              c0.938,0,1.699-0.761,1.699-1.699C167.137,348.026,167.118,347.881,167.081,347.743z"
+                  }
+                }),
+                _vm._v(" "),
+                _c("path", {
+                  class: this.ValueId + "_color2",
+                  staticStyle: {
+                    opacity: "0.3",
+                    fill: "#7D868C",
+                    "enable-background": "new"
+                  },
+                  attrs: {
+                    d:
+                      "M138.221,310.937c-1.723,0-3.117-1.396-3.117-3.119\n              c0-1.721,1.395-3.117,3.117-3.117h14.049v6.236H138.221z"
+                  }
+                }),
+                _vm._v(" "),
+                _c("path", {
+                  staticStyle: { fill: "#D1D3D3" },
+                  attrs: {
+                    d:
+                      "M161.786,338.267c2.807,2.345,4.76,5.68,5.295,9.476c0.037,0.138,0.057,0.283,0.057,0.433\n              c0,0.938-0.762,1.699-1.699,1.699H157.6v-3.713C157.6,342.878,159.26,339.983,161.786,338.267z"
+                  }
+                })
+              ]),
+              _vm._v(" "),
+              _c("g", [
+                _c("path", {
+                  class: this.ValueId + "_color1",
+                  style: { fill: "rgba(95, 117, 133,1)" },
+                  attrs: {
+                    d:
+                      "M297.229,347.743c-1.031-7.29-7.258-12.904-14.811-12.987V231.018\n              c0-8.123-6.645-14.769-14.77-14.769h-44.305c-8.121,0-14.768,6.646-14.768,14.769v104.375c0,7.998,6.482,14.481,14.48,14.481\n              h72.529c0.938,0,1.699-0.761,1.699-1.699C297.286,348.026,297.266,347.881,297.229,347.743z"
+                  }
+                }),
+                _vm._v(" "),
+                _c("path", {
+                  class: this.ValueId + "_color2",
+                  staticStyle: {
+                    opacity: "0.3",
+                    fill: "#7D868C",
+                    "enable-background": "new"
+                  },
+                  attrs: {
+                    d:
+                      "M268.37,310.937c-1.723,0-3.117-1.396-3.117-3.119\n              c0-1.721,1.395-3.117,3.117-3.117h14.049v6.236H268.37z"
+                  }
+                }),
+                _vm._v(" "),
+                _c("path", {
+                  staticStyle: { fill: "#D1D3D3" },
+                  attrs: {
+                    d:
+                      "M291.932,338.267c2.809,2.345,4.762,5.68,5.297,9.476c0.037,0.138,0.057,0.283,0.057,0.433\n              c0,0.938-0.762,1.699-1.699,1.699h-7.838v-3.713C287.749,342.878,289.409,339.983,291.932,338.267z"
+                  }
+                })
+              ]),
+              _vm._v(" "),
+              _c("g", [
+                _c("path", {
+                  staticStyle: { fill: "#7C98AB" },
+                  attrs: {
+                    d:
+                      "M62.577,144.7c-0.674,0-1.35-0.257-1.863-0.772c-12.705-12.706-33.383-12.708-46.092-0.001\n              c-1.029,1.029-2.699,1.029-3.729-0.001c-1.031-1.03-1.031-2.7,0-3.73c14.766-14.764,38.787-14.762,53.549,0.001\n              c1.029,1.03,1.029,2.7,0,3.73C63.926,144.443,63.253,144.7,62.577,144.7z"
+                  }
+                }),
+                _vm._v(" "),
+                _c("path", {
+                  class: this.ValueId + "_color1",
+                  style: { fill: "rgba(95, 117, 133,1)" },
+                  attrs: {
+                    d:
+                      "M14.544,149.251l-6.752,4.688c-2.252,1.563-5.346,1.006-6.908-1.247\n              c-1.213-1.746-1.143-4.009,0-5.662l4.689-6.751c2.029-2.925,6.045-3.652,8.971-1.621c2.928,2.032,3.649,6.049,1.619,8.974\n              C15.716,148.275,15.151,148.826,14.544,149.251z"
+                  }
+                })
+              ]),
+              _vm._v(" "),
+              _c("path", {
+                staticStyle: { fill: "#7C98AB" },
+                attrs: {
+                  d:
+                    "M210.561,103.891c49.863,0,90.285,40.422,90.285,90.285s-40.422,90.285-90.285,90.285H104.764\n          c-49.863,0-90.285-40.422-90.285-90.285s40.422-90.285,90.285-90.285H210.561z"
+                }
+              }),
+              _vm._v(" "),
+              _c("g", [
+                _c("path", {
+                  staticStyle: { fill: "#7C98AB" },
+                  attrs: {
+                    d:
+                      "M129.682,347.743c-1.031-7.29-7.258-12.904-14.813-12.987v-94.244\n              c0-8.123-6.645-14.768-14.768-14.768H55.798c-8.123,0-14.77,6.646-14.77,14.768v94.881c0,7.998,6.484,14.481,14.481,14.481h72.531\n              c0.938,0,1.697-0.761,1.697-1.699C129.737,348.026,129.718,347.881,129.682,347.743z"
+                  }
+                }),
+                _vm._v(" "),
+                _c("path", {
+                  staticStyle: { fill: "#D1D3D3" },
+                  attrs: {
+                    d:
+                      "M124.385,338.267c2.809,2.345,4.762,5.68,5.297,9.476c0.035,0.138,0.055,0.283,0.055,0.433\n              c0,0.938-0.76,1.699-1.697,1.699h-7.838v-3.713C120.202,342.878,121.862,339.983,124.385,338.267z"
+                  }
+                }),
+                _vm._v(" "),
+                _c("path", {
+                  class: this.ValueId + "_color2",
+                  staticStyle: {
+                    opacity: "0.3",
+                    fill: "#7D868C",
+                    "enable-background": "new"
+                  },
+                  attrs: {
+                    d:
+                      "M100.823,310.937c-1.723,0-3.119-1.396-3.119-3.119\n              c0-1.721,1.396-3.117,3.119-3.117h14.047v6.236H100.823z"
+                  }
+                })
+              ]),
+              _vm._v(" "),
+              _c("g", [
+                _c("path", {
+                  staticStyle: { fill: "#7C98AB" },
+                  attrs: {
+                    d:
+                      "M259.831,347.743c-1.031-7.29-7.258-12.904-14.813-12.987v-94.244\n              c0-8.123-6.645-14.768-14.768-14.768h-44.305c-8.123,0-14.77,6.646-14.77,14.768v94.881c0,7.998,6.484,14.481,14.482,14.481\n              h72.529c0.938,0,1.697-0.761,1.697-1.699C259.885,348.026,259.866,347.881,259.831,347.743z"
+                  }
+                }),
+                _vm._v(" "),
+                _c("path", {
+                  staticStyle: { fill: "#D1D3D3" },
+                  attrs: {
+                    d:
+                      "M254.534,338.267c2.807,2.345,4.762,5.68,5.297,9.476c0.035,0.138,0.055,0.283,0.055,0.433\n              c0,0.938-0.76,1.699-1.697,1.699h-7.838v-3.713C250.35,342.878,252.009,339.983,254.534,338.267z"
+                  }
+                }),
+                _vm._v(" "),
+                _c("path", {
+                  class: this.ValueId + "_color2",
+                  staticStyle: {
+                    opacity: "0.3",
+                    fill: "#7D868C",
+                    "enable-background": "new"
+                  },
+                  attrs: {
+                    d:
+                      "M230.971,310.937c-1.723,0-3.117-1.396-3.117-3.119\n              c0-1.721,1.395-3.117,3.117-3.117h14.047v6.236H230.971z"
+                  }
+                })
+              ]),
+              _vm._v(" "),
+              _c("g", [
+                _c("g", [
+                  _c("path", {
+                    staticStyle: { fill: "#7C98AB" },
+                    attrs: {
+                      d:
+                        "M315.549,79.815c-4.781,0-8.672-3.89-8.672-8.672c0-0.313,0.018-0.632,0.051-0.948l0.016-0.137\n                  l0.02-0.136c1.365-9.227,9.433-16.185,18.77-16.185c9.338,0,17.408,6.958,18.769,16.186l0.016,0.108l0.014,0.109\n                  c0.039,0.332,0.059,0.669,0.059,1.002c0,4.782-3.891,8.672-8.672,8.672L315.549,79.815L315.549,79.815z"
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c("path", {
+                    staticStyle: { fill: "#FF9C9F" },
+                    attrs: {
+                      d:
+                        "M335.919,72.711c0.865,0,1.566-0.703,1.566-1.568c0-0.062-0.002-0.122-0.01-0.181\n                  c-0.846-5.726-5.779-10.12-11.742-10.12c-5.961,0-10.895,4.394-11.74,10.12c-0.008,0.059-0.012,0.12-0.012,0.181\n                  c0,0.866,0.703,1.568,1.568,1.568H335.919z"
+                    }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("path", {
+                  staticStyle: { fill: "#7C98AB" },
+                  attrs: {
+                    d:
+                      "M349.815,109.171h-9.482c-9.889-30.707-38.682-52.932-72.676-52.932\n              c-42.168,0-76.35,34.183-76.35,76.349v47.283c0,20.377,16.52,36.897,36.896,36.897h121.611c29.713,0,53.799-24.086,53.799-53.799\n              C403.614,133.258,379.528,109.171,349.815,109.171z"
+                  }
+                }),
+                _vm._v(" "),
+                _c("circle", {
+                  staticStyle: { fill: "#333E48" },
+                  attrs: { cx: "273.527", cy: "101.782", r: "6.925" }
+                }),
+                _vm._v(" "),
+                _c("circle", {
+                  staticStyle: { fill: "#333E48" },
+                  attrs: { cx: "325.733", cy: "101.782", r: "6.926" }
+                }),
+                _vm._v(" "),
+                _c("path", {
+                  class: this.ValueId + "_color3",
+                  staticStyle: { fill: "#FBE298" },
+                  attrs: {
+                    d:
+                      "M341.444,180.247v14.058c0,2.454-2.008,4.463-4.461,4.463h-14.059\n              c-2.455,0-4.463-2.009-4.463-4.463v-14.058H341.444z"
+                  }
+                }),
+                _vm._v(" "),
+                _c("path", {
+                  class: this.ValueId + "_color3",
+                  staticStyle: { fill: "#FBE298" },
+                  attrs: {
+                    d:
+                      "M400.759,180.247v14.058c0,2.454-2.008,4.463-4.463,4.463h-14.057\n              c-2.455,0-4.465-2.009-4.465-4.463v-14.058H400.759z"
+                  }
+                }),
+                _vm._v(" "),
+                _c("g", [
+                  _c("path", {
+                    staticStyle: { fill: "#7C98AB" },
+                    attrs: {
+                      d:
+                        "M202.612,79.815c-4.783,0-8.672-3.89-8.672-8.672c0-0.313,0.018-0.632,0.051-0.948l0.016-0.137\n                  l0.02-0.136c1.363-9.227,9.434-16.185,18.77-16.185s17.406,6.958,18.77,16.186l0.016,0.108l0.012,0.109\n                  c0.039,0.332,0.059,0.669,0.059,1.002c0,4.782-3.889,8.672-8.672,8.672L202.612,79.815L202.612,79.815z"
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c("path", {
+                    staticStyle: { fill: "#FF9C9F" },
+                    attrs: {
+                      d:
+                        "M222.979,72.711c0.867,0,1.568-0.703,1.568-1.568c0-0.062-0.004-0.122-0.01-0.181\n                  c-0.846-5.726-5.781-10.12-11.742-10.12s-10.896,4.394-11.742,10.12c-0.006,0.059-0.01,0.12-0.01,0.181\n                  c0,0.866,0.701,1.568,1.568,1.568H222.979z"
+                    }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("g", [
+                  _c("path", {
+                    staticStyle: { fill: "#7C98AB" },
+                    attrs: {
+                      d:
+                        "M318.315,137.023c-3.553,0-6.443-2.891-6.443-6.443c0-0.232,0.012-0.47,0.039-0.704l0.01-0.101\n                  l0.016-0.101c1.014-6.855,7.01-12.025,13.945-12.025c6.936,0,12.932,5.169,13.945,12.025l0.01,0.08l0.01,0.082\n                  c0.029,0.247,0.045,0.497,0.045,0.744c0,3.553-2.891,6.443-6.443,6.443L318.315,137.023L318.315,137.023z"
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c("path", {
+                    class: this.ValueId + "_color1",
+                    style: { fill: "rgba(95, 117, 133,1)" },
+                    attrs: {
+                      d:
+                        "M333.448,131.745c0.643,0,1.164-0.522,1.164-1.166c0-0.045-0.002-0.09-0.008-0.134\n                  c-0.629-4.254-4.295-7.519-8.723-7.519c-4.43,0-8.096,3.265-8.725,7.519c-0.004,0.044-0.006,0.089-0.006,0.134\n                  c0,0.644,0.521,1.166,1.164,1.166H333.448z"
+                    }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("g", [
+                  _c("path", {
+                    staticStyle: { fill: "#7C98AB" },
+                    attrs: {
+                      d:
+                        "M372.13,137.023c-3.551,0-6.441-2.891-6.441-6.443c0-0.232,0.012-0.47,0.037-0.704l0.012-0.101\n                  l0.014-0.101c1.014-6.855,7.01-12.025,13.945-12.025c6.938,0,12.932,5.169,13.945,12.025l0.012,0.08l0.01,0.082\n                  c0.029,0.247,0.043,0.497,0.043,0.744c0,3.553-2.891,6.443-6.441,6.443L372.13,137.023L372.13,137.023z"
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c("path", {
+                    class: this.ValueId + "_color1",
+                    style: { fill: "rgba(95, 117, 133,1)" },
+                    attrs: {
+                      d:
+                        "M387.264,131.745c0.643,0,1.164-0.522,1.164-1.166c0-0.045-0.004-0.09-0.008-0.134\n                  c-0.629-4.254-4.295-7.519-8.725-7.519c-4.428,0-8.094,3.265-8.723,7.519c-0.006,0.044-0.008,0.089-0.008,0.134\n                  c0,0.644,0.521,1.166,1.164,1.166H387.264z"
+                    }
+                  })
+                ])
+              ])
+            ])
+          ])
+        ]
+      ),
+      _vm._v(" "),
+      _c(
+        "svg",
+        {
+          attrs: {
+            viewBox: "0 0 600 600",
+            "xmlns:xlink": "http://www.w3.org/1999/xlink"
+          }
+        },
+        [
+          _c("use", {
+            class: this.ValueId,
+            attrs: { href: "#ic" + this.ValueId, x: "0", y: "0" }
+          })
+        ]
+      ),
+      _vm._v(" "),
+      _c(
+        "svg",
+        {
+          attrs: {
+            viewBox: "0 0 600 600",
+            "xmlns:xlink": "http://www.w3.org/1999/xlink"
+          }
+        },
+        [
+          _c("use", {
+            class: this.ValueId,
+            attrs: { href: "#ic" + this.ValueId, x: "0", y: "0" }
+          })
+        ]
+      ),
+      _vm._v(" "),
+      _c(
+        "svg",
+        {
+          attrs: {
+            viewBox: "0 0 600 600",
+            "xmlns:xlink": "http://www.w3.org/1999/xlink"
+          }
+        },
+        [
+          _c("use", {
+            class: this.ValueId,
+            attrs: { href: "#ic" + this.ValueId, x: "0", y: "0" }
+          })
+        ]
+      ),
+      _vm._v(" "),
+      _c(
+        "svg",
+        {
+          attrs: {
+            viewBox: "0 0 600 600",
+            "xmlns:xlink": "http://www.w3.org/1999/xlink"
+          }
+        },
+        [
+          _c("use", {
+            class: this.ValueId,
+            attrs: { href: "#ic" + this.ValueId, x: "0", y: "0" }
+          })
+        ]
+      ),
+      _vm._v(" "),
+      _c(
+        "svg",
+        {
+          attrs: {
+            viewBox: "0 0 600 600",
+            "xmlns:xlink": "http://www.w3.org/1999/xlink"
+          }
+        },
+        [
+          _c("use", {
+            class: this.ValueId,
+            attrs: { href: "#ic" + this.ValueId, x: "0", y: "0" }
+          })
+        ]
+      ),
+      _vm._v(" "),
+      _c(
+        "svg",
+        {
+          attrs: {
+            viewBox: "0 0 600 600",
+            "xmlns:xlink": "http://www.w3.org/1999/xlink"
+          }
+        },
+        [
+          _c("use", {
+            class: this.ValueId,
+            attrs: { href: "#ic" + this.ValueId, x: "0", y: "0" }
+          })
+        ]
+      ),
+      _vm._v(" "),
+      this.$store.state.dynamicName === _vm.svgName + _vm.dynamicIndex
+        ? _c("div", { attrs: { id: _vm.svgName + _vm.dynamicIndex } }, [
+            _c("button", {
+              class: this.ValueId + "_color1btn",
+              style: {
+                background: "rgba(95, 117, 133,1)",
+                width: "50px",
+                height: "50px"
+              },
+              on: {
+                click: function($event) {
+                  return _vm.ShowElement(_vm.getterHippoBg1)
+                }
+              }
+            }),
+            _vm._v(" "),
+            _c("button", {
+              class: this.ValueId + "_color2btn",
+              style: {
+                backgroundColor: "rgba(125, 134, 140, 1)",
+                width: "50px",
+                height: "50px"
+              },
+              on: {
+                click: function($event) {
+                  return _vm.ShowElement1(_vm.getterHippoBg2)
+                }
+              }
+            }),
+            _vm._v(" "),
+            _c("button", {
+              class: this.ValueId + "_color3btn",
+              style: {
+                backgroundColor: "rgba(251, 226, 152 , 1)",
+                width: "50px",
+                height: "50px"
+              },
+              on: {
+                click: function($event) {
+                  return _vm.ShowElement2(_vm.getterHippoBg3)
+                }
+              }
+            })
+          ])
+        : _vm._e(),
+      _vm._v(" "),
+      this.showColorPicker
+        ? _c("Colorpicker", {
+            attrs: {
+              colorElement: this.colorValue,
+              valueElement: this.clickedInput
+            }
+          })
+        : _vm._e(),
+      _vm._v(" "),
+      this.showColorPicker
+        ? _c("button", { on: { click: _vm.hideElement } }, [_vm._v("Close")])
+        : _vm._e()
+    ],
+    1
   )
 }
 var staticRenderFns = []
@@ -42474,7 +43179,7 @@ var render = function() {
             _c("g", { staticClass: "icon" }, [
               _c("path", {
                 class: this.ValueId + "_color1",
-                style: { fill: "rgba(" + this.getterBg1 + ")" },
+                style: { fill: "rgba(101, 81, 60,1)" },
                 attrs: {
                   d:
                     "M233.058,210.95c27.653,0,50.072,22.419,50.072,50.072c0,8.669-2.204,16.823-6.081,23.933h5.28\n      c7.218,0,13.07,5.852,13.07,13.07v7.171c0,3.259-2.641,5.9-5.9,5.9h-56.441c-27.655,0-50.074-22.419-50.074-50.074\n      C182.984,233.369,205.403,210.95,233.058,210.95z"
@@ -42483,7 +43188,7 @@ var render = function() {
               _vm._v(" "),
               _c("path", {
                 class: this.ValueId + "_color1",
-                style: { fill: "rgba(" + this.getterBg1 + ")" },
+                style: { fill: "rgba(101, 81, 60,1)" },
                 attrs: {
                   d:
                     "M78.038,210.95c-27.654,0-50.073,22.419-50.073,50.072c0,8.669,2.205,16.823,6.082,23.933h-5.28\n      c-7.218,0-13.07,5.852-13.07,13.07v7.171c0,3.259,2.641,5.9,5.9,5.9h56.441c27.655,0,50.074-22.419,50.074-50.074\n      C128.113,233.369,105.694,210.95,78.038,210.95z"
@@ -42500,7 +43205,7 @@ var render = function() {
               _vm._v(" "),
               _c("path", {
                 class: this.ValueId + "_color3",
-                style: { fill: "rgba(" + this.getterBg3 + ")" },
+                style: { fill: "rgba(255, 255, 255 , 1)" },
                 attrs: {
                   d:
                     "M62.184,207.95v55.777c12.467-3.153,21.693-14.442,21.693-27.889\n      C83.877,222.392,74.651,211.103,62.184,207.95z"
@@ -42517,7 +43222,7 @@ var render = function() {
               _vm._v(" "),
               _c("path", {
                 class: this.ValueId + "_color3",
-                style: { fill: "rgba(" + this.getterBg3 + ")" },
+                style: { fill: "rgba(255, 255, 255 , 1)" },
                 attrs: {
                   d:
                     "M193.767,95.523h-76.438c-11.774,0-21.318,9.544-21.318,21.318v42.638\n          c0,11.774,9.544,21.319,21.318,21.319s21.318-9.545,21.318-21.319v-21.318h33.801v21.318c0,11.774,9.544,21.319,21.318,21.319\n          c11.774,0,21.318-9.545,21.318-21.319v-42.638C215.085,105.067,205.541,95.523,193.767,95.523z"
@@ -42542,7 +43247,7 @@ var render = function() {
               _vm._v(" "),
               _c("path", {
                 class: this.ValueId + "_color2",
-                style: { fill: "rgba(" + this.getterBg2 + ")" },
+                style: { fill: "rgba(130, 105, 64, 1)" },
                 attrs: {
                   d:
                     "M172.667,122.066h-34.24c-7.607,0-13.834,6.225-13.834,13.834v7.549\n              c0,17.097,13.858,30.953,30.955,30.953c17.096,0,30.954-13.856,30.954-30.953V135.9\n              C186.502,128.29,180.276,122.066,172.667,122.066z"
@@ -42559,7 +43264,7 @@ var render = function() {
               _vm._v(" "),
               _c("path", {
                 class: this.ValueId + "_color1",
-                style: { fill: "rgba(" + this.getterBg1 + ")" },
+                style: { fill: "rgba(101, 81, 60,1)" },
                 attrs: {
                   d:
                     "M252.347,51.524c-13.42,0.246-24.591-10.54-24.825-23.957l-0.267-14.968\n          c-0.236-13.421,7.341-16.635,16.832-7.143l28.14,28.139c9.492,9.492,6.274,17.457-7.146,17.696L252.347,51.524z"
@@ -42568,7 +43273,7 @@ var render = function() {
               _vm._v(" "),
               _c("path", {
                 class: this.ValueId + "_color1",
-                style: { fill: "rgba(" + this.getterBg1 + ")" },
+                style: { fill: "rgba(101, 81, 60,1)" },
                 attrs: {
                   d:
                     "M58.749,51.524c13.42,0.246,24.591-10.54,24.825-23.957l0.267-14.968\n          c0.237-13.421-7.34-16.635-16.831-7.143L38.87,33.595c-9.492,9.492-6.274,17.457,7.145,17.696L58.749,51.524z"
@@ -42577,7 +43282,7 @@ var render = function() {
               _vm._v(" "),
               _c("circle", {
                 class: this.ValueId + "_color3",
-                style: { fill: "rgba(" + this.getterBg3 + ")" },
+                style: { fill: "rgba(255, 255, 255 , 1)" },
                 attrs: { cx: "207.687", cy: "60.347", r: "24.161" }
               }),
               _vm._v(" "),
@@ -42593,7 +43298,7 @@ var render = function() {
               _vm._v(" "),
               _c("path", {
                 class: this.ValueId + "_color2",
-                style: { fill: "rgba(" + this.getterBg2 + ")" },
+                style: { fill: "rgba(130, 105, 64, 1)" },
                 attrs: {
                   d:
                     "M130.128,216.124c0-12.094-9.805-21.898-21.898-21.898c-12.094,0-21.898,9.805-21.898,21.898v68.83\n      H68.179c-7.219,0-13.069,5.852-13.069,13.07v7.171c0,3.259,2.64,5.9,5.899,5.9h56.05c7.218,0,13.069-5.853,13.069-13.071V216.124z"
@@ -42602,7 +43307,7 @@ var render = function() {
               _vm._v(" "),
               _c("path", {
                 class: this.ValueId + "_color2",
-                style: { fill: "rgba(" + this.getterBg2 + ")" },
+                style: { fill: "rgba(130, 105, 64, 1)" },
                 attrs: {
                   d:
                     "M180.968,216.124c0-12.094,9.805-21.898,21.898-21.898c12.094,0,21.898,9.805,21.898,21.898v68.83\n      h18.152c7.219,0,13.069,5.852,13.069,13.07v7.171c0,3.259-2.64,5.9-5.899,5.9h-56.05c-7.218,0-13.069-5.853-13.069-13.071v-81.9\n      H180.968z"
@@ -42709,47 +43414,51 @@ var render = function() {
         ]
       ),
       _vm._v(" "),
-      _c("button", {
-        class: this.ValueId + "_color1btn",
-        style: {
-          background: "rgba(" + this.getterBg1 + ")",
-          width: "50px",
-          height: "50px"
-        },
-        on: {
-          click: function($event) {
-            return _vm.ShowElement(_vm.getterBg1)
-          }
-        }
-      }),
-      _vm._v(" "),
-      _c("button", {
-        class: this.ValueId + "_color2btn",
-        style: {
-          backgroundColor: "rgba(" + this.getterBg2 + ")",
-          width: "50px",
-          height: "50px"
-        },
-        on: {
-          click: function($event) {
-            return _vm.ShowElement1(_vm.getterBg2)
-          }
-        }
-      }),
-      _vm._v(" "),
-      _c("button", {
-        class: this.ValueId + "_color3btn",
-        style: {
-          backgroundColor: "rgba(" + this.getterBg3 + ")",
-          width: "50px",
-          height: "50px"
-        },
-        on: {
-          click: function($event) {
-            return _vm.ShowElement2(_vm.getterBg3)
-          }
-        }
-      }),
+      this.$store.state.dynamicName === _vm.svgName + _vm.dynamicIndex
+        ? _c("div", { attrs: { id: _vm.svgName + _vm.dynamicIndex } }, [
+            _c("button", {
+              class: this.ValueId + "_color1btn",
+              style: {
+                background: "rgba(101, 81, 60,1)",
+                width: "50px",
+                height: "50px"
+              },
+              on: {
+                click: function($event) {
+                  return _vm.ShowElement(_vm.getterBg1)
+                }
+              }
+            }),
+            _vm._v(" "),
+            _c("button", {
+              class: this.ValueId + "_color2btn",
+              style: {
+                backgroundColor: "rgba(130, 105, 64, 1)",
+                width: "50px",
+                height: "50px"
+              },
+              on: {
+                click: function($event) {
+                  return _vm.ShowElement1(_vm.getterBg2)
+                }
+              }
+            }),
+            _vm._v(" "),
+            _c("button", {
+              class: this.ValueId + "_color3btn",
+              style: {
+                backgroundColor: "rgba(255, 255, 255 , 1)",
+                width: "50px",
+                height: "50px"
+              },
+              on: {
+                click: function($event) {
+                  return _vm.ShowElement2(_vm.getterBg3)
+                }
+              }
+            })
+          ])
+        : _vm._e(),
       _vm._v(" "),
       this.showColorPicker
         ? _c("Colorpicker", {
@@ -59754,6 +60463,75 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/animalSvg/hippopotamusComponent.vue":
+/*!*********************************************************************!*\
+  !*** ./resources/js/components/animalSvg/hippopotamusComponent.vue ***!
+  \*********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _hippopotamusComponent_vue_vue_type_template_id_faac9c2c___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./hippopotamusComponent.vue?vue&type=template&id=faac9c2c& */ "./resources/js/components/animalSvg/hippopotamusComponent.vue?vue&type=template&id=faac9c2c&");
+/* harmony import */ var _hippopotamusComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./hippopotamusComponent.vue?vue&type=script&lang=js& */ "./resources/js/components/animalSvg/hippopotamusComponent.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _hippopotamusComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _hippopotamusComponent_vue_vue_type_template_id_faac9c2c___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _hippopotamusComponent_vue_vue_type_template_id_faac9c2c___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/animalSvg/hippopotamusComponent.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/animalSvg/hippopotamusComponent.vue?vue&type=script&lang=js&":
+/*!**********************************************************************************************!*\
+  !*** ./resources/js/components/animalSvg/hippopotamusComponent.vue?vue&type=script&lang=js& ***!
+  \**********************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_hippopotamusComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./hippopotamusComponent.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/animalSvg/hippopotamusComponent.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_hippopotamusComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/animalSvg/hippopotamusComponent.vue?vue&type=template&id=faac9c2c&":
+/*!****************************************************************************************************!*\
+  !*** ./resources/js/components/animalSvg/hippopotamusComponent.vue?vue&type=template&id=faac9c2c& ***!
+  \****************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_hippopotamusComponent_vue_vue_type_template_id_faac9c2c___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib??vue-loader-options!./hippopotamusComponent.vue?vue&type=template&id=faac9c2c& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/animalSvg/hippopotamusComponent.vue?vue&type=template&id=faac9c2c&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_hippopotamusComponent_vue_vue_type_template_id_faac9c2c___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_hippopotamusComponent_vue_vue_type_template_id_faac9c2c___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
 /***/ "./resources/js/components/animals.json":
 /*!**********************************************!*\
   !*** ./resources/js/components/animals.json ***!
@@ -60117,7 +60895,8 @@ var store = new vuex__WEBPACK_IMPORTED_MODULE_1__["default"].Store({
     divData: [],
     SvgComponent: [],
     dynamicIndex: '',
-    editSvgClicked: false
+    editSvgClicked: false,
+    dynamicName: ''
   },
   getters: {},
   mutations: {
@@ -60207,9 +60986,18 @@ var store = new vuex__WEBPACK_IMPORTED_MODULE_1__["default"].Store({
           background1: '130, 105, 64, 1',
           background2: '255, 255, 255 , 1'
         }];
+        this.state.SvgComponent.push(tempArray);
       }
 
-      this.state.SvgComponent.push(tempArray);
+      if (value == "Hippo") {
+        tempArray = [{
+          name: value,
+          background: '95, 117, 133,1',
+          background1: '125, 134, 140, 1',
+          background2: '251, 226, 152 , 1'
+        }];
+        this.state.SvgComponent.push(tempArray);
+      }
     }
   },
   actions: {
@@ -60248,8 +61036,8 @@ var store = new vuex__WEBPACK_IMPORTED_MODULE_1__["default"].Store({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! D:\xampp\htdocs\NYC_NEW\iconPattern\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! D:\xampp\htdocs\NYC_NEW\iconPattern\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\xampp\htdocs\patternIconVueJs\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\xampp\htdocs\patternIconVueJs\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

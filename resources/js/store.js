@@ -16,7 +16,8 @@ export const store = new Vuex.Store({
         divData: [],
         SvgComponent:[],
         dynamicIndex:'',
-        editSvgClicked:false
+        editSvgClicked:false,
+        dynamicName:'',
     },
     getters: {},
     mutations: {
@@ -134,8 +135,19 @@ export const store = new Vuex.Store({
                       background2:'255, 255, 255 , 1',
                   }
               ]
+              this.state.SvgComponent.push(tempArray)
             }
-            this.state.SvgComponent.push(tempArray)
+            if(value =="Hippo"){
+               tempArray = [
+                  {
+                      name:value,
+                      background :  '95, 117, 133,1',
+                      background1: '125, 134, 140, 1',
+                      background2:'251, 226, 152 , 1',
+                  }
+              ]
+              this.state.SvgComponent.push(tempArray)
+            }
         }
         
     },
