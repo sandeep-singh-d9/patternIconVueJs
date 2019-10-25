@@ -26,10 +26,15 @@
     "dependencies": {
         "@jaames/iro": "^4.5.1",
         "iro-transparency-plugin": "^1.0.2",
+        "jquery-ui": "^1.12.1",
+        "jquery-ui-dist": "^1.12.1",
         "react-undraw-illustrations": "^2.0.3",
         "vue-color": "^2.7.0",
+        "vue-drag-resize": "^1.3.2",
         "vue-iro-color-picker": "^2.0.0",
+        "vue-moveable": "^1.0.0",
         "vue-router": "^3.1.3",
+        "vue-slider-component": "^3.0.41",
         "vuex": "^3.1.1"
     }
 }

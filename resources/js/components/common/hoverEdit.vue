@@ -22,12 +22,12 @@
                 </span>
             </a>
             <div>
-                <h4 style="color:#fff; text-align: center;">Select Color</h4>
+                <!-- <h4 style="color:#fff; text-align: center;">Select Color</h4>
                 <button style="border-radius: 50px;width: 35px;height: 35px;background: rgba(101, 81, 60,1);border: none;margin-left: 10px"></button>
                 <button style="border-radius: 50px;width: 35px;height: 35px;background: rgba(101, 81, 60,1);border: none;margin-left: 10px"></button>
-                <button style="border-radius: 50px;width: 35px;height: 35px;background: rgba(101, 81, 60,1);border: none;margin-left: 10px"></button>
+                <button style="border-radius: 50px;width: 35px;height: 35px;background: rgba(101, 81, 60,1);border: none;margin-left: 10px"></button> -->
             </div>
-         <Colorpicker v-if="diaplayColorpicker" :colorElement="colorModule"/>
+         <!-- <Colorpicker v-if="diaplayColorpicker" :colorElement="colorModule"/> -->
         </div>
     </div>
 </template>

@@ -1,6 +1,6 @@
 <template>
   <div>
-      <chrome   v-model="colorModel" @input="changePickerColor(colorModel)"/>
+      <chrome v-model="colorModel" @input="changePickerColor(colorModel)"/>
   </div>
 </template>
 
@@ -15,7 +15,7 @@ import {
 export default {
      props: ['colorElement', 'valueElement'],
      mounted(){
-      alert(this.colorElement)
+      // alert(this.colorElement)
      },
     components:{
         'photoshop-picker': Photoshop,

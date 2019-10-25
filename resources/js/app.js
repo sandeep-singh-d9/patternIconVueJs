@@ -5,10 +5,12 @@
  */
 
 require('./bootstrap');
-
+// require('../../node_modules/jquery-ui')
 window.Vue = require('vue');
+import 'jquery-ui-dist/jquery-ui.js';
+import 'jquery-ui-dist/jquery-ui.\css';
 import router from './router';
-import { store } from './store.js'
+import { store } from './store.js';
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue

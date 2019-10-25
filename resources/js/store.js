@@ -5,7 +5,7 @@ Vue.use(Vuex);
 
 export const store = new Vuex.Store({
     state: {
-        rightBodyBackground:'#fff',
+        rightBodyBackground:'255, 255, 255,1',
         background :  '101, 81, 60,1',
         background1: '130, 105, 64, 1',
         background2:'255, 255, 255 , 1',
@@ -18,6 +18,7 @@ export const store = new Vuex.Store({
         dynamicIndex:'',
         editSvgClicked:false,
         dynamicName:'',
+        showColor:false
     },
     getters: {},
     mutations: {
@@ -144,6 +145,95 @@ export const store = new Vuex.Store({
                       background :  '95, 117, 133,1',
                       background1: '125, 134, 140, 1',
                       background2:'251, 226, 152 , 1',
+                  }
+              ]
+              this.state.SvgComponent.push(tempArray)
+            }
+
+            if(value =="Llama"){
+               tempArray = [
+                  {
+                      name:value,
+                      background :  '95, 117, 133,1',
+                      background1: '200, 201, 201, 1',
+                      background2:'51, 62, 72 , 1',
+                  }
+              ]
+              this.state.SvgComponent.push(tempArray)
+            }
+            if(value =="Mouse"){
+               tempArray = [
+                  {
+                      name:value,
+                      background :  '255, 156, 159,1',
+                      background1: '125, 134, 140, 1',
+                      background2:'51, 62, 72 , 1',
+                  }
+              ]
+              this.state.SvgComponent.push(tempArray)
+            }
+            if(value =="Squirrel"){
+               tempArray = [
+                  {
+                      name:value,
+                      background :  '130, 105, 64,1',
+                      background1: '156, 127, 77, 1',
+                      background2:'101, 81, 60 , 1',
+                  }
+              ]
+              this.state.SvgComponent.push(tempArray)
+            }
+            if(value =="FrenchFries"){
+               tempArray = [
+                  {
+                      name:value,
+                      background :  '255, 202, 40, 1',
+                      background1: '211, 47, 47, 1',
+                      background2:'48, 60, 66 , 1',
+                  }
+              ]
+              this.state.SvgComponent.push(tempArray)
+            }
+            if(value =="Pie"){
+               tempArray = [
+                  {
+                      name:value,
+                      background :  '127, 110, 93,1',
+                      background1: '241, 141, 70,1',
+                      background2:'210, 86, 39 1',
+                  }
+              ]
+              this.state.SvgComponent.push(tempArray)
+            }
+            if(value =="Pizza"){
+               tempArray = [
+                  {
+                      name:value,
+                      background :  '48, 60, 66,1',
+                      background1: '229, 115, 115,1',
+                      background2:'255, 202, 40 1',
+                  }
+              ]
+              this.state.SvgComponent.push(tempArray)
+            }
+            if(value =="Popcorn"){
+               tempArray = [
+                  {
+                      name:value,
+                      background :  '211, 47, 47 , 1',
+                      background1: '48, 60, 66 , 1',
+                      background2:'230, 230, 230 , 1',
+                  }
+              ]
+              this.state.SvgComponent.push(tempArray)
+            }
+            if(value =="Steak"){
+               tempArray = [
+                  {
+                      name:value,
+                      background :  '48, 60, 66,1',
+                      background1: '255, 235, 238, 1',
+                      background2:'198, 40, 40 , 1',
                   }
               ]
               this.state.SvgComponent.push(tempArray)

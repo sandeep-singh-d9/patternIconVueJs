@@ -1,0 +1,180 @@
+<template>
+  <div>
+     <svg  version="1.1" baseProfile="basic" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  style="display: none;">
+    <symbol :id="'ic'+this.ValueId">
+     <path   :style="{fill:'rgba(48,60,66,1)' }" :class="this.ValueId+'_color1'" d="M277.333,0c-237.542,0-256,130.625-256,170.667V256c0,60.094,49.135,72.625,92.479,83.677
+	c26.479,6.76,53.854,13.74,70.646,30.531c12.146,12.146,24.563,29.198,37.708,47.24C254.438,461.771,291.01,512,341.333,512
+	c72.802,0,149.333-177.635,149.333-256v-85.333C490.667,88.594,409.104,0,277.333,0z"/>
+<path :style="{fill:'rgba(198,40,40,1)' }" :class="this.ValueId+'_color3'" d="M277.333,21.333c118.594,0,192,77.51,192,149.333c0,73.656-73.042,234.667-128,234.667
+	c-39.469,0-72.646-45.573-101.927-85.771c-13.646-18.74-26.531-36.448-39.865-49.771c-20.927-20.927-51.188-28.656-80.458-36.115
+	c-47.375-12.094-76.417-21.594-76.417-63.01C42.667,125.771,65.531,21.333,277.333,21.333z"/>
+<path  :style="{fill:'rgba(255, 235, 238, 1)' }" :class="this.ValueId+'_color2'" d="M341.333,490.667c-39.469,0-72.646-45.573-101.927-85.771c-13.646-18.74-26.531-36.448-39.865-49.771
+	c-20.927-20.927-51.188-28.656-80.458-36.115C71.708,306.917,42.667,297.417,42.667,256v-32.408
+	c18.324,16.953,45.617,24.242,71.146,30.751c26.479,6.76,53.854,13.74,70.646,30.531c12.146,12.146,24.563,29.198,37.708,47.24
+	c32.271,44.323,68.844,94.552,119.167,94.552c48.824,0,99.211-79.88,127.181-156.143
+	C460.413,348.849,392.915,490.667,341.333,490.667z"/>
+<path style="opacity:0.1;enable-background:new    ;" d="M239.406,404.896c29.281,40.198,62.458,85.771,101.927,85.771
+	c51.582,0,119.079-141.818,127.181-220.143c-5.133,13.995-11.033,28.105-17.527,41.828C427.984,388.866,376.469,480,335.111,480
+	c-39.469,0-72.646-45.573-101.927-85.771"/>
+<path   :style="{fill:'rgba(48,60,66,1)' }" :class="this.ValueId+'_color1'" d="M224,170.667c42.563,0,74.667-18.344,74.667-42.667S266.563,85.333,224,85.333
+	S149.333,103.677,149.333,128S181.438,170.667,224,170.667z"/>
+<path style="fill:#FFFFFF;" d="M224,106.667c32.552,0,53.333,12.635,53.333,21.333S256.552,149.333,224,149.333
+	S170.667,136.698,170.667,128S191.448,106.667,224,106.667z"/>
+<g>
+	<path   :style="{fill:'rgba(48,60,66,1)' }" :class="this.ValueId+'_color1'" d="M192,224c0,5.896,4.771,10.667,10.667,10.667c24.146,0,74.208-12.167,122.635-23.927
+		C363.219,201.521,402.427,192,416,192c5.896,0,10.667-4.771,10.667-10.667c0-5.896-4.771-10.667-10.667-10.667
+		c-16.125,0-53.021,8.958-95.74,19.344c-45,10.927-96.01,23.323-117.594,23.323C196.771,213.333,192,218.104,192,224z"/>
+	<path   :style="{fill:'rgba(48,60,66,1)' }" :class="this.ValueId+'_color1'" d="M405.333,234.667c-24.365,0-56.521,9.219-87.615,18.135c-24.875,7.125-48.365,13.865-61.719,13.865
+		c-5.896,0-10.667,4.771-10.667,10.667S250.104,288,256,288c16.354,0,40.104-6.813,67.604-14.698
+		C351.896,265.198,383.969,256,405.333,256c5.896,0,10.667-4.771,10.667-10.667C416,239.438,411.229,234.667,405.333,234.667z"/>
+</g>
+<path style="opacity:0.2;fill:#FFFFFF;enable-background:new    ;" d="M264.74,319.563c-13.646-18.74-26.531-36.448-39.865-49.771
+	c-20.927-20.927-51.188-28.656-80.458-36.115C97.042,221.583,68,212.083,68,170.667C68,126.84,90.298,26.551,288.358,21.784
+	c-3.673-0.154-7.259-0.451-11.025-0.451c-211.802,0-234.667,104.438-234.667,149.333c0,41.417,29.042,50.917,76.417,63.01
+	c29.271,7.458,59.531,15.188,80.458,36.115c13.333,13.323,26.219,31.031,39.865,49.771c29.281,40.198,62.458,85.771,101.927,85.771
+	c3.565,0,7.211-0.737,10.904-2.025C319.012,394.077,290.382,354.763,264.74,319.563z"/>
+<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="-45.2418" y1="641.0171" x2="-24.0272" y2="631.1243" gradientTransform="matrix(21.3333 0 0 -21.3333 996.3334 13791.667)">
+	<stop  offset="0" style="stop-color:#FFFFFF;stop-opacity:0.2"/>
+	<stop  offset="1" style="stop-color:#FFFFFF;stop-opacity:0"/>
+</linearGradient>
+<path style="fill:url(#SVGID_1_);" d="M277.333,0c-237.542,0-256,130.625-256,170.667V256c0,60.094,49.135,72.625,92.479,83.677
+	c26.479,6.76,53.854,13.74,70.646,30.531c12.146,12.146,24.563,29.198,37.708,47.24C254.438,461.771,291.01,512,341.333,512
+	c72.802,0,149.333-177.635,149.333-256v-85.333C490.667,88.594,409.104,0,277.333,0z"/>
+<g>
+</g>
+    </symbol>
+     </svg>
+
+     <svg viewBox="0 0 2000 1000" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <use :class="this.ValueId" :href="'#ic'+this.ValueId" x="0" y="0" />
+    </svg>
+    <svg viewBox="0 0 2000 1000" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <use :class="this.ValueId" :href="'#ic'+this.ValueId" x="0" y="0" />
+    </svg>
+    <svg viewBox="0 0 2000 1000" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <use :class="this.ValueId" :href="'#ic'+this.ValueId" x="0" y="0" />
+    </svg>
+     <svg viewBox="0 0 2000 1000" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <use :class="this.ValueId" :href="'#ic'+this.ValueId" x="0" y="0" />
+    </svg>
+    <svg viewBox="0 0 2000 1000" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <use :class="this.ValueId" :href="'#ic'+this.ValueId" x="0" y="0" />
+    </svg>
+    <svg viewBox="0 0 2000 1000" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <use :class="this.ValueId" :href="'#ic'+this.ValueId" x="0" y="0" />
+    </svg>
+
+     <div :id="svgName+dynamicIndex" v-if="this.$store.state.dynamicName ===svgName+dynamicIndex">
+        <button :style="{background:'rgba(48, 60, 66,1)' , width:'50px' ,height:'50px'}" @click="ShowElement(getterHippoBg1)" :class="this.ValueId+'_color1btn'"></button>
+               
+               
+        <button :style="{backgroundColor:'rgba(255, 235, 238, 1)' , width:'50px' , height:'50px'}" @click="ShowElement1(getterHippoBg2)" :class="this.ValueId+'_color2btn'"></button>
+    
+    
+        <button :style="{backgroundColor:'rgba(198, 40, 40 , 1)' , width:'50px' , height:'50px'}" @click="ShowElement2(getterHippoBg3)" :class="this.ValueId+'_color3btn'"></button>
+    </div>
+    <Colorpicker v-if="this.showColorPicker" :colorElement ="this.colorValue" :valueElement="this.clickedInput"/>
+     <button v-if="this.showColorPicker" @click="hideElement">Close</button>
+  </div>
+</template>
+
+<script>
+import ColorButton from '../ColorButton'
+import Colorpicker from '../colorPickerComponent'
+import {
+    mapState,
+    mapActions,
+    mapGetters,
+    mapMutations
+} from 'vuex';
+export default {
+  props:['dynamicBackground' ,'dynamicBackgroundOne', 'dynamicBackgroundTwo' , 'dynamicIndex', 'ValueId' , 'svgName'],
+  components:{
+        ColorButton,
+        Colorpicker
+    },
+   computed: {
+        ...mapState([ 
+            'background' ,
+            'background1',
+            'background2', 
+        ]),
+        getterHippoBg1:{
+            get(){
+             console.log(this.$store.state.SvgComponent[this.$store.state.dynamicIndex][0])
+              
+                  return this.$store.state.SvgComponent[this.$store.state.dynamicIndex][0].background
+            
+
+            }, 
+            set(newValue){
+                console.log(newValue)
+            }
+        },
+        getterHippoBg2:{
+            get(){
+               
+                     return this.$store.state.SvgComponent[this.$store.state.dynamicIndex][0].background1
+                
+            }, 
+            set(newValue){
+                console.log(newValue)
+            }
+        },
+        getterHippoBg3:{
+            get(){
+                
+                     return this.$store.state.SvgComponent[this.$store.state.dynamicIndex][0].background2
+                 
+            }, 
+            set(newValue){
+                console.log(newValue)
+            }
+        }
+    },
+    data(){
+        return{
+           colorValue:'',
+           showColorPicker:false,
+           clickedInput:''
+        }
+    },
+    methods:{
+    ...mapActions([
+    'ACTION_CHANGE_STATE',
+    ]),
+    ...mapMutations([
+        
+    ]),
+    
+    ShowElement(value){
+        //   this.colorValue = value
+          console.log(value, 'ssss')
+          var ColorValue = this.$store.state.SvgComponent[this.$store.state.dynamicIndex][0].background
+          this.colorValue = 'rgba('+ColorValue+')'
+          this.showColorPicker=true
+          this.clickedInput= 'One'
+        //  console.log( , 'value')
+      },
+      ShowElement1(value){
+            this.colorValue = 'rgba('+this.$store.state.SvgComponent[this.$store.state.dynamicIndex][0].background1+')'
+        console.log('sjahsja')
+         this.clickedInput= 'Two'
+          this.showColorPicker=true
+      },
+      ShowElement2(value){
+            this.colorValue = 'rgba('+this.$store.state.SvgComponent[this.$store.state.dynamicIndex][0].background2+')'
+        console.log('sjahsja')
+         this.clickedInput= 'Third'
+          this.showColorPicker=true
+      },
+      hideElement(){
+        this.showColorPicker=false
+      }, 
+    }
+}
+</script>
+
+<style>
+
+</style>

@@ -1,5 +1,5 @@
 <template>
-  <div id="main" class="container" :style="{height: '100vh'}">
+  <div id="main" @drop="drop($event)" @dragover="allowDrop($event)">
    <ColorButton v-if="this.openModal"/>
   <!-- <div style="height:100px ;width:100px; float:left"  v-for="(items, index) in AllSvgUrl" :key="index">
     <HoverEdit  v-if="id === index"/>
@@ -10,9 +10,10 @@
     </svg>
 </div>
   </div> -->
-    <div v-for="(Svgs , index) in dataSvgComponent" :key="index">
-       <div v-for="(itemsName , key) in Svgs" :key="key"  @click="getIndex(index)">
-        <component :dynamicIndex="index" :ValueId="'Svg_'+index" :svgName="itemsName.name" :is="itemsName.name" :dynamicBackground="itemsName.background"  :dynamicBackgroundOne="itemsName.background1" :dynamicBackgroundTwo="itemsName.background2" :NavClicked="true"></component>
+  
+    <div v-for="(Svgs , index) in dataSvgComponent" :key="index" class="right_icondiv" :id="index"  style="height:10px;top: 12px;left: 72px;">
+       <div v-for="(itemsName , key) in Svgs" :key="key">
+        <component :dynamicIndexValue="index" :ValueId="'Svg_'+index" :svgName="itemsName.name" :is="itemsName.name" :dynamicBackground="itemsName.background"  :dynamicBackgroundOne="itemsName.background1" :dynamicBackgroundTwo="itemsName.background2" :NavClicked="true"></component>
        </div>
     </div>
   </div>
@@ -23,6 +24,15 @@ import ColorButton from './ColorButton'
 import HoverEdit from './common/hoverEdit' 
 import BullDogSvg from './bulldog'
 import Hippo from './animalSvg/hippopotamusComponent'
+import Llama from './animalSvg/llamaComponent' 
+import Mouse from './animalSvg/mouseComponent'
+import Squirrel from './animalSvg/squirrelComponent' 
+import Popcorn from './foodSvg/popcornComponent'
+import Steak from './foodSvg/steakComponent' 
+import Pizza from './foodSvg/pizzaComponent' 
+import Pie from './foodSvg/pieComponent' 
+import FrenchFries from './foodSvg/frenchFriesComponent' 
+import Colorpicker from './colorPickerComponent'
 import {
     mapState,
     mapActions,
@@ -34,14 +44,36 @@ export default {
        ColorButton,
        HoverEdit,
        BullDogSvg,
-       Hippo
+       Hippo,
+       Llama,
+       Mouse,
+       Squirrel,
+       Popcorn,
+       Steak,
+       Pizza,
+       Pie,
+       FrenchFries,
+       Colorpicker
    },
    data(){
      return {
         openModal:false,
         ShowEditor:false,
         id:'',
+        test:'#000'
      }
+   },
+   mounted(){
+    //  let circle = document.querySelector("circle");
+    //  circle.setAttribute("fill", "cyan");
+     var idValue =this.dynamicIndex
+    //  console.log(idValue)
+    //   $(function() { 
+    //     if(idValue != undefined){
+    //       alert('asasa')
+         
+    //     } 
+    //   }) 
    },
   computed:{
       ...mapState([
@@ -91,7 +123,8 @@ export default {
   }, 
   methods:{
      ...mapActions([
-            'ACTION_CHANGE_STATE'
+            'ACTION_CHANGE_STATE',
+             'ACTION_PUSH_TO_SVG'
         ]),
     ...mapMutations([
             
@@ -116,11 +149,32 @@ export default {
     valueStore(){
     },
     getIndex(value){
+
+      // $('#myModal').modal('show');
+      // alert('sasgg')
      this.ACTION_CHANGE_STATE(['dynamicIndex' ,value ])
       this.ACTION_CHANGE_STATE(['dynamicName' ,this.$store.state.SvgComponent[this.$store.state.dynamicIndex][0].name+value ])
     //  console.log(this.$store.state.SvgComponent[this.$store.state.dynamicIndex][0].name+value)
      this.ACTION_CHANGE_STATE(['editSvgClicked' ,true])
-    }
+    },
+    drop(e){
+      // alert('jsasahssaasg')
+      e.preventDefault();
+      var data = e.dataTransfer.getData("text");
+      this.addSvg(data)
+    },
+    allowDrop(ev){
+       ev.preventDefault();
+    },
+    addSvg (SvgName) {
+     
+      var x = $('#bullDogSvg').val()
+        
+      this.ACTION_PUSH_TO_SVG(SvgName)
+      this.ACTION_CHANGE_STATE(['dynamicIndex' ,x])
+      x++
+      $('#bullDogSvg').val(x)
+    },
   }
 }
 </script>
