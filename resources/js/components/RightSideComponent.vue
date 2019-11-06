@@ -1,5 +1,5 @@
 <template>
-  <div id="main" @drop="drop($event)" @dragover="allowDrop($event)">
+  <div :style="{background:'rgba('+this.$store.state.rightBodyBackground+')'}" id="main" @drop="drop($event)" @dragover="allowDrop($event)">
    <ColorButton v-if="this.openModal"/>
   <!-- <div style="height:100px ;width:100px; float:left"  v-for="(items, index) in AllSvgUrl" :key="index">
     <HoverEdit  v-if="id === index"/>
@@ -11,7 +11,8 @@
 </div>
   </div> -->
   
-    <div v-for="(Svgs , index) in dataSvgComponent" :key="index" class="right_icondiv" :id="index"  style="height:10px;top: 12px;left: 72px;">
+    <!-- <input type="hidden" id="hiddenModal" name="hiddenModal" value=""> -->
+    <div v-for="(Svgs , index) in dataSvgComponent" :key="index" class="right_icondiv" :id="index" :style="{'height':'0px', 'top':'12px','left':'72px'}">
        <div v-for="(itemsName , key) in Svgs" :key="key">
         <component :dynamicIndexValue="index" :ValueId="'Svg_'+index" :svgName="itemsName.name" :is="itemsName.name" :dynamicBackground="itemsName.background"  :dynamicBackgroundOne="itemsName.background1" :dynamicBackgroundTwo="itemsName.background2" :NavClicked="true"></component>
        </div>
@@ -60,7 +61,9 @@ export default {
         openModal:false,
         ShowEditor:false,
         id:'',
-        test:'#000'
+        test:'#000',
+        xAxis:'12px',
+        yAxis:'75px'
      }
    },
    mounted(){
@@ -74,6 +77,7 @@ export default {
          
     //     } 
     //   }) 
+      
    },
   computed:{
       ...mapState([
@@ -174,6 +178,7 @@ export default {
       this.ACTION_CHANGE_STATE(['dynamicIndex' ,x])
       x++
       $('#bullDogSvg').val(x)
+      
     },
   }
 }

@@ -11,6 +11,11 @@ import 'jquery-ui-dist/jquery-ui.js';
 import 'jquery-ui-dist/jquery-ui.\css';
 import router from './router';
 import { store } from './store.js';
+import VueCircleSlider from 'vue-circle-slider'
+Vue.use(VueCircleSlider)
+
+ 
+
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue

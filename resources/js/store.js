@@ -18,7 +18,16 @@ export const store = new Vuex.Store({
         dynamicIndex:'',
         editSvgClicked:false,
         dynamicName:'',
-        showColor:false
+        showColor:false,
+        ClickedSvg:'',
+        newDisableIndex:'',
+        OpenNavigationElement:'search',
+        tempModalIndex:'',
+        Savefcloader:'',
+        popUpOpen:'',
+        RandomClicked:false,
+        downloadImageWidth:1275,
+        downloadImageHeight:580,
     },
     getters: {},
     mutations: {
@@ -134,6 +143,9 @@ export const store = new Vuex.Store({
                       background :  '101, 81, 60,1',
                       background1: '130, 105, 64, 1',
                       background2:'255, 255, 255 , 1',
+                      background3:'156, 127, 77 , 1',
+                      background4:'51, 62, 72 , 1',
+                      background5:'250, 223, 141, 1'
                   }
               ]
               this.state.SvgComponent.push(tempArray)
@@ -145,6 +157,10 @@ export const store = new Vuex.Store({
                       background :  '95, 117, 133,1',
                       background1: '125, 134, 140, 1',
                       background2:'251, 226, 152 , 1',
+                      background3:'124, 152, 171, 1',
+                      background4:'255, 156, 159, 1',
+                      background5:'51, 62, 72, 1'
+
                   }
               ]
               this.state.SvgComponent.push(tempArray)
@@ -157,6 +173,7 @@ export const store = new Vuex.Store({
                       background :  '95, 117, 133,1',
                       background1: '200, 201, 201, 1',
                       background2:'51, 62, 72 , 1',
+                      background3:'218, 219, 220, 1',
                   }
               ]
               this.state.SvgComponent.push(tempArray)
@@ -168,6 +185,7 @@ export const store = new Vuex.Store({
                       background :  '255, 156, 159,1',
                       background1: '125, 134, 140, 1',
                       background2:'51, 62, 72 , 1',
+                      background3:'92, 102, 112, 1',
                   }
               ]
               this.state.SvgComponent.push(tempArray)
@@ -179,6 +197,8 @@ export const store = new Vuex.Store({
                       background :  '130, 105, 64,1',
                       background1: '156, 127, 77, 1',
                       background2:'101, 81, 60 , 1',
+                      background3:'225, 203, 129, 1',
+                      background4:'51, 62, 72, 1',
                   }
               ]
               this.state.SvgComponent.push(tempArray)
@@ -238,6 +258,47 @@ export const store = new Vuex.Store({
               ]
               this.state.SvgComponent.push(tempArray)
             }
+        },
+        RANDOM_SVG_PUSH_TO_SVG_ARRAY(state, value){
+            var tempArray = []
+            tempArray = [
+               {
+                   name:'BullDogSvg',
+                   background :  '101, 81, 60,1',
+                   background1: '130, 105, 64, 1',
+                   background2:'255, 255, 255 , 1',
+                   background3:'156, 127, 77 , 1'
+               },
+               {
+                  name:'Hippo',
+                  background :  '95, 117, 133,1',
+                  background1: '125, 134, 140, 1',
+                  background2:'251, 226, 152 , 1',
+                  background3:'124, 152, 171, 1'
+               },
+               {
+                  name:'Llama',
+                  background :  '95, 117, 133,1',
+                  background1: '200, 201, 201, 1',
+                  background2:'51, 62, 72 , 1',
+                  background3:'218, 219, 220, 1',
+               },
+               {
+                  name:'Mouse',
+                  background :  '255, 156, 159,1',
+                  background1: '125, 134, 140, 1',
+                  background2:'51, 62, 72 , 1',
+                  background3:'92, 102, 112, 1',
+               },
+               {
+                  name:'Squirrel',
+                  background :  '130, 105, 64,1',
+                  background1: '156, 127, 77, 1',
+                  background2:'101, 81, 60 , 1',
+                  background3:'225, 203, 129, 1',
+               }
+           ]
+         this.state.SvgComponent.push(tempArray)
         }
         
     },
@@ -253,6 +314,9 @@ export const store = new Vuex.Store({
         },
         ACTION_PUSH_TO_SVG(context , value ){
          context.commit('SVG_PUSH_TO_SVG_ARRAY', value)
+        },
+        ACTION_PUSH_SVG_RANDOM(context , value ){
+         context.commit('RANDOM_SVG_PUSH_TO_SVG_ARRAY', value)
         }
     },
 
