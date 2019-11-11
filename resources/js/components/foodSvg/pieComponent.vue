@@ -56,7 +56,7 @@
 </template>
 
 <script>
-import ColorButton from '../ColorButton'
+
 import Colorpicker from '../colorPickerComponent'
 import {
     mapState,
@@ -67,7 +67,6 @@ import {
 export default {
   props:['dynamicBackground' ,'dynamicBackgroundOne', 'dynamicBackgroundTwo' , 'dynamicIndex', 'ValueId' , 'svgName'],
   components:{
-        ColorButton,
         Colorpicker
     },
    computed: {

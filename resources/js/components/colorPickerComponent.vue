@@ -27,7 +27,7 @@ export default {
     },
     watch: { 
       	colorElement: function(newVal, oldVal) { // watch it
-          console.log('Prop changed: ', newVal, ' | was: ', oldVal)
+          // console.log('Prop changed: ', newVal, ' | was: ', oldVal)
           this.colorModel = newVal
         }
     },
@@ -53,7 +53,7 @@ export default {
 
             this.ACTION_CHANGE_STATE(['background', value.rgba.r+','+value.rgba.g+','+value.rgba.b+','+value.rgba.a])
             
-            console.log(this.$store.state.SvgComponent[this.$store.state.dynamicIndex][0].background = value.rgba.r+','+value.rgba.g+','+value.rgba.b+','+value.rgba.a)
+            // console.log(this.$store.state.SvgComponent[this.$store.state.dynamicIndex][0].background = value.rgba.r+','+value.rgba.g+','+value.rgba.b+','+value.rgba.a)
             $('.Svg_'+this.$store.state.dynamicIndex+'_color1').css({fill: 'rgba('+value.rgba.r+','+value.rgba.g+','+value.rgba.b+','+value.rgba.a+')'})
              $('.Svg_'+this.$store.state.dynamicIndex+'_color1btn').css({background: 'rgba('+value.rgba.r+','+value.rgba.g+','+value.rgba.b+','+value.rgba.a+')'})
      
@@ -83,9 +83,6 @@ export default {
                 
                   $('.Svg_'+this.$store.state.dynamicIndex+'_color4').css({fill: 'rgba('+value.rgba.r+','+value.rgba.g+','+value.rgba.b+','+value.rgba.a+')'})
                    $('.Svg_'+this.$store.state.dynamicIndex+'_color4btn').css({background: 'rgba('+value.rgba.r+','+value.rgba.g+','+value.rgba.b+','+value.rgba.a+')'})
-
-
-              //  this.ACTION_CHANGE_STATE(['background2', value.rgba.r+','+value.rgba.g+','+value.rgba.b+','+value.rgba.a])
                
           }else if(this.valueElement == "five" ){
             // return false
@@ -94,20 +91,13 @@ export default {
                 
                   $('.Svg_'+this.$store.state.dynamicIndex+'_color5').css({fill: 'rgba('+value.rgba.r+','+value.rgba.g+','+value.rgba.b+','+value.rgba.a+')'})
                    $('.Svg_'+this.$store.state.dynamicIndex+'_color5btn').css({background: 'rgba('+value.rgba.r+','+value.rgba.g+','+value.rgba.b+','+value.rgba.a+')'})
-
-
-              //  this.ACTION_CHANGE_STATE(['background2', value.rgba.r+','+value.rgba.g+','+value.rgba.b+','+value.rgba.a])
                
           }else if(this.valueElement == "six" ){
-            // return false
             
                 this.$store.state.SvgComponent[this.$store.state.dynamicIndex][0].background5 = value.rgba.r+','+value.rgba.g+','+value.rgba.b+','+value.rgba.a
                 
                   $('.Svg_'+this.$store.state.dynamicIndex+'_color6').css({fill: 'rgba('+value.rgba.r+','+value.rgba.g+','+value.rgba.b+','+value.rgba.a+')'})
                    $('.Svg_'+this.$store.state.dynamicIndex+'_color6btn').css({background: 'rgba('+value.rgba.r+','+value.rgba.g+','+value.rgba.b+','+value.rgba.a+')'})
-
-
-              //  this.ACTION_CHANGE_STATE(['background2', value.rgba.r+','+value.rgba.g+','+value.rgba.b+','+value.rgba.a])
                
           }
       }

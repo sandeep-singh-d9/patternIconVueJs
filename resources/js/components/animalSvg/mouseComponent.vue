@@ -63,11 +63,11 @@
                                 <a class="nav-link" data-tooltip="Zoom"  @click="openElementInModal('opacity')" ><img src="images/all_use_icon/zoom-in.svg"></a>
                             </li>
                             <li class="nav-item" @click="disableDraggable(dynamicIndexValue)">
-                                <a class="nav-link" data-tooltip="Clone"   @click="openElementInModal('duplicate')"><img src="images/all_use_icon/duplicate.svg"></a>
+                                <a class="nav-link" data-tooltip="Clone"   @click="openElementInModal('duplicate'), cloneElement($event)"><img src="images/all_use_icon/duplicate.svg"></a>
                             </li>
-                            <li class="nav-item" @click="disableDraggable(dynamicIndexValue)">
+                            <!-- <li class="nav-item" @click="disableDraggable(dynamicIndexValue)">
                                 <a class="nav-link" data-tooltip="Layer"   @click="openElementInModal('layers')" ><img src="images/all_use_icon/layers.svg"></a>
-                            </li>
+                            </li> -->
                             <li class="nav-item" @click="removeElement(dynamicIndexValue)">
                                 <a class="nav-link" data-toggle="Delete"><img src="images/all_use_icon/remove.svg"></a>
                             </li>
@@ -175,7 +175,6 @@
 </template>
 
 <script>
-import ColorButton from '../ColorButton'
 import Colorpicker from '../colorPickerComponent'
 import VueSlider from 'vue-slider-component'
 import {
@@ -188,7 +187,6 @@ export default {
 //   props:['dynamicBackground' ,'dynamicBackgroundOne', 'dynamicBackgroundTwo' , 'dynamicIndex', 'ValueId' , 'svgName'],
 props:['dynamicBackground' ,'dynamicBackgroundOne', 'dynamicBackgroundTwo' , 'dynamicIndexValue', 'ValueId' ,  'svgName' , 'NavClicked'],
   components:{
-        ColorButton,
         Colorpicker,
         VueSlider
     },
@@ -199,11 +197,13 @@ props:['dynamicBackground' ,'dynamicBackgroundOne', 'dynamicBackgroundTwo' , 'dy
             'background2',
             'dynamicIndex',
             'dynamicName',
-            'newDisableIndex' 
+            'newDisableIndex', 
+            'randomYAxis',
+            'randomXAxis'
         ]),
         getterMouseBg1:{
             get(){
-             console.log(this.$store.state.SvgComponent[this.$store.state.dynamicIndex][0])
+            //  console.log(this.$store.state.SvgComponent[this.$store.state.dynamicIndex][0])
               if(this.$store.state.SvgComponent[this.$store.state.dynamicIndex][0].name==='Mouse'){
                   return this.$store.state.SvgComponent[this.$store.state.dynamicIndex][0].background
               }
@@ -306,66 +306,96 @@ props:['dynamicBackground' ,'dynamicBackgroundOne', 'dynamicBackgroundTwo' , 'dy
             show: false,
             backdrop: 'static', // For static modal
             keyboard: false // prevent click outside of the modal
-		});
-         var items = [254, 249, 212, 365, 254 , 150, 276 ,81 , 100 , 150 , 200];
-        var itemsTop = [488, 350, 255, 145,  , 150, 333 ,300 , 222 , 111 , 154];
-        
-        
+        });
+        /*
+            This will get these from SvgComponentArray
+        */
+            this.sliderValue = this.$store.state.SvgComponent[this.dynamicIndexValue][0].circleSlider
 
+            this.scaleValue = this.$store.state.SvgComponent[this.dynamicIndexValue][0].zoomValue
+            
+            this.flipElement = this.$store.state.SvgComponent[this.dynamicIndexValue][0].flipValue
+        /*
+            End
+        */
+        var mouse= [
+            {top:472 ,left:44},
+            {top:464 ,left:57},
+            {top:18 ,left:151},
+            {top:294 ,left:104},
+            {top:310 ,left:36},
+            {top:21 ,left:79},
+            {top:466 ,left:93},
+            {top:512 ,left:41},
+            {top:418 ,left:125},
+            {top:294 ,left:52},
+        ]        
+       
+        
+        if(this.$store.state.randomIndexElement == '2'){
+             this.scaleValue = '1.2'
+             this.sliderValue = '50'
+         }else if(this.$store.state.randomIndexElement == '3'){
+                this.scaleValue = '1.2'
+                this.flipElement = '-1'
+         }
         if(this.$store.state.RandomClicked == true){
-        var randomNumber = items[Math.floor(Math.random()*items.length)];
-        var randomNumberTop = itemsTop[Math.floor(Math.random()*itemsTop.length)];
+            var randomNumber = mouse[this.$store.state.randomIndexElement].left
+            var randomNumberTop  =  mouse[this.$store.state.randomIndexElement].top
+                if(this.$store.state.randomFirstSvg == 'Mouse'){
+                    //console.log(randomNumber ,'---', randomNumberTop)
+                    this.ACTION_CHANGE_STATE(['randomYAxis' ,randomNumberTop])
+                    this.ACTION_CHANGE_STATE(['randomXAxis' , randomNumber])
+                }
             var randomWidth = randomNumber
             var randomHeight = randomNumberTop
         }else{    
-            var randomWidth = Math.floor(Math.random()*350);
+            var randomWidth = Math.floor(Math.random()*200);
             var randomHeight = Math.floor(Math.random()*500);
         }
-        // alert(test)
-        // Math.random()
-            var x = this.dynamicIndexValue
-            $('#'+x).css({left: randomWidth , top: randomHeight})
+        var x = this.dynamicIndexValue
+        $('#'+x).css({left: randomWidth , top: randomHeight})
 
-            var DynamicIDs = this.dynamicIndexValue
-            $(function() { 
+        var DynamicIDs = this.dynamicIndexValue
+        $(function() { 
             var isDragging = false;
             var test= $( "#"+DynamicIDs).draggable({
-             zIndex: 100,
-             cursor: "move",
+                zIndex: 100,
+                cursor: "move",
             })
             // Getter
             var zIndex = $( "#"+DynamicIDs ).draggable( "option", "zIndex" );
             // Setter
             $( "#"+DynamicIDs ).draggable( "option", "zIndex", 100 );
-            })
+        })
             
-            // Getter
-            var cursor = $( ".selector" ).draggable( "option", "cursor" );
+        // Getter
+        var cursor = $( ".selector" ).draggable( "option", "cursor" );
 
-            // Setter
-            $( ".selector" ).draggable( "option", "cursor", "move" );
-            var isDragging = false;
-            var self = this  
-            $( "#"+DynamicIDs).draggable({
-                start: function( event, ui ) {},
-                stop: function( event, ui ) {}
-            });
-            $( "#"+DynamicIDs).on( "dragstart", function( event, ui ) {
-                console.log(event)
-                self.returnDrag = true
-            });
-             $( "#"+DynamicIDs).on( "dragstop", function( event, ui ) {
-                setTimeout(function(){
-                     self.returnDrag = false
-                },1500)
-            }); 
+        // Setter
+        $( ".selector" ).draggable( "option", "cursor", "move" );
+        var isDragging = false;
+        var self = this  
+        $( "#"+DynamicIDs).draggable({
+            start: function( event, ui ) {},
+            stop: function( event, ui ) {}
+        });
+        $( "#"+DynamicIDs).on( "dragstart", function( event, ui ) {
+            //console.log(event)
+            self.returnDrag = true
+        });
+        $( "#"+DynamicIDs).on( "dragstop", function( event, ui ) {
+            setTimeout(function(){
+                    self.returnDrag = false
+            },500)
+        }); 
     },
     watch: { 
         ShowModalArea: function(newVal, oldVal) { // watch it
-            console.log('Prop changed: ', newVal, ' | was: ', oldVal)
+            // console.log('Prop changed: ', newVal, ' | was: ', oldVal)
         },
         returnDrag: function(newVal, oldVal) { // watch it
-            console.log('Prop changed: ', newVal, ' | was: ', oldVal)
+            // console.log('Prop changed: ', newVal, ' | was: ', oldVal)
             this.returnDrag =newVal
         },
     },
@@ -379,7 +409,7 @@ props:['dynamicBackground' ,'dynamicBackgroundOne', 'dynamicBackgroundTwo' , 'dy
     
     ShowElement(value){
         //   this.colorValue = value
-          console.log(value, 'ssss')
+        //   console.log(value, 'ssss')
           var ColorValue = this.$store.state.SvgComponent[this.$store.state.dynamicIndex][0].background
           this.colorValue = 'rgba('+ColorValue+')'
           this.showColorPicker=true
@@ -388,13 +418,13 @@ props:['dynamicBackground' ,'dynamicBackgroundOne', 'dynamicBackgroundTwo' , 'dy
       },
       ShowElement1(value){
             this.colorValue = 'rgba('+this.$store.state.SvgComponent[this.$store.state.dynamicIndex][0].background1+')'
-        console.log('sjahsja')
+        // console.log('sjahsja')
          this.clickedInput= 'Two'
           this.showColorPicker=true
       },
       ShowElement2(value){
             this.colorValue = 'rgba('+this.$store.state.SvgComponent[this.$store.state.dynamicIndex][0].background2+')'
-        console.log('sjahsja')
+        // console.log('sjahsja')
          this.clickedInput= 'Third'
           this.showColorPicker=true
       },
@@ -418,7 +448,7 @@ props:['dynamicBackground' ,'dynamicBackgroundOne', 'dynamicBackgroundTwo' , 'dy
         //Null Active element of modal-body       
     },
        getCircle(value, e){
-        console.log(e.currentTarget)
+        // console.log(e.currentTarget)
         if(this.returnDrag != true){
             $("svg").removeClass("active");
             $("#"+value+" svg").removeClass("active");
@@ -522,7 +552,54 @@ props:['dynamicBackground' ,'dynamicBackgroundOne', 'dynamicBackgroundTwo' , 'dy
     },
     resetRotate(){
         this.sliderValue = 0
-    }
+    },
+    cloneElement(e){
+            var number = e.currentTarget.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.id
+            var cloneElementId = number.split('l')
+            var elemntId = cloneElementId[1]
+            var styleAttrClone = $('#'+elemntId).find( "svg" ).attr('style')
+            /* 
+            This is for color dynamic on clone 
+            */
+            var tempArrayClone = this.$store.state.SvgComponent[elemntId][0]
+            var backgroundClone = tempArrayClone.background 
+            var background1Clone =tempArrayClone.background1 
+            var background2Clone =tempArrayClone.background2 
+            var background3Clone =tempArrayClone.background3 
+            var background4Clone =tempArrayClone.background4 
+            var background5Clone =tempArrayClone.background5 
+            var circleSliderClone = this.sliderValue
+            var scaleValueClone =this.scaleValue 
+            var flipElementClone = this.flipElement
+            var tempArray = []
+        
+                tempArray = [
+                    {
+                    name:'Mouse',
+                    background :  backgroundClone,
+                    background1:  background1Clone,
+                    background2:  background2Clone,
+                    background3:  background3Clone,
+                    circleSlider: circleSliderClone,
+                    zoomValue:scaleValueClone,
+                    flipValue:flipElementClone,
+                }
+                ]
+                this.$store.state.SvgComponent.push(tempArray)
+                var cloneIndex = this.$store.state.SvgComponent.length-1 
+                $(document).ready(function(){
+                    // console.log($('.Svg_'+cloneIndex+'_color1') , 'length')
+                    $('.Svg_'+cloneIndex+'_color1').css({fill: 'rgba('+backgroundClone+')'})
+                    $('.Svg_'+cloneIndex+'_color2').css({fill: 'rgba('+background1Clone+')'})
+                    $('.Svg_'+cloneIndex+'_color3').css({fill: 'rgba('+background2Clone+')'})
+                    $('.Svg_'+cloneIndex+'_color4').css({fill: 'rgba('+background3Clone+')'})
+                    
+                    $('#'+cloneIndex).find("svg").attr('style',styleAttrClone);
+                })
+            /* 
+            End
+            */
+        }
     }
 }
 </script>

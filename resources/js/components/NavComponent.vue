@@ -76,7 +76,7 @@
                             <!-- Animal Svg  Start-->
                             <ul v-if="showTabMenu =='animal'">
                                 <li>                                    
-                                    <img @click="getSvgName($event), addSvg('BullDogSvg')" name="BullDogSvg" src="images/animals/bulldog.svg" alt="" draggable="true" @dragstart="drag($event)">                                    
+                                    <img @click="addSvg('BullDogSvg')" name="BullDogSvg" src="images/animals/bulldog.svg" alt="" draggable="true" @dragstart="drag($event)">                                    
                                 </li>
                                 <li>                                    
                                     <img @click="addSvg('Hippo')" name="Hippo" src="images/animals/hippopotamus.svg"  data-svg="images/animals/hippopotamus.svg" alt="" draggable="true" @dragstart="drag($event)">                                    
@@ -245,7 +245,7 @@
                                 <button data-value="4caf50" @click="getbgcolorValue($event)" style="background-color:#4caf50;" class="nostyle"></button>
                             </li>
                             <li class="color">
-                                <button data-value="000" @click="getbgcolorValue($event)" style="background-color:#000;" class="nostyle"></button>
+                                <button data-value="000000" @click="getbgcolorValue($event)" style="background-color:#000000;" class="nostyle"></button>
                             </li>
                         </ul>
                         <color-picker class="color_picker_model" v-model="colorModel" @input="changePickerColor(colorModel)"></color-picker>
@@ -281,7 +281,7 @@
                             <div class="fixed_div">
                                 <img src="images/all_use_icon/food_icon.png" alt=""   title="">
                             </div>
-                            
+                           
                         </div>
                         <ul class="nav nav-pills mt-3 nav-justified download">
                             <li class="nav-item">
@@ -296,12 +296,12 @@
                                     <span class="title btn">jpg</span>
                                 </label>
                             </li>
-                            <!-- <li class="nav-item">
+                            <li class="nav-item">
                                 <label for="download-svg">
-                                    <input type="radio" name="download" id="download-svg">
+                                    <input type="radio" name="download" id="download-svg" value="svg" v-model="imageFormat">
                                     <span class="title btn">svg</span>
                                 </label>
-                            </li> -->
+                            </li>
                             <li class="nav-item">
                                 <label for="download-base64">
                                     <input type="radio" name="download" id="download-base64" v-model="imageFormat" @change="getImageFormat()" value="b64">
@@ -321,17 +321,48 @@
                             </li>
                         </ul>
                         <div class="row">
-                            <div class="col-sm-6">
+                            <div class="col-sm-5">
                                 <input type="number" value="" class="color_code m-0"  v-model="inputImageWidth" data-name="width" @change="getInputImageValue($event,inputImageWidth)" name="">
                             </div>
-                            <div class="col-sm-6">
+                            <div class="col-sm-2 p-0">
+                                <button class="aspect-ratio keep-ratio" title="Keep aspect ratio" data-aspect-ratio="1.4285714285714286" @click="linkClickDownload">
+                                    <img style="width:60% ; height:auto" src="images/all_use_icon/link1.png" v-if="showLinkOne" alt="">
+                                    <img style="width:60% ; height:auto" src="images/all_use_icon/link2.png" v-if="showLinktwo" alt="">
+                                </button>
+                               
+                            </div>
+                            <div class="col-sm-5">
                                 <input type="number" value="" class="color_code m-0"  v-model="inputImageHeight" data-name="height" @change="getInputImageValue($event,inputImageHeight)" name="">
                             </div>
                         </div>
                         
-                        <button class="download_btn" @click="downloadPng"> <img src="images/all_use_icon/download.svg" alt="" title="">Download Pattern </button>
+                        <button class="download_btn" @click="downloadImage"> <img src="images/all_use_icon/download.svg" alt="" title="">Download Pattern </button>
+                        <progressBar v-if="downloadProgressBar == true"/>
                     </div>
                 </div>
+                <div class="modal fade" id="b64Modal">
+            <div class="modal-dialog modal-lg modal-dialog-scrollable">
+                <div class="modal-content">
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">Base 64</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <h3>Code</h3>
+                        <div style="word-break: break-all;font-size: 17px;">
+                            <p id="b64Content" ref="b64Content"></p>
+                        </div>
+                    </div>
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" @click="CopyToClipboard" >Copy</button>
+                        <button type="button" class="btn btn-success" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
             </div>
         </div>
     </div>
@@ -339,12 +370,12 @@
 
 <script>
 import ColorPicker from "vue-iro-color-picker";
-import json from "../components/animals.json";
 import VueSlider from 'vue-slider-component';
 import 'vue-slider-component/theme/antd.css'
 import domtoimage from 'dom-to-image-more';
 import { saveAs } from 'file-saver';
 import html2canvas from 'html2canvas';
+import progressBar from './common/progressBar';
 import {
     mapState,
     mapActions,
@@ -369,25 +400,19 @@ export default {
                 navClickedElement =''
             } 
             });
-             $("#SearchContent").on("keyup", function () {
-                    var value = $(this).val().toLowerCase();
-                    $("#groupSvgs li").filter(function () {
-                        console.log($(this).toggle($(this).text().toLowerCase().indexOf(value)))
-                        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-                    });
-            });
         });
-        console.log(navClickedElement, 'here')
         this.showSearchBar = true
         // this.ClickNav = true
         document.getElementById("mySidenav").style.width = "318px";
         document.getElementById("mySidenav").style.left = "110px";
-        
-        
+
+        this.enableSearch()
     },
     components: {
     "color-picker": ColorPicker,
     VueSlider,
+    progressBar
+    
     },
     computed: {
         ...mapState([ 
@@ -398,7 +423,11 @@ export default {
             'OpenNavigationElement',
             'RandomClicked',
             'downloadImageWidth',
-            'downloadImageHeight'
+            'downloadImageHeight',
+            'randomFirstSvg',
+            'randomIndexElement',
+            'b64Image',
+            'loaderDisplay',
         ])
     },
     data() {
@@ -407,7 +436,6 @@ export default {
             showSearchBar:"",
             showBgBar:"",
             showDownloadBar:"",
-            myJson: json,
             ClickNav:true,
             showTabMenu:'',
             value: 100,
@@ -494,14 +522,15 @@ export default {
             inputImageWidth:this.$store.state.downloadImageWidth,
             inputImageHeight:this.$store.state.downloadImageHeight,
             imageFormat:'png',
+            showLinkOne:true,
+            showLinktwo:false,
+            downloadProgressBar:false,
 
         }
     },
      methods:{
         ...mapActions([
         'ACTION_CHANGE_STATE',
-        'PUSH_ANIMAL_ARRAY',
-        'PUSH_TO_URL_SVG_ARRAY',
         'ACTION_PUSH_TO_SVG',
         'ACTION_PUSH_SVG_RANDOM'
         ]),
@@ -514,6 +543,8 @@ export default {
             this.ACTION_CHANGE_STATE(['OpenNavigationElement', value])
             this.showSearchBar = true
             this.showBgBar = false
+            this.enableSearch()
+
          }else if (value === 'bg'){
              this.ACTION_CHANGE_STATE(['OpenNavigationElement', value])
             this.showBgBar = true
@@ -521,6 +552,8 @@ export default {
               
             this.ACTION_CHANGE_STATE(['OpenNavigationElement', value])
             this.showDownloadBar = true
+             $('.modal').modal('hide');
+             $('svg').removeClass('active')
              domtoimage.toPng(document.getElementById('main'),{ width: 1275 , height:580 })
                 .then(function (dataUrl) {
                     var img = new Image();
@@ -540,26 +573,9 @@ export default {
          document.getElementById("mySidenav").style.left = "110px";
       },
         drag(ev) {
-            console.log(ev.target.name)
+            // console.log(ev.target.name)
                 ev.dataTransfer.setData("text", ev.target.name);
-        },
-      getValue(){
-          var Arrayvalue = this.myJson.Animals
-        //   Arrayvalue.map((d)=>{
-        //       if(d.name== this.svgName){
-        //           alert('here')
-        //           console.log(d.svg)
-        //         var data={
-        //            name:d.name,
-        //            background:d.background,
-        //            background1:d.background1,
-        //            background2:d.background2,
-        //            svg:d.svg
-        //          }
-        //          this.PUSH_ANIMAL_ARRAY(data)
-        //       }
-        //   })
-      },   
+        },   
       closeNav (event) {
         //   alert(event.target.dataset.name)
           if(this.$store.state.OpenNavigationElement == event.target.dataset.name){
@@ -589,7 +605,7 @@ export default {
           }
         },
         changePickerColor(value){
-             console.log(value)
+            //  console.log(value)
             var hex = value.replace('#','');
             var r = parseInt(hex.substring(0,2), 16);
             var g = parseInt(hex.substring(2,4), 16);
@@ -606,26 +622,21 @@ export default {
             var r = parseInt(hex.substring(0,2), 16);
             var g = parseInt(hex.substring(2,4), 16);
             var b = parseInt(hex.substring(4,6), 16);
+            // console.log(b)
             var opacity = '100'
             var result = +r+','+g+','+b+','+opacity/100;
+            // console.log(result, 'sasasasa')
             this.ACTION_CHANGE_STATE(['rightBodyBackground', result])
             this.value = 100;
         },
         getSliderValue(value){
             var SliderValue  = value/100
-            console.log(SliderValue)
+            // console.log(SliderValue)
             var colorvalue  = $('.main_div').attr('value')
             var test = colorvalue.split(',')
-            console.log(test[0],test[1],test[2])
+            // console.log(test[0],test[1],test[2])
             var result = test[0]+','+test[1]+','+test[2]+','+SliderValue
             this.ACTION_CHANGE_STATE(['rightBodyBackground', result])
-        },
-        getSvgName(e){
-            console.log(e.target.dataset.svg ,'ttttt')
-            this.ACTION_CHANGE_STATE(["svgName" , e.target.name])
-            this.getValue()
-            this.ACTION_CHANGE_STATE(['urlSvg' , e.target.dataset.svg])
-            this.PUSH_TO_URL_SVG_ARRAY(e.target.dataset.svg)
         },
         addSvg (SvgName) {
             var x = $('#bullDogSvg').val()
@@ -641,62 +652,79 @@ export default {
             $('#pills-profile').addClass('active show')
             this.showTabMenu = value
         },
-        downloadPng(){
-            //   var $parentNode = $("#parentDiv").clone().appendTo("body");
-            //   console.log($parentNode[0])
-            //   html2canvas($parentNode[0], { 
-            //         width: 3000,
-            //         height:3000,
-            //     }).then(canvas=>{
-            //         // onrendered: function(canvas) {
-            //         //     console.log(canvas.toDataURL() , 'sasas');
-            //         //     $parentNode.remove(); //removing cloned element
-            //         // },
-            //          document.getElementById('app').appendChild(canvas)
-            //           console.log(canvas.toDataURL() , 'sasas');
-            //          $parentNode[0].remove()
-            //     });
-               
-            
-            // html2canvas(document.getElementById("main"),{ width: 3000,height:3000,}).then(canvas => {
-            //     // document.body.appendChild(canvas)
-                
-            //     document.getElementById('app').appendChild(canvas)
-            // });
+        downloadImage(){
+             $('.modal').modal('hide');
+             $('svg').removeClass('active')
             /* This Will Excecute After Clicked Download Pattern */
-
+            console.log(this.$store.state.SvgComponent.length)
+            if(this.$store.state.SvgComponent.length == 0){
+                alert('null')
+                return false 
+            }
             var node = document.getElementById('main');
             // console.log(this.imageFormat)
             var dynamicWidth = this.$store.state.downloadImageWidth
             var dynamicHeight = this.$store.state.downloadImageHeight
-            
+            console.log(dynamicWidth ,dynamicHeight )
+              var self = this
+            if(dynamicWidth == 0 && dynamicHeight == 0){
+                alert('Error in Either Width Or Height of Image size')
+                return false
+            }
             if(this.imageFormat == 'png'){
-                domtoimage.toCanvas(document.getElementById('main'),{ width: dynamicWidth , height:dynamicHeight})
-                .then(function (canvas) {
-                    console.log(canvas)
-                        canvas.toBlob(function(blob) {
-                            console.log(blob)
-                            saveAs(blob, "PatternImage.png");
-                        })
-                    console.log('canvas', canvas.width, canvas.height); 
-                });                
+                this.downloadProgressBar = true;
+              
+                setTimeout(function(){
+                    domtoimage.toCanvas(document.getElementById('main'),{ width: dynamicWidth , height:dynamicHeight})
+                    .then(function (canvas) {
+                        // console.log(canvas)
+                        if(self.$store.state.progressValue == 100){
+                            self.downloadProgressBar = false
+                            canvas.toBlob(function(blob) {
+                                saveAs(blob, "PatternImage.png");
+                            })
+                        } 
+                        // console.log('canvas', canvas.width, canvas.height); 
+                    });                
+                },2000)
             }else if(this.imageFormat == 'jpg'){
-                /*For Jpeg */
-                domtoimage.toJpeg(document.getElementById('main'), { width: dynamicWidth , height:dynamicHeight })
-                .then(function (dataUrl) {
-                    var link = document.createElement('a');
-                    link.download = 'PatternImage.jpeg';
-                    link.href = dataUrl;
-                    link.click();
-                });
+                this.downloadProgressBar = true;
+                setTimeout(function(){
+                     /*For Jpeg */
+                     domtoimage.toJpeg(document.getElementById('main'), { width: dynamicWidth , height:dynamicHeight })
+                     .then(function (dataUrl) {
+                        if(self.$store.state.progressValue == 100){
+                            var link = document.createElement('a');
+                            link.download = 'PatternImage.jpeg';
+                            link.href = dataUrl;
+                            link.click();
+                            self.downloadProgressBar = false
+                        }
+                    });
+                },2000)  
+            }else if(this.imageFormat == 'svg'){
+                this.downloadProgressBar = true;
+                function filter (node) {
+                    return (node.tagName !== 'i');
+                }
+                 setTimeout(function(){
+                    domtoimage.toSvg(document.getElementById('main'), { width: dynamicWidth , height:dynamicHeight})
+                    .then(function (dataUrl) {
+                        /* do something */
+                        console.log(self.$store.state.progressValue)
+                        if(self.$store.state.progressValue == 100){
+                            saveAs(dataUrl, "PatternImage.svg");
+                            self.downloadProgressBar = false
+                        }
+                    })
+                 },2500)
             }else {
+                    $(document).ready(function(){
+                        $('#b64Modal').modal('show');
+                    })
                 domtoimage.toPng(document.getElementById('main'), { width: dynamicWidth , height:dynamicHeight })
                 .then(function (dataUrl) {
-                    // var img = new Image();
-                    // img.src = dataUrl;
-                    console.log(dataUrl)
-                    alert('base 64 is in console')
-                    
+                    $('#b64Modal').find('p').html(dataUrl)
                 })
                 .catch(function (error) {
                     console.error('oops, something went wrong!', error);
@@ -704,13 +732,14 @@ export default {
             }
 
              return false
-            // domtoimage.toBlob(document.getElementById('main'))
-            // .then(function (blob) {
-            //     window.saveAs(blob, 'my-node.png');
-            // });
+
         },
         clearAllSvg(){
-           document.getElementById("main").innerHTML = "";
+            this.ACTION_CHANGE_STATE(['OpenNavigationElement', 'clear'])
+            document.getElementById("mySidenav").style.width = "318px";
+            document.getElementById("mySidenav").style.left = "-20%";
+            document.getElementById("main").innerHTML = "";
+            this.$store.state.rightBodyBackground = '255, 255, 255,1'
         },
         getInputColorValue(val ,e){
             if(e.code == 'Enter'){
@@ -725,15 +754,31 @@ export default {
             }
         },
         RandomSvg(){
+            this.ACTION_CHANGE_STATE(['OpenNavigationElement', 'random'])
+            document.getElementById("mySidenav").style.width = "318px";
+            document.getElementById("mySidenav").style.left = "-20%";
             this.clearAllSvg()
-            // console.log(this.RandomArray)
             var items = this.RandomArray
-            this.ACTION_CHANGE_STATE(['RandomClicked' , true])
+            // this.ACTION_CHANGE_STATE(['RandomClicked' , true])
+            this.ACTION_CHANGE_STATE(['loaderDisplay' , true])
+            var self = this
+            setTimeout(function(){
+                self.ACTION_CHANGE_STATE(['loaderDisplay' , false])
+                // console.log(self.$store.state.loaderDisplay)
+                self.triggerRandom()
+            },1600)
             // this.shuffle(items)
             // return false
-            if(this.showTabMenu ==''){
+            // console.log(this.loaderDisplay, 'ssss')
+                
+        },
+        triggerRandom(){
+             var items = this.RandomArray
+              this.ACTION_CHANGE_STATE(['RandomClicked' , true])
+            if(this.showTabMenu =='' ||this.showTabMenu =='animal' ){
+                // console.log('working two')
                 /* 
-                  This is for Random Color for background
+                This is for Random Color for background
                 */
                 var letters = '0123456789ABCDEF';
                 var colorRandom = '#';
@@ -741,7 +786,7 @@ export default {
                     colorRandom += letters[Math.floor(Math.random() * 16)];
                 }
                 /* 
-                  End
+                End
                 */
 
                 this.colorModel =colorRandom
@@ -754,7 +799,13 @@ export default {
                 this.ACTION_CHANGE_STATE(['rightBodyBackground', result])
                 this.value = 100;
                 var RandomItems= items.sort(() => Math.random() - 0.5);
+                // console.log(RandomItems[0] , 'nav')
+                var indexRandom = Math.floor(Math.random() * 10);
+                this.ACTION_CHANGE_STATE(['randomIndexElement', indexRandom])
+                this.ACTION_CHANGE_STATE(['randomFirstSvg' , RandomItems[0].name])
+                // return false;
                 RandomItems.map((d, index)=>{
+                    // alert(d.name)
                     this.ACTION_PUSH_TO_SVG(d.name)
                     var x = $('#bullDogSvg').val()
                     this.ACTION_CHANGE_STATE(['dynamicIndex' ,x])
@@ -764,7 +815,7 @@ export default {
                         this.CompleteRandom()
                     }
                 })
-            }
+            }   
         },
         CompleteRandom(){
             var self = this
@@ -776,13 +827,73 @@ export default {
         getInputImageValue(e, value){
             if(e.target.dataset.name == "width"){
                 this.ACTION_CHANGE_STATE(['downloadImageWidth' , value])
+                if(this.showLinkOne == true){
+                    var height = this.getHeight(value);
+                    this.inputImageHeight = height 
+                        this.ACTION_CHANGE_STATE(['downloadImageHeight' , height])
+                }
+                // console.log(height);
             }else{
                 this.ACTION_CHANGE_STATE(['downloadImageHeight' , value])
+                if(this.showLinkOne == true){
+                    var width = this.getWidth(value);
+                    this.inputImageWidth = width 
+                        this.ACTION_CHANGE_STATE(['downloadImageWidth' , width])
+                }
             }
         },
         getImageFormat(){
 
-        }
+        },
+        enableSearch(){
+            $(document).ready(function(){
+            $("#SearchContent").on("keyup", function () {
+                var value = $(this).val().toLowerCase();
+                    $("#groupSvgs li").filter(function () {
+                    // console.log($(this).toggle($(this).text().toLowerCase().indexOf(value)))
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            });
+            })
+        },
+        CopyToClipboard() {
+            this.selectText(this.$refs.b64Content);
+            document.execCommand("copy");
+        },
+        selectText(element) {
+            var range;
+            if (document.selection) {
+                // IE
+                range = document.body.createTextRange();
+                range.moveToElementText(element);
+                range.select();
+            } else if (window.getSelection) {
+                range = document.createRange();
+                range.selectNode(element);
+                window.getSelection().removeAllRanges();
+                window.getSelection().addRange(range);
+            }
+        },
+        getHeight(length) {
+            var ratio = 2;
+            var height =length/ratio;;
+            return Math.round(height);
+        },
+        getWidth(length) {
+            // console.log(length, 'ssasas')
+            var ratio = 2;
+            var width = length*ratio;
+            return Math.round(width);
+        },
+        linkClickDownload(){
+            if(this.showLinkOne == true){
+                this.showLinkOne = false
+                this.showLinktwo = true 
+            }else{
+                    this.showLinktwo = false 
+                    this.showLinkOne = true
+            }
+        }   
     }
 }
 </script>
