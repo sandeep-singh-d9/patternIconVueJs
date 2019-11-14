@@ -165,6 +165,7 @@
 import Colorpicker from '../colorPickerComponent'
 import VueSlider from 'vue-slider-component'
 import 'vue-slider-component/theme/antd.css'
+
 import {
     mapState,
     mapActions,

@@ -15,6 +15,14 @@ import Hippo from './animalSvg/hippopotamusComponent'
 import Llama from './animalSvg/llamaComponent' 
 import Mouse from './animalSvg/mouseComponent'
 import Squirrel from './animalSvg/squirrelComponent' 
+import Atom from './SchoolPackSvg/atom' 
+import Calculator from './SchoolPackSvg/calculator' 
+import Compass from './SchoolPackSvg/compass' 
+import Proctor from './SchoolPackSvg/proctor' 
+import Ruler from './SchoolPackSvg/ruler' 
+import School from './SchoolPackSvg/school' 
+import SchoolBus from './SchoolPackSvg/schoolbus' 
+import Books from './SchoolPackSvg/books' 
 import Popcorn from './foodSvg/popcornComponent'
 import Steak from './foodSvg/steakComponent' 
 import Pizza from './foodSvg/pizzaComponent' 
@@ -35,6 +43,14 @@ export default {
        Llama,
        Mouse,
        Squirrel,
+       Atom,
+       Calculator,
+       Compass,
+       Proctor,
+       Ruler,
+       School,
+       SchoolBus,
+       Books,
        Popcorn,
        Steak,
        Pizza,

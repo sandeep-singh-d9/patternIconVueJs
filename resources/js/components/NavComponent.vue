@@ -97,83 +97,108 @@
                             <!-- Food Svg -->
                             <ul v-if="showTabMenu == 'food'">
                                 <li>
-                                    <img @click="getSvgName($event)" name="anteater" src="images/food/bread.svg"  data-svg="images/food/bread.svg" alt="">                                    
+                                    <img  name="anteater" src="images/food/bread.svg"  data-svg="images/food/bread.svg" alt="">                                    
                                 </li>
                                 <li>
-                                    <img @click="addSvg('Burger')" name="Burger" src="images/food/burger.svg"  data-svg="images/food/burger.svg" alt="">                                    
+                                    <img  name="Burger" src="images/food/burger.svg"  data-svg="images/food/burger.svg" alt="">                                    
                                 </li>
                                 <li>
-                                    <img @click="addSvg('cheese')" name="Cheese" src="images/food/cheese.svg"  data-svg="images/food/cheese.svg" alt="">                                    
+                                    <img  name="Cheese" src="images/food/cheese.svg"  data-svg="images/food/cheese.svg" alt="">                                    
                                 </li>
                                 <li>
-                                    <img @click="addSvg('chocolate')" name="anteater" src="images/food/chocolate.svg"  data-svg="images/food/chocolate.svg" alt="">                                    
+                                    <img name="anteater" src="images/food/chocolate.svg"  data-svg="images/food/chocolate.svg" alt="">                                    
                                 </li>
                                 <li>
-                                    <img @click="addSvg('Cookie')" name="Cookie" src="images/food/cookie.svg"  data-svg="images/food/cookie.svg" alt="">                                    
+                                    <img  name="Cookie" src="images/food/cookie.svg"  data-svg="images/food/cookie.svg" alt="">                                    
                                 </li>
                                 <li>
-                                    <img @click="addSvg('FrenchFries')" name="anteater" src="images/food/french-fries.svg"  data-svg="images/food/french-fries.svg" alt="">                                    
+                                    <img  name="anteater" src="images/food/french-fries.svg"  data-svg="images/food/french-fries.svg" alt="">                                    
                                 </li>
                                 <li>
-                                    <img @click="addSvg('Pie')" name="Pie" src="images/food/pie.svg"  data-svg="images/food/pie.svg" alt="" draggable="true" @dragstart="drag($event)">                                    
+                                    <img  name="Pie" src="images/food/pie.svg"  data-svg="images/food/pie.svg" alt="" draggable="true">                                    
                                 </li>
                                 <li>
-                                    <img @click="addSvg('Pizza')" name="Pizza" src="images/food/pizza.svg"  data-svg="images/food/pizza.svg" alt="" draggable="true" @dragstart="drag($event)">                                    
+                                    <img  name="Pizza" src="images/food/pizza.svg"  data-svg="images/food/pizza.svg" alt="" draggable="true" >                                    
                                 </li>
                                 <li>
-                                    <img @click="addSvg('Popcorn')" name="Popcorn" src="images/food/popcorn.svg"  data-svg="images/food/popcorn.svg" alt=""  draggable="true" @dragstart="drag($event)" >                                   
+                                    <img  name="Popcorn" src="images/food/popcorn.svg"  data-svg="images/food/popcorn.svg" alt=""  draggable="true"  >                                   
                                 </li>
                                 <li>
-                                    <img @click="addSvg('Steak')" name="Steak" src="images/food/steak.svg"  data-svg="images/food/steak.svg" alt="" draggable="true" @dragstart="drag($event)">                                    
+                                    <img  name="Steak" src="images/food/steak.svg"  data-svg="images/food/steak.svg" alt="" draggable="true">                                    
                                 </li>
                             </ul>
                             <!-- Food Svg End -->
 
                             <!-- Space Svg  -->
                             <ul v-if="showTabMenu == 'space'"> 
+                                
                                 <li>
-                                    <img @click="getSvgName($event)" name="anteater" src="images/space/man-on-the-moon.svg"  data-svg="images/space/man-on-the-moon.svg" alt="">                                    
+                                    <img @click="addSvg('Atom')"  name="Atom" src="images/School/atom.svg"  data-svg="images/space/atom.svg" alt="" @dragstart="drag($event)">                           
                                 </li>
                                 <li>
-                                    <img @click="getSvgName($event)" name="anteater" src="images/space/mercury.svg"  data-svg="images/space/mercury.svg" alt="">                                    
+                                    <img @click="addSvg('Calculator')"  name="Calculator" src="images/School/calculator.svg"  data-svg="images/space/calculator.svg" alt="" @dragstart="drag($event)">                           
                                 </li>
                                 <li>
-                                    <img @click="getSvgName($event)" name="anteater" src="images/space/orbit.svg"  data-svg="images/space/orbit.svg" alt="">                                    
+                                    <img @click="addSvg('Compass')"  name="Compass" src="images/School/Compass.svg"  data-svg="images/space/Compass.svg" alt="" @dragstart="drag($event)">                           
                                 </li>
                                 <li>
-                                    <img @click="getSvgName($event)" name="anteater" src="images/space/saturn.svg"  data-svg="images/space/saturn.svg" alt="">                                    
+                                    <img @click="addSvg('Proctor')"  name="Proctor" src="images/School/proctor.svg"  data-svg="images/space/proctor.svg" alt="" @dragstart="drag($event)">                           
                                 </li>
                                 <li>
-                                    <img @click="getSvgName($event)" name="anteater" src="images/space/solar-system.svg"  data-svg="images/space/solar-system.svg" alt="">                                    
+                                    <img @click="addSvg('Ruler')"  name="Ruler" src="images/School/ruler.svg"  data-svg="images/space/ruler.svg" alt="" @dragstart="drag($event)">                           
                                 </li>
+                                <li>
+                                    <img @click="addSvg('School')"  name="School" src="images/School/school_house.svg"  data-svg="images/space/school_house.svg" alt="" @dragstart="drag($event)">                           
+                                </li>
+                                <li>
+                                    <img @click="addSvg('SchoolBus')"  name="SchoolBus" src="images/School/schoolbus.svg"  data-svg="images/space/schoolbus.svg" alt="" @dragstart="drag($event)">                           
+                                </li>
+                                <li>
+                                    <img @click="addSvg('Books')"  name="Books" src="images/School/Stack_of_Books.svg"  data-svg="images/space/Stack_of_Books.svg" alt="" @dragstart="drag($event)">                           
+                                </li>
+                                <!-- <li>
+                                    <img  name="anteater" src="images/space/mercury.svg"  data-svg="images/space/mercury.svg" alt="">                                    
+                                </li>
+                                <li>
+                                    <img  name="anteater" src="images/space/orbit.svg"  data-svg="images/space/orbit.svg" alt="">                                    
+                                </li>
+                                <li>
+                                    <img  name="anteater" src="images/space/saturn.svg"  data-svg="images/space/saturn.svg" alt="">                                    
+                                </li>
+                                <li>
+                                    <img  name="anteater" src="images/space/solar-system.svg"  data-svg="images/space/solar-system.svg" alt="">                                    
+                                </li>
+                                <li>
+                                    <img  name="anteater" src="images/space/man-on-the-moon.svg"  data-svg="images/space/man-on-the-moon.svg" alt="">                                    
+                                </li> -->
                             </ul>
                             <!-- Space Svg  -->
 
                             <!-- ThanksGiving -->
                             <ul v-if="showTabMenu == 'thanksgiving'">
                                 <li>
-                                    <img @click="getSvgName($event)" name="anteater" src="images/thanksgiving/corn.svg"  data-svg="images/thanksgiving/corn.svg" alt="">                                    
+                                    <img  name="anteater" src="images/thanksgiving/corn.svg"  data-svg="images/thanksgiving/corn.svg" alt="">                                    
                                 </li>
                                 <li>
-                                    <img @click="getSvgName($event)" name="anteater" src="images/thanksgiving/leaf.svg"  data-svg="images/thanksgiving/leaf.svg" alt="">                                    
+                                    <img  name="anteater" src="images/thanksgiving/leaf.svg"  data-svg="images/thanksgiving/leaf.svg" alt="">                                    
                                 </li>
                                 <li>
-                                    <img @click="getSvgName($event)" name="anteater" src="images/thanksgiving/pilgrim.svg"  data-svg="images/thanksgiving/pilgrim.svg" alt="">                                    
+                                    <img  name="anteater" src="images/thanksgiving/pilgrim.svg"  data-svg="images/thanksgiving/pilgrim.svg" alt="">                                    
                                 </li>
                                 <li>
-                                    <img @click="getSvgName($event)" name="anteater" src="images/thanksgiving/pumpkin.svg"  data-svg="images/thanksgiving/pumpkin.svg" alt="">                                    
+                                    <img  name="anteater" src="images/thanksgiving/pumpkin.svg"  data-svg="images/thanksgiving/pumpkin.svg" alt="">                                    
                                 </li>
                                 <li>
-                                     <img @click="getSvgName($event)" name="anteater" src="images/thanksgiving/sunflower.svg"  data-svg="images/thanksgiving/sunflower.svg" alt="">                                    
+                                     <img  name="anteater" src="images/thanksgiving/sunflower.svg"  data-svg="images/thanksgiving/sunflower.svg" alt="">                                    
                                 </li>
                                 <li>
-                                    <img @click="getSvgName($event)" name="anteater" src="images/thanksgiving/turkey.svg"  data-svg="images/thanksgiving/turkey.svg" alt="">                                    
+                                    <img  name="anteater" src="images/thanksgiving/turkey.svg"  data-svg="images/thanksgiving/turkey.svg" alt="">                                    
                                 </li>
                                 <li>
-                                    <img @click="getSvgName($event)" name="anteater" src="images/thanksgiving/turkeybird.svg"  data-svg="images/thanksgiving/turkeybird.svg" alt="">                                    
+                                    <img  name="anteater" src="images/thanksgiving/turkeybird.svg"  data-svg="images/thanksgiving/turkeybird.svg" alt="">                                    
                                 </li>
                                 <li>
-                                    <img @click="getSvgName($event)" name="anteater" src="images/thanksgiving/wheat.svg"  data-svg="images/thanksgiving/wheat.svg" alt="">                                    
+                                    <img  name="anteater" src="images/thanksgiving/wheat.svg"  data-svg="images/thanksgiving/wheat.svg" alt="">                                    
                                 </li>
                             </ul>
                             <!-- ThanksGiving -->
@@ -182,25 +207,25 @@
                             <!-- Wedding Svg -->
                             <ul v-if="showTabMenu == 'wedding'">
                                 <li>
-                                    <img @click="getSvgName($event)" name="anteater" src="images/wedding/arch.svg"  data-svg="images/wedding/arch.svg" alt="">                                    
+                                    <img  name="anteater" src="images/wedding/arch.svg"  data-svg="images/wedding/arch.svg" alt="">                                    
                                 </li>
                                 <li>
-                                    <img @click="getSvgName($event)" name="anteater" src="images/wedding/car.svg"  data-svg="images/wedding/car.svg" alt="">                                    
+                                    <img  name="anteater" src="images/wedding/car.svg"  data-svg="images/wedding/car.svg" alt="">                                    
                                 </li>
                                 <li>
-                                    <img @click="getSvgName($event)" name="anteater" src="images/wedding/champagne.svg"  data-svg="images/wedding/champagne.svg" alt="">                                    
+                                    <img  name="anteater" src="images/wedding/champagne.svg"  data-svg="images/wedding/champagne.svg" alt="">                                    
                                 </li>
                                 <li>
-                                    <img @click="getSvgName($event)" name="anteater" src="images/wedding/church.svg"  data-svg="images/wedding/church.svg" alt="">                                    
+                                    <img  name="anteater" src="images/wedding/church.svg"  data-svg="images/wedding/church.svg" alt="">                                    
                                 </li>
                                 <li>
-                                    <img @click="getSvgName($event)" name="anteater" src="images/wedding/engagement.svg"  data-svg="images/wedding/engagement.svg" alt="">                                    
+                                    <img  name="anteater" src="images/wedding/engagement.svg"  data-svg="images/wedding/engagement.svg" alt="">                                    
                                 </li>
                                 <li>
-                                    <img @click="getSvgName($event)" name="anteater" src="images/wedding/wedding-cake.svg"  data-svg="images/wedding/wedding-cake.svg" alt="">                                    
+                                    <img  name="anteater" src="images/wedding/wedding-cake.svg"  data-svg="images/wedding/wedding-cake.svg" alt="">                                    
                                 </li>
                                 <li>
-                                    <img @click="getSvgName($event)" name="anteater" src="images/wedding/wedding-rings.svg"  data-svg="images/wedding/wedding-rings.svg" alt="">                                    
+                                    <img  name="anteater" src="images/wedding/wedding-rings.svg"  data-svg="images/wedding/wedding-rings.svg" alt="">                                    
                                 </li>
                             </ul>
                             <!-- Wedding Svg -->
@@ -775,7 +800,7 @@ export default {
         triggerRandom(){
              var items = this.RandomArray
               this.ACTION_CHANGE_STATE(['RandomClicked' , true])
-            if(this.showTabMenu =='' ||this.showTabMenu =='animal' ){
+            if(this.showTabMenu =='' ||this.showTabMenu =='space' ){
                 // console.log('working two')
                 /* 
                 This is for Random Color for background

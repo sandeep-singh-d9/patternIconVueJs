@@ -1,0 +1,668 @@
+<template>
+    <div style="height:0px">
+        <svg  @click="getCircle(dynamicIndexValue, $event)" v-for="(items , index) in dataloop" :key="index" version="1.1" baseProfile="basic"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" data-toggle="modal" :data-target="'#myModal'+dynamicIndexValue"  :style="{transform:'rotate('+sliderValue+'deg) scale('+scaleValue+') scaleX('+flipElement+')'}">
+                <g style="transform: scale(0.7);">
+                    <path style="display:none;fill:#3762CB;" d="M516.27,444.26c8.49,0,16.97-0.05,25.46,0.02c6.22,0.05,9.22,2.99,9.25,9.16
+		c0.06,12.5,0.02,25,0.02,37.5c0,8.92-2.36,11.32-11.14,11.32c-76.83,0.01-153.65,0.01-230.48,0.01c-78.33,0-156.65,0-234.98,0
+		c-9.09,0-11.41-2.34-11.41-11.56c0-12.17-0.02-24.33,0.01-36.5c0.01-7.13,2.84-9.91,10-9.95c4.5-0.02,9-0.02,13.5-0.04
+		c0.32,0,0.64-0.14,0.88-0.19c-2.04-17.87-0.92-35.79-0.94-53.67c-0.13-102.99-0.06-205.98-0.03-308.97c0-2.49,0.09-5.01,0.45-7.47
+		c1.07-7.22,6.58-12.65,13.85-12.74c18.66-0.24,37.32-0.06,55.99-0.12c4.11-0.01,7.12,3.84,10.42,3.86
+		c3.29,0.02,6.32-3.86,10.41-3.85c18.66,0.03,37.33,0.02,55.99-0.01c4.09-0.01,7.06,3.85,10.41,3.88c3.12,0.03,5.98-3.86,9.9-3.85
+		c19,0.02,37.99,0.02,56.99,0.04c3.92,0,6.79,4.15,9.75,4c3.06-0.15,5.92-4,9.83-4.01c19-0.02,37.99-0.03,56.99,0.03
+		c3.68,0.01,6.66,1.85,9.28,4.33c0.76,0.71,1.29,2.26,2.78,1.34c7.74-4.77,16.71-3.95,25.14-5.43c10.97-1.93,22.08-3.11,33.1-4.79
+		c10.35-1.58,17.89,3.35,19.47,13.7c3.45,22.7,6.58,45.45,9.79,68.19c4.55,32.29,9.06,64.59,13.58,96.89
+		c4.5,32.13,8.98,64.27,13.5,96.39c4.17,29.66,8.27,59.33,12.62,88.96C528.54,433.65,526.2,439.34,516.27,444.26z"/>
+	<path :style="{fill:'rgba(38, 46, 60, 1)' ,transform: 'scale(0.2)' }" :class="ValueId+'_color4'" d="M303.63,531.85c-90.41,0-180.82-0.07-271.23,0.16c-6.17,0.02-7.47-1.7-7.26-7.47
+		c0.45-12.2,0.37-24.43,0.02-36.63c-0.13-4.72,1.29-5.82,5.88-5.81c94.94,0.13,189.88,0.1,284.82,0.1
+		c86.86,0,173.73,0.07,260.59-0.15c5.85-0.01,7.19,1.58,6.98,7.16c-0.45,12.2-0.39,24.43-0.02,36.63c0.15,4.97-1.34,6.13-6.2,6.12
+		C486.03,531.81,394.83,531.85,303.63,531.85z"/>
+	<path :style="{fill:'rgba(0, 181, 186, 1)' ,transform: 'scale(0.2)' }" :class="ValueId+'_color1'" d="M325.54,431.37c-1.9-1.76-1.18-4.07-1.14-6.14c2.47-128.93,0.57-257.87,1.17-386.81
+		c0.03-6.47,2.31-8.97,8.79-9c20.87-0.09,41.75-0.09,62.62,0c6.71,0.03,8.96,2.71,8.97,10.22c0.02,40.37,0.01,80.74,0.01,121.11
+		c0,77.98,0,155.97,0,233.95c-2.65,2.29-5.9,1.87-9.01,1.88c-20.25,0.05-40.5,0-60.75,0.03c-8.49,0.01-8.7,0.24-8.74,8.46
+		c-0.02,4.92-0.02,9.83,0,14.75c0.04,8.22,0.24,8.45,8.73,8.46c20.25,0.03,40.5-0.02,60.75,0.03c3.11,0.01,6.36-0.42,9.01,1.87
+		c0.01,0.39,0.01,0.78,0,1.18c-1.77,1.46-2.94,3.46-2.92,5.61c0.05,5.75-3.31,9.4-7.09,13.02c-5.54,5.32-10.85,10.87-16.34,16.24
+		c-2.14,2.09-4.51,3.86-7.65,4.1c-1.61,0.12-3.27,0.01-4.09-1.66c-0.7-1.43,0.14-2.69,1-3.78c2.09-2.62,4.6-4.86,6.96-7.23
+		c6.52-6.57,13.12-13.06,19.6-19.67c1.06-1.08,2.79-2.28,1.89-3.95c-1-1.85-3.18-1.34-4.83-0.98c-4.24,0.93-7.18,3.98-10.11,6.86
+		c-8.56,8.42-17,16.98-25.52,25.45c-2.25,2.24-4.6,4.38-7.9,4.87c-1.77,0.26-3.71,0.35-4.69-1.55c-0.86-1.67,0.25-3.08,1.31-4.23
+		c5.34-5.79,11.08-11.19,16.61-16.81c3.45-3.51,7.02-6.9,10.39-10.49c0.8-0.85,1.77-1.84,1.18-3.1c-0.58-1.22-1.93-1.12-3.11-1.18
+		c-3.47-0.17-6.01,1.81-8.36,3.88c-8,7.02-15.14,14.92-22.77,22.33c-1.55,1.51-2.98,3.15-4.66,4.53c-1.3,1.07-2.64,2.9-4.55,1.67
+		c-1.64-1.07-1.36-3.13-1.3-4.9c0.09-3,1.91-5.07,3.88-7.06c5.13-5.18,10.34-10.27,15.42-15.5c1.04-1.07,2.73-2.24,1.64-3.96
+		c-0.96-1.52-2.87-1.12-4.38-0.85c-4.32,0.76-7.13,3.96-10.26,6.62c-4.47,3.8-5.31,3.57-6.47-2.18
+		C328.35,435.02,327.45,432.96,325.54,431.37z"/>
+	<path :style="{fill:'rgba(0, 181, 186, 1)' ,transform: 'scale(0.2)' }" :class="ValueId+'_color1'" d="M52.46,394.71c0-116.21,0.01-232.43,0.01-348.64c0-1.97-0.29-4,0.08-5.9
+		c1.49-7.55,1.98-11.08,11.93-10.89c19.49,0.37,39,0.1,58.5,0.11c8.2,0,11.06,2.79,11.06,10.81c0,118.18-0.01,236.36-0.02,354.55
+		c-1.73,1.58-3.88,1.8-6.06,1.81c-23.35,0.09-46.7,0.12-70.05-0.02c-1.18-0.01-2.35-0.18-3.47-0.59
+		C53.72,395.64,53.06,395.22,52.46,394.71z"/>
+	<path :style="{fill:'rgba(255, 187, 51, 1)' ,transform: 'scale(0.2)' }" :class="ValueId+'_color2'" d="M465.48,395.79c-5.6-39.22-11.27-78.42-16.77-117.65c-5.31-37.87-10.36-75.79-15.67-113.66
+		c-4.49-32.04-9.2-64.06-13.8-96.08c-1.23-8.54-2.52-17.07-3.61-25.63c-0.69-5.45,3.06-9.79,9.4-10.75
+		c9.31-1.41,18.66-2.54,27.99-3.81c9.72-1.32,19.46-2.46,29.14-4.03c9.03-1.46,13.13,0.91,14.47,9.81
+		c2.28,15.13,4.16,30.31,6.28,45.46c2.91,20.78,5.9,41.55,8.81,62.33c3.01,21.56,5.93,43.13,8.96,64.69
+		c2.89,20.59,5.87,41.16,8.79,61.74c2.97,20.97,5.93,41.94,8.87,62.92c2.21,15.73,4.41,31.46,6.57,47.2c0.27,1.93,0.3,3.9,0.44,5.85
+		c-1.62,2.01-3.87,2.46-6.28,2.77c-21.26,2.73-42.45,6.03-63.68,8.97C472.1,396.38,468.78,396.97,465.48,395.79z"/>
+	<path :style="{fill:'rgba(255, 187, 51, 1)' ,transform: 'scale(0.2)' }" :class="ValueId+'_color2'" d="M143.76,394.63c-0.07-39.58-0.18-79.16-0.2-118.75c-0.03-77.99-0.01-155.98-0.01-233.97
+		c0-10.01,2.6-12.67,12.39-12.68c19.5-0.01,39-0.03,58.49,0.01c7.28,0.02,10.49,3.1,10.49,10.34
+		c0.02,117.58,0.01,235.15-0.01,352.73c0,0.78-0.16,1.56-0.24,2.35c-2.18,2.26-5.06,1.91-7.75,1.92c-21.81,0.07-43.61,0.06-65.42,0
+		C148.8,396.58,145.94,396.87,143.76,394.63z"/>
+	<path :style="{fill:'rgba(255, 109, 59, 1)' ,transform: 'scale(0.2)' }" :class="ValueId+'_color3'" d="M234.66,394.58c-0.07-13.98-0.19-27.96-0.2-41.93c-0.02-103.59-0.01-207.17-0.01-310.76
+		c0-10.67,2.1-12.78,12.72-12.79c19.3-0.01,38.6-0.03,57.9,0.02c7.46,0.02,10.03,2.56,10.03,9.85
+		c0.02,117.37,0.01,234.74,0.01,352.11c0,1.18-0.15,2.35-0.23,3.53c-2.22,2.11-5.03,1.98-7.76,1.99c-21.57,0.05-43.14,0.05-64.71,0
+		C239.67,396.6,236.85,396.75,234.66,394.58z"/>
+	<path style="fill:#FDFDFE;transform:scale(0.2)" d="M466.68,472.51c-17.16,0-34.82,0-51.73,0c0-119.39,0-238.6,0-357.81c0.46-0.02,0.91-0.05,1.37-0.07
+		C433.1,233.86,449.88,353.11,466.68,472.51z"/>
+	<path style="fill:#14B5BA;transform:scale(0.2)" d="M53.65,394.71c0.36-0.01,0.71-0.02,1.07-0.03c1.95,2.05,1.95,4.64,1.98,7.21
+		c0.07,6.3-0.03,12.61,0.04,18.91c0.08,6.93,0.51,7.44,7.37,7.46c20.68,0.07,41.36,0,62.04,0.05c3.11,0.01,6.37-0.46,9.05,1.81
+		c0.01,10.81,0.04,21.61,0.02,32.42c-0.01,6.35-3.28,10.11-9.45,10.15c-20.83,0.13-41.65,0.13-62.48,0
+		c-6.05-0.04-9.59-5.43-9.62-14.32C53.61,437.14,53.65,415.93,53.65,394.71z"/>
+	<path :style="{fill:'rgba(255, 187, 51, 1)' ,transform: 'scale(0.2)' }" :class="ValueId+'_color2'" d="M224.68,430.21c0.09,11.2,0.32,22.4,0.2,33.59c-0.06,5.37-3.6,8.83-9.02,8.87
+		c-21.03,0.13-42.06,0.14-63.1,0.01c-5.61-0.03-9.08-3.66-9.14-9.42c-0.12-11,0.08-22.01,0.15-33.01c2.18-2.24,5.05-1.94,7.75-1.95
+		c21.8-0.06,43.6-0.06,65.4,0C219.62,428.3,222.49,427.96,224.68,430.21z"/>
+	<path :style="{fill:'rgba(255, 109, 59, 1)' ,transform: 'scale(0.2)' }" :class="ValueId+'_color3'" d="M314.88,430.27c0.07,11.22,0.15,22.44,0.21,33.66c0.03,5.54-3.02,8.66-8.28,8.71
+		c-21.26,0.19-42.53,0.22-63.8-0.02c-5.13-0.06-8.46-3.27-8.49-8.7c-0.07-11.22,0.08-22.44,0.14-33.66c2.2-2.15,5.03-1.98,7.75-1.98
+		c21.57-0.05,43.14-0.05,64.71,0C309.86,428.28,312.67,428.17,314.88,430.27z"/>
+	<path :style="{fill:'rgba(255, 187, 51, 1)' ,transform: 'scale(0.2)' }" :class="ValueId+'_color2'" d="M550.48,419.66c2.11,11.13,3.69,22.35,4.55,33.64c0.44,5.72-2.76,9.13-8.44,9.95
+		c-18.78,2.71-37.55,5.41-56.33,8.12c-11.41,1.65-14.46-0.79-15.82-12.13c-1.12-9.32-3.23-18.51-3.56-27.93
+		c1.61-2.04,3.97-2.38,6.3-2.71c21.72-3.07,43.44-6.17,65.16-9.33C545.07,418.88,547.8,418.82,550.48,419.66z"/>
+	<path style="fill:#FFFFFF;transform:scale(0.2)" d="M550.48,419.66c-12.37,1.9-24.73,3.87-37.11,5.68c-14.15,2.07-28.32,4-42.49,5.98
+		c-2.75-11.7-3.49-23.7-5.4-35.53c13.11-1.94,26.22-3.9,39.33-5.81c13.51-1.96,27.04-3.87,40.56-5.81
+		C547.76,395.91,549.18,407.78,550.48,419.66z"/>
+	<path style="fill:#FFFFFF;transform:scale(0.2)" d="M224.68,430.21c-26.97,0.01-53.95,0.02-80.92,0.03c0-11.87,0-23.74,0-35.61
+		c26.98,0.01,53.95,0.03,80.93,0.04C224.68,406.51,224.68,418.36,224.68,430.21z"/>
+	<path style="fill:#FFFFFF;transform:scale(0.2)" d="M135.22,430.12c-27.53,0.04-55.05,0-82.58,0.22c-4.82,0.04-5.68-1.77-5.59-5.59
+		c0.23-10.02,0.1-20.05,0.11-30.07c29.35,0.02,58.71,0.05,88.06,0.07C135.22,406.54,135.22,418.33,135.22,430.12z"/>
+	<path style="fill:#FFFFFF;transform:scale(0.2)" d="M314.88,430.27c-26.74,0-53.48-0.01-80.22-0.01c0-11.89,0-23.78,0-35.68
+		c26.74,0.01,53.48,0.02,80.21,0.04C314.87,406.5,314.88,418.39,314.88,430.27z"/>
+	<path style="fill:#FFFFFF;transform:scale(0.2)" d="M410.13,430.18c-29.01,0.02-58.01-0.02-87.02,0.13c-4.52,0.02-6.61-0.81-6.43-5.18
+		c0.35-8.46,0.35-16.95,0-25.41c-0.18-4.38,1.94-5.2,6.44-5.17c29,0.16,58.01,0.12,87.01,0.15
+		C410.14,406.52,410.13,418.35,410.13,430.18z"/>
+	<path style="fill:#14B5BA;transform:scale(0.2)" d="M326.73,431.37c6.8,0.41,3.83,6.02,5.22,9.96c3.23-2.57,6.33-5.04,9.42-7.51
+		c0.77-0.61,1.42-1.57,2.29-1.82c3.22-0.93,7.37-2.01,9.49,0.38c2.63,2.96-1.33,5.11-3.24,7.1c-4.78,4.97-9.57,9.94-14.64,14.6
+		c-3.23,2.97-4.67,6.18-3.4,10.56c2.46-0.07,3.38-2.32,4.86-3.69c9.67-8.94,18.02-19.26,28.51-27.35c1.42-1.09,2.67-2.52,4.62-2.18
+		c2.53,0.44,6.01-1.66,7.42,1.64c1.24,2.88-1.78,4.49-3.51,6.24c-8.45,8.54-16.99,16.99-25.44,25.53c-0.99,1-3.13,2.01-1.75,3.74
+		c1,1.25,2.93,0.72,4.46,0.23c2.54-0.81,4.23-2.77,6.09-4.53c10.72-10.13,20.19-21.54,31.82-30.73c1.42-1.12,2.7-2.41,4.65-2.14
+		c2.42,0.34,5.64-1.38,7.11,1.22c1.79,3.19-1.55,4.88-3.37,6.73c-8.29,8.42-16.72,16.71-25,25.13c-1.07,1.09-3.66,2.14-2.01,4.11
+		c1.13,1.36,3.37,0.76,4.97-0.1c1.37-0.74,2.74-1.59,3.84-2.67c7.01-6.91,13.89-13.97,20.96-20.82c2.1-2.03,2.14-4.36,2.44-6.94
+		c0.34-2.84-0.18-6.76,4.62-6.7c0,10.63,0.04,21.25-0.02,31.88c-0.03,5.52-3.42,9.39-8.98,9.43c-21.05,0.16-42.11,0.13-63.16,0.02
+		c-4.73-0.02-8.17-3.86-8.21-8.85C326.68,453.02,326.73,442.19,326.73,431.37z"/>
+	<path style="fill:#FFFFFF;transform:scale(0.2)" d="M345.53,210.96c0-38.4-0.12-76.81,0.06-115.21c0.07-15.16,16.26-24.49,29.6-17.28
+		c6.71,3.63,10.64,9.4,10.64,17.16c0.06,77.2,0.07,154.4-0.01,231.6c-0.01,11.06-8.95,19.2-20.42,19.15
+		c-11.51-0.05-19.79-7.95-19.83-19.62C345.44,288.16,345.52,249.56,345.53,210.96z"/>
+	<path style="fill:#FFFFFF;transform:scale(0.2)" d="M73.59,211.48c0-38.6-0.14-77.2,0.08-115.79c0.09-15.43,16.8-24.63,30.14-16.88
+		c6.38,3.7,10.1,9.36,10.1,16.89c0.05,77,0.08,154-0.02,231c-0.01,11.61-8.87,19.77-20.56,19.71c-11.42-0.07-19.67-8.05-19.71-19.71
+		C73.51,288.29,73.59,249.89,73.59,211.48z"/>
+	<path style="fill:#FFFFFF;transform:scale(0.2)" d="M516.03,318.31c0.28,16-7.12,24.77-18.66,25.48c-10.81,0.66-19.99-7.59-21.63-19.24
+		c-4.24-30.08-8.64-60.13-12.83-90.21c-4.9-35.13-9.61-70.29-14.47-105.43c-1.32-9.51-2.77-19-4.35-28.47
+		c-1.95-11.67,4.96-22.77,15.64-24.83c12.05-2.32,22.4,4.63,24.39,17.19c3.38,21.29,6.28,42.65,9.32,63.99
+		c4.29,30.07,8.57,60.14,12.78,90.22C509.69,271.85,513.06,296.7,516.03,318.31z"/>
+	<path style="fill:#FFFFFF;transform:scale(0.2)" d="M204.89,212.05c0,37.82,0.09,75.65-0.04,113.47c-0.06,16.21-16.83,26.33-30.4,18.48
+		c-7.92-4.58-10.82-11.84-10.81-20.84c0.09-66.39,0.05-132.77,0.06-199.16c0-8.86-0.08-17.73,0.03-26.59
+		c0.16-12.6,8.38-20.89,20.57-20.9c12.15-0.01,20.54,8.35,20.57,20.9C204.94,135.62,204.89,173.83,204.89,212.05z"/>
+	<path style="fill:#FFFFFF;transform:scale(0.2)" d="M294.86,211.2c0,38.41,0.01,76.83-0.01,115.24c-0.01,11.53-7.83,19.73-18.76,19.81
+		c-12.9,0.1-21.36-7.51-21.41-19.83c-0.13-30.73-0.05-61.46-0.05-92.19c0-45.9-0.01-91.8,0.01-137.7c0-9.35,6.39-17.87,14.66-19.76
+		c10.19-2.32,19.63,2.14,24.12,11.16c1.4,2.81,1.43,5.66,1.43,8.61C294.86,134.77,294.86,172.98,294.86,211.2z"/>
+                </g>
+        </svg>
+
+        <div class="modal inner_color_model w3-animate-left" :id="'myModal'+dynamicIndexValue">
+            <div v-if="ShowModalArea == 'myModal'+dynamicIndexValue">
+                <div class="modal-content">
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <!-- Nav pills -->
+                        <ul class="nav nav-pills nav-justified">
+                            <li class="nav-item" @click="disableDraggable(dynamicIndexValue)">
+                                <a class="nav-link" data-tooltip="Color"  @click="openElementInModal('palette')" ><img src="images/all_use_icon/paint.svg"></a>
+                            </li>
+                            <li class="nav-item" @click="disableDraggable(dynamicIndexValue)">
+                                <a class="nav-link" data-tooltip="Rotate"  @click="openElementInModal('rotate')" ><img src="images/all_use_icon/rotateicon.svg"></a>
+                            </li>
+                            <li class="nav-item" @click="disableDraggable(dynamicIndexValue)">
+                                <a class="nav-link" data-tooltip="Flip"  @click="openElementInModal('mirror')" ><img src="images/all_use_icon/flip_ltr.svg"></a>
+                            </li>
+                            <li class="nav-item" @click="disableDraggable(dynamicIndexValue)">
+                                <a class="nav-link" data-tooltip="Zoom"  @click="openElementInModal('opacity')" ><img src="images/all_use_icon/zoom-in.svg"></a>
+                            </li>
+                            <li class="nav-item" @click="disableDraggable(dynamicIndexValue)">
+                                <a class="nav-link" data-tooltip="Clone"   @click="openElementInModal('duplicate'), cloneElement($event)"><img src="images/all_use_icon/duplicate.svg"></a>
+                            </li>
+                            <!-- <li class="nav-item" @click="disableDraggable(dynamicIndexValue)">
+                                <a class="nav-link" data-tooltip="Layer"   @click="openElementInModal('layers')" ><img src="images/all_use_icon/layers.svg"></a>
+                            </li> -->
+                            <li class="nav-item" @click="removeElement(dynamicIndexValue)">
+                                <a class="nav-link" data-toggle="Delete"><img src="images/all_use_icon/remove.svg"></a>
+                            </li>
+                            <li class="nav-item">
+                                 <a class="nav-link"  data-dismiss="modal" @click="hideElement" title="Close"><img src="images/all_use_icon/close-circle.svg" alt=""></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                            <div :class="{'tab-pane':true, active:ActivePalette=='active'}" id="palette">
+                                <div class="bulldog_svg" :id="svgName+dynamicIndex" v-if="this.$store.state.dynamicName ===svgName+dynamicIndex">
+                                    <h2>Select Color</h2>
+                                    <button :style="{background:'rgba('+getterBooksBg1+')'}" @click="ShowElement(getterBooksBg1)" :class="this.ValueId+'_color1btn'"></button>
+                                    <button :style="{backgroundColor:'rgba('+getterBooksBg2+')'}" @click="ShowElement1(getterBooksBg2)" :class="this.ValueId+'_color2btn'"></button>
+                                    <button :style="{backgroundColor:'rgba('+getterBooksBg3+')'}" @click="ShowElement2(getterBooksBg3)" :class="this.ValueId+'_color3btn'"></button>
+
+                                    <!-- <button :style="{backgroundColor:'rgba('+getterBooksBg4+')'}" @click="ShowElement3(getterBooksBg4)" :class="this.ValueId+'_color4btn'"></button>
+
+                                    <button :style="{backgroundColor:'rgba('+getterBooksBg5+')'}" @click="ShowElement4(getterBooksBg5)" :class="this.ValueId+'_color5btn'"></button> -->
+                                </div>
+
+                                <Colorpicker class="color_bulldog" v-if="this.showColorPicker" :colorElement="this.colorValue" :valueElement="this.clickedInput" />
+                            </div>
+                             <div :class="{'tab-pane':true, active:ActiveRotate=='active'}" id="rotate">
+                                <div class="bulldog_svg">
+                                    <div class="row">
+                                        <div class="col-md-5">
+                                            <h2>Rotate</h2>
+                                            <circle-slider v-model="sliderValue" :side="150" :min="0" :max="368" :step-size="2"></circle-slider>
+                                        </div>
+                                         <button @click="resetRotate()" type="button" class="btn btn-warning rotate_btn">Reset Rotate</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div :class="{'tab-pane':true, active:ActiveMirror=='active'}" id="mirror">
+                                <div class="bulldog_svg">
+                                    <div class="row">
+                                        <div class="col-md-7">
+                                            <h2>flip</h2>
+                                            <label for="fip-icon" :class="{flip_icon:true , active:rotateLeft=='active' }">
+                                                <input  value="-1" type="radio" name="fipIcon" id="fip-icon" checked="" @click="sentFlip('-1')">
+                                                <span class="title btn"><img src="images/all_use_icon/flip_icon.svg" style="transform:scaleX(-1)" alt="" title=""></span>
+                                            </label>
+                                            <label for="fip-icon" :class="{flip_icon:true , active:rotateRight=='active' }">
+                                                <input  type="radio" value="1" name="fipIcon" id="fip-icon" checked=""  @click="sentFlip('1')">
+                                                <span class="title btn"><img src="images/all_use_icon/flip_icon.svg" alt="" title=""></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div :class="{'tab-pane':true , active:ActiveOpacity =='active'}" id="opacity">
+                                <div class="bulldog_svg">
+                                    <h2>Zoom</h2>
+                                    <vue-slider ref="slider" v-model="scaleValue" v-bind="options">
+                                    </vue-slider>
+                                    <h3 class="text-right">{{ scaleValue * 10}}%</h3>
+                                </div>
+                            </div>
+                            <!-- <div class="tab-pane fade" id="duplicate">
+                                <div class="bulldog_svg">
+                                    <h2>Image Duplicate</h2>
+                                    <img src="images/all_use_icon/copy.svg" class="svg_popup" alt="" title="">
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="layers">
+
+                            </div> -->
+
+                        </div>
+                    </div>
+                    <!-- Modal footer -->
+                    <!-- <div class="modal-footer" v-if="this.showColorPicker">
+                        <button class="btn_grey" data-dismiss="modal" @click="hideElement">Close</button>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+
+<script>
+    import Colorpicker from '../colorPickerComponent'
+    import VueSlider from 'vue-slider-component'
+    import {
+        mapState,
+        mapActions,
+        mapGetters,
+        mapMutations
+    }
+    from 'vuex';
+    export default {
+        //   props:['dynamicBackground' ,'dynamicBackgroundOne', 'dynamicBackgroundTwo' , 'dynamicIndex', 'ValueId' , 'svgName'],
+        props: ['dynamicBackground', 'dynamicBackgroundOne', 'dynamicBackgroundTwo', 'dynamicIndexValue', 'ValueId', 'svgName', 'NavClicked'],
+        components: {
+            Colorpicker,
+            VueSlider,
+        },
+        mounted() {
+            /*
+                This will get these from SvgComponentArray
+            */
+                this.sliderValue = this.$store.state.SvgComponent[this.dynamicIndexValue][0].circleSlider
+
+                this.scaleValue = this.$store.state.SvgComponent[this.dynamicIndexValue][0].zoomValue
+                
+                this.flipElement = this.$store.state.SvgComponent[this.dynamicIndexValue][0].flipValue
+            /*
+                End
+            */
+            var width = window.innerWidth;
+            var height = window.innerWidth
+        var Books= [
+            {top:135 ,left:106},
+            {top:95 ,left:32},
+            {top:127 ,left:12},
+            {top:9 ,left:99},
+            {top:502 ,left:81},
+            {top:362 ,left:123},
+            {top:251 ,left:133},
+            {top:376 ,left:155},
+            {top:134 ,left:110},
+            {top:468 ,left:124},
+        ]        
+        
+        
+         if(this.$store.state.randomIndexElement == '4'){
+             this.scaleValue = '1.2'
+         }
+
+        if(this.$store.state.RandomClicked == true){
+            var randomNumber = Books[this.$store.state.randomIndexElement].left
+            var randomNumberTop  =  Books[this.$store.state.randomIndexElement].top
+            if(this.$store.state.randomFirstSvg == 'Books'){
+                //  console.log(randomNumber ,'---', randomNumberTop)
+                 this.ACTION_CHANGE_STATE(['randomYAxis' , randomNumberTop])
+                 this.ACTION_CHANGE_STATE(['randomXAxis' , randomNumber])
+            }
+            var randomWidth = randomNumber
+            var randomHeight = randomNumberTop
+        }else{    
+            var randomWidth = Math.floor(Math.random()*200);
+            var randomHeight = Math.floor(Math.random()*500);
+        }
+            var x = this.dynamicIndexValue
+            $('#' + x).css({
+                left: randomWidth,
+                top: randomHeight
+            })
+            $("#myModal").modal({
+                focus: false,
+                // Do not show modal when innitialized.
+                show: false,
+                backdrop: 'static', // For static modal
+                keyboard: false // prevent click outside of the modal
+            });
+            var DynamicIDs = this.dynamicIndexValue
+            $(function() { 
+            var isDragging = false;
+            var test= $( "#"+DynamicIDs).draggable({
+             zIndex: 100,
+             cursor: "move",
+            })
+            // Getter
+            var zIndex = $( "#"+DynamicIDs ).draggable( "option", "zIndex" );
+            // Setter
+            $( "#"+DynamicIDs ).draggable( "option", "zIndex", 100 );
+            })
+            
+            // Getter
+            var cursor = $( ".selector" ).draggable( "option", "cursor" );
+
+            // Setter
+            $( ".selector" ).draggable( "option", "cursor", "move" );
+            var isDragging = false;
+            var self = this  
+            $( "#"+DynamicIDs).draggable({
+                start: function( event, ui ) {},
+                stop: function( event, ui ) {}
+            });
+            $( "#"+DynamicIDs).on( "dragstart", function( event, ui ) {
+                // console.log(event)
+                self.returnDrag = true
+            });
+             $( "#"+DynamicIDs).on( "dragstop", function( event, ui ) {
+                setTimeout(function(){
+                     self.returnDrag = false
+                },500)
+            }); 
+
+        },
+        computed: {
+            ...mapState([
+                    'background',
+                    'background1',
+                    'background2',
+                    'dynamicIndex',
+                    'dynamicName',
+                    'newDisableIndex',
+                    'randomYAxis',
+                    'randomXAxis'
+                ]),
+                getterBooksBg1: {
+                    get() {
+                        // console.log(this.$store.state.SvgComponent[this.$store.state.dynamicIndex][0])
+                        if (this.$store.state.SvgComponent[this.$store.state.dynamicIndex][0].name === 'Books') {
+                            return this.$store.state.SvgComponent[this.$store.state.dynamicIndex][0].background
+                        }
+
+                    },
+                    set(newValue) {
+                        console.log(newValue)
+                    }
+                },
+                getterBooksBg2: {
+                    get() {
+                        if (this.$store.state.SvgComponent[this.$store.state.dynamicIndex][0].name === 'Books') {
+                            return this.$store.state.SvgComponent[this.$store.state.dynamicIndex][0].background1
+                        }
+                    },
+                    set(newValue) {
+                        console.log(newValue)
+                    }
+                },
+                getterBooksBg3: {
+                    get() {
+                        if (this.$store.state.SvgComponent[this.$store.state.dynamicIndex][0].name === 'Books') {
+                            return this.$store.state.SvgComponent[this.$store.state.dynamicIndex][0].background2
+                        }
+                    },
+                    set(newValue) {
+                        console.log(newValue)
+                    }
+                },
+                getterBooksBg4: {
+                    get() {
+                        return this.$store.state.SvgComponent[this.$store.state.dynamicIndex][0].background3
+                    },
+                    set(newValue) {
+                            console.log(newValue)
+                    }
+                },
+                getterBooksBg5: {
+                    get() {
+                        return this.$store.state.SvgComponent[this.$store.state.dynamicIndex][0].background4
+                    },
+                    set(newValue) {
+                        console.log(newValue)
+                    }
+                }
+
+        },
+        data() {
+            return {
+                colorValue: '',
+                showColorPicker: false,
+                clickedInput: '',
+                value: 100,
+                ShowModalArea: '',
+                sliderValue: 0,
+                options: {
+                    dotSize: 14,
+                    width: 'auto',
+                    height: 10,
+                    contained: false,
+                    direction: 'ltr',
+                    data: null,
+                    min: 0.8,
+                    max: 10,
+                    interval: 0.2,
+                    disabled: false,
+                    clickable: true,
+                    duration: 0.5,
+                    tooltip: 'focus',
+                    tooltipPlacement: 'top',
+                    tooltipFormatter: void 0,
+                    useKeyboard: false,
+                    enableCross: true,
+                    fixed: false,
+                    minRange: void 0,
+                    maxRange: void 0,
+                    order: true,
+                    marks: false,
+                    dotOptions: void 0,
+                    process: true,
+                    dotStyle: void 0,
+                    railStyle: void 0,
+                    processStyle: void 0,
+                    tooltipStyle: void 0,
+                    stepStyle: void 0,
+                    stepActiveStyle: void 0,
+                    labelStyle: void 0,
+                    labelActiveStyle: void 0,
+                },
+                scale: '0.2',
+                scaleValue: '0.8',
+                flipElement: '1',
+                rotateLeft:'',
+                rotateRight:'active',
+                ActivePalette:'',
+                ActiveRotate:'',
+                ActiveMirror:'',
+                ActiveOpacity:'',
+                ActiveDuplicate:'',
+                ActiveLayers:'',
+                returnDrag:'',
+                dataloop:[1 , 2, 3, 4, 5],
+
+            }
+        },
+        watch: { 
+            ShowModalArea: function(newVal, oldVal) { // watch it
+                //console.log('Prop changed: ', newVal, ' | was: ', oldVal)
+            },
+            returnDrag: function(newVal, oldVal) { // watch it
+                //console.log('Prop changed: ', newVal, ' | was: ', oldVal)
+                this.returnDrag =newVal
+            },
+
+        },
+        methods: {
+            ...mapActions([
+                    'ACTION_CHANGE_STATE',
+                ]),
+                ...mapMutations([
+
+                ]),
+
+                ShowElement(value) {
+                    //   this.colorValue = value
+                   // console.log(value, 'ssss')
+                    var ColorValue = this.$store.state.SvgComponent[this.$store.state.dynamicIndex][0].background
+                    this.colorValue = 'rgba(' + ColorValue + ')'
+                    this.showColorPicker = true
+                    this.clickedInput = 'One'
+                        //  console.log( , 'value')
+                },
+                ShowElement1(value) {
+                    this.colorValue = 'rgba(' + this.$store.state.SvgComponent[this.$store.state.dynamicIndex][0].background1 + ')'
+                    //console.log('sjahsja')
+                    this.clickedInput = 'Two'
+                    this.showColorPicker = true
+                },
+                ShowElement2(value) {
+                    this.colorValue = 'rgba(' + this.$store.state.SvgComponent[this.$store.state.dynamicIndex][0].background2 + ')'
+                    //console.log('sjahsja')
+                    this.clickedInput = 'Third'
+                    this.showColorPicker = true
+                },
+                ShowElement3(value) {
+                    this.colorValue = 'rgba(' + this.$store.state.SvgComponent[this.$store.state.dynamicIndex][0].background3 + ')'
+                    this.clickedInput = 'forth'
+                    this.showColorPicker = true
+                },
+                ShowElement4(value) {
+                    this.colorValue = 'rgba(' + this.$store.state.SvgComponent[this.$store.state.dynamicIndex][0].background4 + ')'
+                    this.clickedInput = 'five'
+                    this.showColorPicker = true
+                },
+                hideElement() {
+                    this.showColorPicker = false
+                    this.ShowModalArea = false
+                    this.enableDragData()
+                    $("svg").removeClass("active");
+                    //Null Active element of modal-body 
+                        this.ActiveOpacity =''
+                        this.ActiveRotate =''
+                        this.ActiveMirror =''
+                        this.ActiveDuplicate =''
+                        this.ActiveLayers=''
+                        this.ActivePalette =''
+                    //Null Active element of modal-body       
+                },
+                getCircle(value, e){
+                   // console.log(e.currentTarget)
+                    if(this.returnDrag != true){
+                        $("svg").removeClass("active");
+                        $("#"+value+" svg").removeClass("active");
+                        $(e.currentTarget).addClass('active')
+                         //Null Active element of modal-body 
+                            this.ActiveOpacity =''
+                            this.ActiveRotate =''
+                            this.ActiveMirror =''
+                            this.ActiveDuplicate =''
+                            this.ActiveLayers=''
+                            this.ActivePalette =''
+                        //Null Active element of modal-body   
+                        this.ShowModalArea = false
+                        var hideElementValueModal = ($('#hiddenModal').val())
+                    if(hideElementValueModal !=''){
+                            $('#myModal'+hideElementValueModal).hide()
+                            $("#"+hideElementValueModal).draggable("enable")
+                            $('#myModal'+hideElementValueModal).modal("hide");
+                            $('#myModal'+value).css('display', 'block')
+                    }
+                        var closeModal= $('#hiddenModal').val(value)
+                    
+                        this.ShowModalArea = 'myModal'+value
+                        this.ACTION_CHANGE_STATE(['dynamicIndex' ,value ])
+                        this.ACTION_CHANGE_STATE(['tempModalIndex', value])
+                        this.ACTION_CHANGE_STATE(['dynamicName' ,this.$store.state.SvgComponent[this.$store.state.dynamicIndex][0].name+value ])
+                        this.ACTION_CHANGE_STATE(['editSvgClicked' ,true])
+                    
+                    }
+                },
+                disableDraggable(value) {
+                    // alert(value)
+                    $("#" + value).draggable("disable")
+                    this.ACTION_CHANGE_STATE(['newDisableIndex', value])
+                },
+                enableDragData() {
+                    if(this.$store.state.newDisableIndex !=''){
+                        $("#"+this.$store.state.newDisableIndex).draggable("enable")
+                    }else{
+                        $("#"+this.dynamicIndexValue).draggable("enable")
+                    }
+                },
+                sentFlip(value) {
+                    this.flipElement = value
+                    if(value ==  '-1'){
+                        this.rotateRight = ''
+                        this.rotateLeft ='active'
+                    }else{
+                            this.rotateLeft =''
+                        this.rotateRight = 'active'
+                    }
+                },
+                removeElement(value){
+                $('#'+this.$store.state.dynamicIndex).remove()
+                  //After this remove from array to SvgComponent  from store
+                },
+                openElementInModal(value){
+                 
+                    if(value =='palette'){
+                        this.ActiveOpacity =''
+                        this.ActiveMirror =''
+                        this.ActiveDuplicate =''
+                        this.ActiveLayers=''
+                        this.ActiveRotate =''
+                        this.ActivePalette ='active'
+                    }else if( value == 'rotate'){
+                        this.ActiveDuplicate =''
+                        this.ActiveLayers=''
+                        this.ActivePalette =''
+                        this.ActiveOpacity =''
+                        this.ActiveRotate ='active'
+                        this.ActiveMirror =''
+                    }else if( value == 'mirror'){
+                        this.ActiveDuplicate =''
+                        this.ActiveLayers=''
+                        this.ActivePalette =''
+                        this.ActiveOpacity =''
+                        this.ActiveRotate =''
+                        this.ActiveMirror ='active'
+                    }else if( value == 'opacity'){
+                        this.ActiveMirror =''
+                        this.ActiveDuplicate =''
+                        this.ActiveLayers=''
+                        this.ActivePalette =''
+                        this.ActiveRotate =''
+                        this.ActiveOpacity ='active'
+                    }else if( value == 'duplicate'){
+                        this.ActiveMirror =''
+                        this.ActiveLayers=''
+                        this.ActivePalette =''
+                        this.ActiveOpacity =''
+                        this.ActiveRotate =''
+                        this.ActiveDuplicate ='active'
+                    }else if( value == 'layers'){
+                        this.ActiveMirror =''
+                        this.ActivePalette =''
+                        this.ActiveOpacity =''
+                        this.ActiveRotate =''
+                        this.ActiveDuplicate ='active'
+                        this.ActiveLayers ='active'
+                    }
+                },
+                resetRotate(){
+                    this.sliderValue = 0
+                },
+                cloneElement(e){
+                    var number = e.currentTarget.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.id
+                    var cloneElementId = number.split('l')
+                    var elemntId = cloneElementId[1]
+                    var styleAttrClone = $('#'+elemntId).find( "svg" ).attr('style')
+                    /* 
+                    This is for color dynamic on clone 
+                    */
+                    var tempArrayClone = this.$store.state.SvgComponent[elemntId][0]
+                    var backgroundClone = tempArrayClone.background 
+                    var background1Clone =tempArrayClone.background1 
+                    var background2Clone =tempArrayClone.background2 
+                    var background3Clone =tempArrayClone.background3 
+                    var background4Clone =tempArrayClone.background4 
+                    var background5Clone =tempArrayClone.background5 
+                    var circleSliderClone = this.sliderValue
+                    var scaleValueClone =this.scaleValue 
+                    var flipElementClone = this.flipElement
+                    var tempArray = []
+                
+                        tempArray = [
+                            {
+                            name:'Books',
+                            background :  backgroundClone,
+                            background1:  background1Clone,
+                            background2:  background2Clone,
+                            background3:  background3Clone,
+                            background4:  background4Clone,
+                            circleSlider: circleSliderClone,
+                            zoomValue:scaleValueClone,
+                            flipValue:flipElementClone,
+                        }
+                        ]
+                        this.$store.state.SvgComponent.push(tempArray)
+                        var cloneIndex = this.$store.state.SvgComponent.length-1 
+                        $(document).ready(function(){
+                           // console.log($('.Svg_'+cloneIndex+'_color1') , 'length')
+                            $('.Svg_'+cloneIndex+'_color1').css({fill: 'rgba('+backgroundClone+')'})
+                            $('.Svg_'+cloneIndex+'_color2').css({fill: 'rgba('+background1Clone+')'})
+                            $('.Svg_'+cloneIndex+'_color3').css({fill: 'rgba('+background2Clone+')'})
+                            $('.Svg_'+cloneIndex+'_color4').css({fill: 'rgba('+background3Clone+')'})
+                            $('.Svg_'+cloneIndex+'_color5').css({fill: 'rgba('+background4Clone+')'})
+                            
+                            $('#'+cloneIndex).find("svg").attr('style',styleAttrClone);
+                        })
+                    /* 
+                    End
+                    */
+                }
+        }
+    }
+</script>
+
+<style>
+
+</style>
