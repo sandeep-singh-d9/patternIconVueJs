@@ -8,6 +8,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>Point Click & Design</title>
+    <link rel="icon" href="images/favicon.png">
     
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>

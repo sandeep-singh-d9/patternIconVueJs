@@ -139,7 +139,7 @@
                                     <img @click="addSvg('Calculator')"  name="Calculator" src="images/School/calculator.svg"  data-svg="images/space/calculator.svg" alt="" @dragstart="drag($event)">                           
                                 </li>
                                 <li>
-                                    <img @click="addSvg('Compass')"  name="Compass" src="images/School/Compass.svg"  data-svg="images/space/Compass.svg" alt="" @dragstart="drag($event)">                           
+                                    <img @click="addSvg('Compass')"  name="Compass" src="images/School/compass.svg"  data-svg="images/space/compass.svg" alt="" @dragstart="drag($event)">                           
                                 </li>
                                 <li>
                                     <img @click="addSvg('Proctor')"  name="Proctor" src="images/School/proctor.svg"  data-svg="images/space/proctor.svg" alt="" @dragstart="drag($event)">                           

@@ -42,8 +42,9 @@ button:focus {
     font-size: 28px;
     color: #000;
 }
+
 .header .navbar-brand {
-    width: 158px;
+    width: 200px;
 }
 .header .navbar-brand img {
     width: 100%;
