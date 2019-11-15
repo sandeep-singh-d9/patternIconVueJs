@@ -190,16 +190,16 @@
             var width = window.innerWidth;
             var height = window.innerWidth
         var Ruler= [
-            {top:135 ,left:106},
-            {top:95 ,left:32},
-            {top:127 ,left:12},
-            {top:9 ,left:99},
-            {top:502 ,left:81},
-            {top:362 ,left:123},
-            {top:251 ,left:133},
-            {top:376 ,left:155},
-            {top:134 ,left:110},
-            {top:468 ,left:124},
+            {top:472 ,left:44},
+            {top:464 ,left:57},
+            {top:18 ,left:151},
+            {top:294 ,left:104},
+            {top:310 ,left:36},
+            {top:21 ,left:79},
+            {top:466 ,left:93},
+            {top:512 ,left:41},
+            {top:418 ,left:125},
+            {top:294 ,left:52},
         ]        
         
         

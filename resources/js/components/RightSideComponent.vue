@@ -23,6 +23,8 @@ import Ruler from './SchoolPackSvg/ruler'
 import School from './SchoolPackSvg/school' 
 import SchoolBus from './SchoolPackSvg/schoolbus' 
 import Books from './SchoolPackSvg/books' 
+import TestTube from './SchoolPackSvg/testTube' 
+import WorldGlobe from './SchoolPackSvg/worldGlobe' 
 import Popcorn from './foodSvg/popcornComponent'
 import Steak from './foodSvg/steakComponent' 
 import Pizza from './foodSvg/pizzaComponent' 
@@ -51,6 +53,8 @@ export default {
        School,
        SchoolBus,
        Books,
+       TestTube,
+       WorldGlobe,
        Popcorn,
        Steak,
        Pizza,

@@ -240,17 +240,17 @@
             var width = window.innerWidth;
             var height = window.innerWidth
         var Atom= [
-            {top:135 ,left:106},
-            {top:95 ,left:32},
-            {top:127 ,left:12},
-            {top:9 ,left:99},
-            {top:502 ,left:81},
-            {top:362 ,left:123},
-            {top:251 ,left:133},
-            {top:376 ,left:155},
-            {top:134 ,left:110},
-            {top:468 ,left:124},
-        ]        
+                {top:254 ,left:50},
+                {top:9 ,left:185},
+                {top:478 ,left:118},
+                {top:476 ,left:112},
+                {top:330 ,left:143},
+                {top:254 ,left:50},
+                {top:8 ,left:49},
+                {top:28 ,left:15},
+                {top:41 ,left:127},
+                {top:155 ,left:73},
+            ]        
         
         
          if(this.$store.state.randomIndexElement == '4'){

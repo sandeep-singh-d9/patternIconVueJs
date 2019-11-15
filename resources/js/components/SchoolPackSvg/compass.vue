@@ -207,18 +207,18 @@
             */
             var width = window.innerWidth;
             var height = window.innerWidth
-        var Compass= [
-            {top:135 ,left:106},
-            {top:95 ,left:32},
-            {top:127 ,left:12},
-            {top:9 ,left:99},
-            {top:502 ,left:81},
-            {top:362 ,left:123},
-            {top:251 ,left:133},
-            {top:376 ,left:155},
-            {top:134 ,left:110},
-            {top:468 ,left:124},
-        ]        
+        var Compass=[
+                {top:339 ,left:122},
+                {top:332 ,left:12},
+                {top:342 ,left:43},
+                {top:147 ,left:117},
+                {top:30 ,left:119},
+                {top:162 ,left:111},
+                {top:31 ,left:81},
+                {top:141 ,left:77},
+                {top:10 ,left:18},
+                {top:-3 ,left:72},
+            ]        
         
         
          if(this.$store.state.randomIndexElement == '4'){

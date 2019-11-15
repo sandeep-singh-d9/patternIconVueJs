@@ -130,7 +130,7 @@
                             <!-- Food Svg End -->
 
                             <!-- Space Svg  -->
-                            <ul v-if="showTabMenu == 'space'"> 
+                            <ul v-if="showTabMenu == 'schoolPack'"> 
                                 
                                 <li>
                                     <img @click="addSvg('Atom')"  name="Atom" src="images/School/atom.svg"  data-svg="images/space/atom.svg" alt="" @dragstart="drag($event)">                           
@@ -156,23 +156,14 @@
                                 <li>
                                     <img @click="addSvg('Books')"  name="Books" src="images/School/Stack_of_Books.svg"  data-svg="images/space/Stack_of_Books.svg" alt="" @dragstart="drag($event)">                           
                                 </li>
-                                <!-- <li>
-                                    <img  name="anteater" src="images/space/mercury.svg"  data-svg="images/space/mercury.svg" alt="">                                    
+                                <li>
+                                    <img @click="addSvg('TestTube')"  name="TestTube" src="images/School/Test_tube.svg"  data-svg="images/space/Test_tube.svg" alt="" @dragstart="drag($event)">                           
                                 </li>
                                 <li>
-                                    <img  name="anteater" src="images/space/orbit.svg"  data-svg="images/space/orbit.svg" alt="">                                    
+                                    <img @click="addSvg('WorldGlobe')"  name="WorldGlobe" src="images/School/World_globe.svg"  data-svg="images/space/World_globe.svg" alt="" @dragstart="drag($event)">                           
                                 </li>
-                                <li>
-                                    <img  name="anteater" src="images/space/saturn.svg"  data-svg="images/space/saturn.svg" alt="">                                    
-                                </li>
-                                <li>
-                                    <img  name="anteater" src="images/space/solar-system.svg"  data-svg="images/space/solar-system.svg" alt="">                                    
-                                </li>
-                                <li>
-                                    <img  name="anteater" src="images/space/man-on-the-moon.svg"  data-svg="images/space/man-on-the-moon.svg" alt="">                                    
-                                </li> -->
                             </ul>
-                            <!-- Space Svg  -->
+                            <!-- SchoolPack Svg  -->
 
                             <!-- ThanksGiving -->
                             <ul v-if="showTabMenu == 'thanksgiving'">
@@ -506,9 +497,9 @@ export default {
                    text:'Animal Icon Collection'
                 },
                 {
-                   name: 'space',
-                   img:'images/all_use_icon/space_icon.png',
-                   text:'Space Elements'
+                   name: 'schoolPack',
+                   img:'images/all_use_icon/SchoolPack.jpg',
+                   text:'School Elements'
                 },
                 {
                    name: 'wedding',
@@ -528,19 +519,19 @@ export default {
             ],
             RandomArray:[
                 {
-                    name:'BullDogSvg', 
+                    name:'Atom', 
                 },
                 {
-                    name:'Hippo',
+                    name:'Compass',
                 },
                 {
-                    name:'Llama',
+                    name:'Proctor',
                 },
                 {
-                    name:'Mouse',
+                    name:'Ruler',
                 },
                 {
-                    name:'Squirrel',
+                    name:'School',
                 },
                 
             ],
@@ -800,7 +791,7 @@ export default {
         triggerRandom(){
              var items = this.RandomArray
               this.ACTION_CHANGE_STATE(['RandomClicked' , true])
-            if(this.showTabMenu =='' ||this.showTabMenu =='space' ){
+            if(this.showTabMenu =='' ||this.showTabMenu =='schoolPack' ){
                 // console.log('working two')
                 /* 
                 This is for Random Color for background

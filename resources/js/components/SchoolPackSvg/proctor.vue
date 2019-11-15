@@ -247,16 +247,16 @@
             var width = window.innerWidth;
             var height = window.innerWidth
         var Proctor= [
-            {top:135 ,left:106},
-            {top:95 ,left:32},
-            {top:127 ,left:12},
-            {top:9 ,left:99},
-            {top:502 ,left:81},
-            {top:362 ,left:123},
-            {top:251 ,left:133},
-            {top:376 ,left:155},
-            {top:134 ,left:110},
-            {top:468 ,left:124},
+            {top:17 ,left:48},
+            {top:230 ,left:111},
+            {top:217 ,left:119},
+            {top:201 ,left:37},
+            {top:162 ,left:38},
+            {top:490 ,left:70},
+            {top:211 ,left:103},
+            {top:276 ,left:11},
+            {top:259 ,left:114},
+            {top:465 ,left:45},
         ]        
         
         

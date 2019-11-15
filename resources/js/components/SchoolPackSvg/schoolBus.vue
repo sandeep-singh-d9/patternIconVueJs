@@ -2,9 +2,7 @@
     <div style="height:0px">
         <svg  @click="getCircle(dynamicIndexValue, $event)" v-for="(items , index) in dataloop" :key="index" version="1.1" baseProfile="basic"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" data-toggle="modal" :data-target="'#myModal'+dynamicIndexValue"  :style="{transform:'rotate('+sliderValue+'deg) scale('+scaleValue+') scaleX('+flipElement+')'}">
                 <g style="transform: scale(0.7);">
-                    <path style="fill:#FEFEFE;transform:scale(0.2)" d="M0.11,205.5C0.11,138.09,0.15,70.69,0,3.28C-0.01,0.54,0.8,0,4.9,0c200.81,0.09,401.62,0.09,602.44,0
-	c4.09,0,4.9,0.54,4.89,3.28c-0.13,134.81-0.13,269.63,0,404.44c0,2.74-0.8,3.28-4.89,3.28c-200.81-0.09-401.62-0.09-602.44,0
-	c-4.09,0-4.9-0.54-4.9-3.28C0.15,340.31,0.11,272.91,0.11,205.5z"/>
+                   
 <path style="transform:scale(0.2)" d="M540.01,353.98c17.06,0,32.8,0.14,48.53-0.1c3.78-0.06,4.55,1.02,4.55,4.63c0.01,14.61,0.15,14.6-14.21,14.6
 	c-184.46,0-368.93-0.03-553.39,0.13c-5.31,0-6.55-1.28-6.39-6.46c0.4-12.81,0.12-12.82,13.05-12.81c12.95,0,25.89,0,39.79,0
 	c-6.52-8.49-11.37-17.19-13.32-27.21c-0.4-2.07-2.12-1.38-3.35-1.43c-3.98-0.17-8.03,0.23-11.92-0.4

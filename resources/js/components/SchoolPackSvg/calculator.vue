@@ -1,7 +1,7 @@
 <template>
     <div style="height:0px">
         <svg  @click="getCircle(dynamicIndexValue, $event)" v-for="(items , index) in dataloop" :key="index" version="1.1" baseProfile="basic"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" data-toggle="modal" :data-target="'#myModal'+dynamicIndexValue"  :style="{transform:'rotate('+sliderValue+'deg) scale('+scaleValue+') scaleX('+flipElement+')'}">
-                <g style="transform: scale(0.7);">
+                <g style="transform: scale(0.5);">
                     <path style="display:none;fill:#37424D;" d="M558.13,391.05c0,99.34,0,198.68-0.01,298.02c0,31.93-21.39,53.24-53.42,53.24
                         c-132.14,0-264.29,0.01-396.43,0c-31.03,0-52.7-21.56-52.7-52.55c-0.02-199.38-0.02-398.76,0-598.14c0-31.5,21.49-52.89,53.06-52.89
                         c132.14-0.01,264.29-0.01,396.43,0c31.53,0,53.07,21.46,53.07,52.9C558.14,191.44,558.13,291.25,558.13,391.05z"/>

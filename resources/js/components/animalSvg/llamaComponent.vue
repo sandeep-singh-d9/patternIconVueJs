@@ -236,7 +236,7 @@ props:['dynamicBackground' ,'dynamicBackgroundOne', 'dynamicBackgroundTwo' , 'dy
             {top:162 ,left:38},
             {top:490 ,left:70},
             {top:211 ,left:103},
-            {top:276 ,left:-11},
+            {top:276 ,left:11},
             {top:259 ,left:114},
             {top:465 ,left:45},
         ]        

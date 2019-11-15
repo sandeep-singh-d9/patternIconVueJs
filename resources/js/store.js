@@ -255,6 +255,37 @@ export const store = new Vuex.Store({
                ]
                this.state.SvgComponent.push(tempArray)
             }
+            if(value =="TestTube"){
+                tempArray = [
+                   {
+                       name:value,
+                       background : '227, 6, 19, 1',
+                       background1: '125, 185, 40, 1',
+                       background2:'201, 149, 16, 1',
+                       background3:'186, 250, 255, 1',
+                       background4:'0, 110, 170, 1',
+                       circleSlider:0,
+                       zoomValue:0.8,
+                       flipValue:1,
+                   }
+               ]
+               this.state.SvgComponent.push(tempArray)
+            }
+            if(value =="WorldGlobe"){
+                tempArray = [
+                   {
+                       name:value,
+                       background : '39, 162, 219, 1',
+                       background1: '252, 212, 98, 1',
+                       background2:'68, 196, 161, 1',
+                       background3:'235, 240, 243, 1',
+                       circleSlider:0,
+                       zoomValue:0.8,
+                       flipValue:1,
+                   }
+               ]
+               this.state.SvgComponent.push(tempArray)
+            }
             if(value =="FrenchFries"){
                tempArray = [
                   {
