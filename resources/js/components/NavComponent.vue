@@ -74,57 +74,72 @@
                         <div class="icon_inner">
                             <input type="hidden" value="0" id="bullDogSvg">
                             <!-- Animal Svg  Start-->
-                            <ul v-if="showTabMenu =='animal'">
+                            <ul v-if="showTabMenu =='Dog'">
                                 <li>                                    
-                                    <img @click="addSvg('BullDogSvg')" name="BullDogSvg" src="images/animals/bulldog.svg" alt="" draggable="true" @dragstart="drag($event)">                                    
-                                </li>
-                                <li>                                    
-                                    <img @click="addSvg('Hippo')" name="Hippo" src="images/animals/hippopotamus.svg"  data-svg="images/animals/hippopotamus.svg" alt="" draggable="true" @dragstart="drag($event)">                                    
+                                    <img @click="addSvg('Beagle')" name="Beagle" src="images/Dogs_SVG/Beagle.svg" alt="" draggable="true" @dragstart="drag($event)">                                    
                                 </li>
                                 <li>                                    
-                                    <img @click="addSvg('Llama')" name="Llama" src="images/animals/llama.svg"  data-svg="images/animals/llama.svg" alt="" draggable="true" @dragstart="drag($event)">                                    
+                                    <img @click="addSvg('Boxer')" name="Boxer" src="images/Dogs_SVG/Boxer.svg" alt="" draggable="true" @dragstart="drag($event)">                                    
                                 </li>
-                                <li>
-                                    <img @click="addSvg('Mouse')" name="Mouse" src="images/animals/mouse.svg"  data-svg="images/animals/mouse.svg" alt="" draggable="true" @dragstart="drag($event)">                                    
+                                <li>                                    
+                                    <img @click="addSvg('BullDog')" name="BullDog" src="images/Dogs_SVG/bulldog.svg" alt="" draggable="true" @dragstart="drag($event)">                                    
                                 </li>
-                                <li>
-                                    <img @click="addSvg('Squirrel')" name="Squirrel" src="images/animals/squirrel.svg"  data-svg="images/animals/squirrel.svg" alt="" draggable="true" @dragstart="drag($event)">                                    
+                                <li>                                    
+                                    <img @click="addSvg('FrenchBullDog')" name="FrenchBullDog" src="images/Dogs_SVG/French-bulldog.svg" alt="" draggable="true" @dragstart="drag($event)">                                    
+                                </li>
+                                <li>                                    
+                                    <img @click="addSvg('GermanShepherd')" name="GermanShepherd" src="images/Dogs_SVG/german-shepherd.svg" alt="" draggable="true" @dragstart="drag($event)">                                    
+                                </li>
+                                <li>                                    
+                                    <img @click="addSvg('GoldenRetriever')" name="GoldenRetriever" src="images/Dogs_SVG/GoldenRetriever.svg" alt="" draggable="true" @dragstart="drag($event)">                                    
+                                </li>
+                                <li>                                    
+                                    <img @click="addSvg('Labrador')" name="Labrador" src="images/Dogs_SVG/Labrador.svg" alt="" draggable="true" @dragstart="drag($event)">                                    
+                                </li>
+                                <li>                                    
+                                    <img @click="addSvg('Poodle')" name="Poodle" src="images/Dogs_SVG/poodle.svg" alt="" draggable="true" @dragstart="drag($event)">                                    
+                                </li>
+                                <li>                                    
+                                    <img @click="addSvg('Rottweiler')" name="Rottweiler" src="images/Dogs_SVG/rottweiler.svg" alt="" draggable="true" @dragstart="drag($event)">                                    
+                                </li>
+                                <li>                                    
+                                    <img @click="addSvg('YorkshireTerrier')" name="YorkshireTerrier" src="images/Dogs_SVG/YorkshireTerrier.svg" alt="" draggable="true" @dragstart="drag($event)">                                    
                                 </li>
                             </ul>
                             <!-- Animal Svg EnD -->
                             
                             
                             <!-- Food Svg -->
-                            <ul v-if="showTabMenu == 'food'">
+                            <ul v-if="showTabMenu == 'Cooking'">
                                 <li>
-                                    <img  name="anteater" src="images/food/bread.svg"  data-svg="images/food/bread.svg" alt="">                                    
+                                    <img  @click="addSvg('Boillingport')"  name="Boillingport" src="images/cooking_svg/boillingport.svg"   alt="" draggable="true" @dragstart="drag($event)">                                    
                                 </li>
                                 <li>
-                                    <img  name="Burger" src="images/food/burger.svg"  data-svg="images/food/burger.svg" alt="">                                    
+                                    <img  @click="addSvg('Butcherknife')"  name="Butcherknife" src="images/cooking_svg/butcher_knife.svg"   alt="" draggable="true" @dragstart="drag($event)">                                    
                                 </li>
                                 <li>
-                                    <img  name="Cheese" src="images/food/cheese.svg"  data-svg="images/food/cheese.svg" alt="">                                    
+                                    <img  @click="addSvg('Cheesegrater')"  name="Cheesegrater" src="images/cooking_svg/CheeseGrater.svg"   alt="" draggable="true" @dragstart="drag($event)">                                    
                                 </li>
                                 <li>
-                                    <img name="anteater" src="images/food/chocolate.svg"  data-svg="images/food/chocolate.svg" alt="">                                    
+                                    <img  @click="addSvg('ChefHat')"  name="ChefHat" src="images/cooking_svg/ChefHat.svg"   alt="" draggable="true" @dragstart="drag($event)">                                    
                                 </li>
                                 <li>
-                                    <img  name="Cookie" src="images/food/cookie.svg"  data-svg="images/food/cookie.svg" alt="">                                    
+                                    <img  @click="addSvg('Cuttingboard')"  name="Cuttingboard" src="images/cooking_svg/cutting_board.svg"   alt="" draggable="true" @dragstart="drag($event)">                                    
                                 </li>
                                 <li>
-                                    <img  name="anteater" src="images/food/french-fries.svg"  data-svg="images/food/french-fries.svg" alt="">                                    
+                                    <img  @click="addSvg('CuttingKnivesinBlock')"  name="CuttingKnivesinBlock" src="images/cooking_svg/CuttingKnivesinBlock.svg"   alt="" draggable="true" @dragstart="drag($event)">                                    
                                 </li>
                                 <li>
-                                    <img  name="Pie" src="images/food/pie.svg"  data-svg="images/food/pie.svg" alt="" draggable="true">                                    
+                                    <img  @click="addSvg('PepperShaker')"  name="PepperShaker" src="images/cooking_svg/PepperShaker.svg"   alt="" draggable="true" @dragstart="drag($event)">                                    
                                 </li>
                                 <li>
-                                    <img  name="Pizza" src="images/food/pizza.svg"  data-svg="images/food/pizza.svg" alt="" draggable="true" >                                    
+                                    <img  @click="addSvg('Salt')"  name="Salt" src="images/cooking_svg/salt.svg"   alt="" draggable="true" @dragstart="drag($event)">                                    
                                 </li>
                                 <li>
-                                    <img  name="Popcorn" src="images/food/popcorn.svg"  data-svg="images/food/popcorn.svg" alt=""  draggable="true"  >                                   
+                                    <img  @click="addSvg('Shaker')"  name="Shaker" src="images/cooking_svg/shaker.svg"   alt="" draggable="true" @dragstart="drag($event)">                                    
                                 </li>
                                 <li>
-                                    <img  name="Steak" src="images/food/steak.svg"  data-svg="images/food/steak.svg" alt="" draggable="true">                                    
+                                    <img  @click="addSvg('Skillet')"  name="Skillet" src="images/cooking_svg/Skillet.svg"   alt="" draggable="true" @dragstart="drag($event)">                                    
                                 </li>
                             </ul>
                             <!-- Food Svg End -->
@@ -133,93 +148,255 @@
                             <ul v-if="showTabMenu == 'schoolPack'"> 
                                 
                                 <li>
-                                    <img @click="addSvg('Atom')"  name="Atom" src="images/School/atom.svg"  data-svg="images/space/atom.svg" alt="" @dragstart="drag($event)">                           
+                                    <img @click="addSvg('Atom')"  name="Atom" src="images/School/atom.svg"  data-svg="images/space/atom.svg" alt="" draggable="true" @dragstart="drag($event)">                           
                                 </li>
                                 <li>
-                                    <img @click="addSvg('Calculator')"  name="Calculator" src="images/School/calculator.svg"  data-svg="images/space/calculator.svg" alt="" @dragstart="drag($event)">                           
+                                    <img @click="addSvg('Calculator')"  name="Calculator" src="images/School/calculator.svg"  data-svg="images/space/calculator.svg" alt="" draggable="true" @dragstart="drag($event)">                           
                                 </li>
                                 <li>
-                                    <img @click="addSvg('Compass')"  name="Compass" src="images/School/compass.svg"  data-svg="images/space/compass.svg" alt="" @dragstart="drag($event)">                           
+                                    <img @click="addSvg('Compass')"  name="Compass" src="images/School/compass.svg"  data-svg="images/space/compass.svg" alt="" draggable="true" @dragstart="drag($event)">                           
                                 </li>
                                 <li>
-                                    <img @click="addSvg('Proctor')"  name="Proctor" src="images/School/proctor.svg"  data-svg="images/space/proctor.svg" alt="" @dragstart="drag($event)">                           
+                                    <img @click="addSvg('Proctor')"  name="Proctor" src="images/School/proctor.svg"  data-svg="images/space/proctor.svg" alt="" draggable="true" @dragstart="drag($event)">                           
                                 </li>
                                 <li>
-                                    <img @click="addSvg('Ruler')"  name="Ruler" src="images/School/ruler.svg"  data-svg="images/space/ruler.svg" alt="" @dragstart="drag($event)">                           
+                                    <img @click="addSvg('Ruler')"  name="Ruler" src="images/School/ruler.svg"  data-svg="images/space/ruler.svg" alt="" draggable="true" @dragstart="drag($event)">                           
                                 </li>
                                 <li>
-                                    <img @click="addSvg('School')"  name="School" src="images/School/school_house.svg"  data-svg="images/space/school_house.svg" alt="" @dragstart="drag($event)">                           
+                                    <img @click="addSvg('School')"  name="School" src="images/School/school_house.svg"  data-svg="images/space/school_house.svg" alt="" draggable="true" @dragstart="drag($event)">                           
                                 </li>
                                 <li>
-                                    <img @click="addSvg('SchoolBus')"  name="SchoolBus" src="images/School/schoolbus.svg"  data-svg="images/space/schoolbus.svg" alt="" @dragstart="drag($event)">                           
+                                    <img @click="addSvg('SchoolBus')"  name="SchoolBus" src="images/School/schoolbus.svg"  data-svg="images/space/schoolbus.svg" alt="" draggable="true" @dragstart="drag($event)">                           
                                 </li>
                                 <li>
-                                    <img @click="addSvg('Books')"  name="Books" src="images/School/Stack_of_Books.svg"  data-svg="images/space/Stack_of_Books.svg" alt="" @dragstart="drag($event)">                           
+                                    <img @click="addSvg('Books')"  name="Books" src="images/School/Stack_of_Books.svg"  data-svg="images/space/Stack_of_Books.svg" alt="" draggable="true" @dragstart="drag($event)">                           
                                 </li>
                                 <li>
-                                    <img @click="addSvg('TestTube')"  name="TestTube" src="images/School/Test_tube.svg"  data-svg="images/space/Test_tube.svg" alt="" @dragstart="drag($event)">                           
+                                    <img @click="addSvg('TestTube')"  name="TestTube" src="images/School/Test_tube.svg"  data-svg="images/space/Test_tube.svg" alt="" draggable="true" @dragstart="drag($event)">                           
                                 </li>
                                 <li>
-                                    <img @click="addSvg('WorldGlobe')"  name="WorldGlobe" src="images/School/World_globe.svg"  data-svg="images/space/World_globe.svg" alt="" @dragstart="drag($event)">                           
+                                    <img @click="addSvg('WorldGlobe')"  name="WorldGlobe" src="images/School/World_globe.svg"  data-svg="images/space/World_globe.svg" alt="" draggable="true" @dragstart="drag($event)">                           
                                 </li>
                             </ul>
                             <!-- SchoolPack Svg  -->
 
                             <!-- ThanksGiving -->
-                            <ul v-if="showTabMenu == 'thanksgiving'">
+                            <ul v-if="showTabMenu == 'Music'">
                                 <li>
-                                    <img  name="anteater" src="images/thanksgiving/corn.svg"  data-svg="images/thanksgiving/corn.svg" alt="">                                    
+                                    <img @click="addSvg('CompactDisk')" name="CompactDisk" src="images/Music_SVG/CompactDisk.svg" draggable="true" @dragstart="drag($event)"  alt="">                                    
                                 </li>
                                 <li>
-                                    <img  name="anteater" src="images/thanksgiving/leaf.svg"  data-svg="images/thanksgiving/leaf.svg" alt="">                                    
+                                    <img @click="addSvg('Drum')" name="Drum" src="images/Music_SVG/Drum.svg" draggable="true" @dragstart="drag($event)"  alt="">                                    
                                 </li>
                                 <li>
-                                    <img  name="anteater" src="images/thanksgiving/pilgrim.svg"  data-svg="images/thanksgiving/pilgrim.svg" alt="">                                    
+                                    <img @click="addSvg('Earbuds')" name="Earbuds" src="images/Music_SVG/Earbuds.svg" draggable="true" @dragstart="drag($event)"  alt="">                                    
                                 </li>
                                 <li>
-                                    <img  name="anteater" src="images/thanksgiving/pumpkin.svg"  data-svg="images/thanksgiving/pumpkin.svg" alt="">                                    
+                                    <img @click="addSvg('Headphones')" name="Headphones" src="images/Music_SVG/Headphones.svg" draggable="true" @dragstart="drag($event)"  alt="">                                    
                                 </li>
                                 <li>
-                                     <img  name="anteater" src="images/thanksgiving/sunflower.svg"  data-svg="images/thanksgiving/sunflower.svg" alt="">                                    
+                                    <img @click="addSvg('Megaphone')" name="Megaphone" src="images/Music_SVG/megaphone.svg" draggable="true" @dragstart="drag($event)"  alt="">                                    
                                 </li>
                                 <li>
-                                    <img  name="anteater" src="images/thanksgiving/turkey.svg"  data-svg="images/thanksgiving/turkey.svg" alt="">                                    
+                                    <img @click="addSvg('Microphone')" name="Microphone" src="images/Music_SVG/microphone.svg" draggable="true" @dragstart="drag($event)"  alt="">                                    
                                 </li>
                                 <li>
-                                    <img  name="anteater" src="images/thanksgiving/turkeybird.svg"  data-svg="images/thanksgiving/turkeybird.svg" alt="">                                    
+                                    <img @click="addSvg('MusicNotes')" name="MusicNotes" src="images/Music_SVG/music_notes.svg" draggable="true" @dragstart="drag($event)"  alt="">                                    
                                 </li>
                                 <li>
-                                    <img  name="anteater" src="images/thanksgiving/wheat.svg"  data-svg="images/thanksgiving/wheat.svg" alt="">                                    
+                                    <img @click="addSvg('RecordAlbum')" name="RecordAlbum" src="images/Music_SVG/RecordAlbum.svg" draggable="true" @dragstart="drag($event)"  alt="">                                    
+                                </li>
+                                <li>
+                                    <img @click="addSvg('Guitar')" name="Guitar" src="images/Music_SVG/Guitar.svg" draggable="true" @dragstart="drag($event)"  alt="">                                    
+                                </li>
+                                <li>
+                                    <img @click="addSvg('Piano')" name="Piano" src="images/Music_SVG/Piano.svg" draggable="true" @dragstart="drag($event)"  alt="">                                    
                                 </li>
                             </ul>
                             <!-- ThanksGiving -->
 
 
-                            <!-- Wedding Svg -->
-                            <ul v-if="showTabMenu == 'wedding'">
+                            <!-- BathRoom Svg -->
+                            <ul v-if="showTabMenu == 'Bathroom'">
                                 <li>
-                                    <img  name="anteater" src="images/wedding/arch.svg"  data-svg="images/wedding/arch.svg" alt="">                                    
+                                    <img  @click="addSvg('Bathtub')" name="Bathtub" src="images/bathroom_svg/bathtub.svg" draggable="true" @dragstart="drag($event)"   alt="">                                    
                                 </li>
                                 <li>
-                                    <img  name="anteater" src="images/wedding/car.svg"  data-svg="images/wedding/car.svg" alt="">                                    
+                                    <img  @click="addSvg('FoldedTowels')" name="FoldedTowels" src="images/bathroom_svg/FoldedTowels.svg"  draggable="true" @dragstart="drag($event)" alt="">                                    
                                 </li>
                                 <li>
-                                    <img  name="anteater" src="images/wedding/champagne.svg"  data-svg="images/wedding/champagne.svg" alt="">                                    
+                                    <img  @click="addSvg('Handsoap')" name="Handsoap" src="images/bathroom_svg/Handsoap.svg"  draggable="true" @dragstart="drag($event)" alt="">                                    
                                 </li>
                                 <li>
-                                    <img  name="anteater" src="images/wedding/church.svg"  data-svg="images/wedding/church.svg" alt="">                                    
+                                    <img  @click="addSvg('Raser')" name="Raser" src="images/bathroom_svg/raser.svg" draggable="true" @dragstart="drag($event)"  alt="">                                    
                                 </li>
                                 <li>
-                                    <img  name="anteater" src="images/wedding/engagement.svg"  data-svg="images/wedding/engagement.svg" alt="">                                    
+                                    <img  @click="addSvg('RubberDuck')" name="RubberDuck" src="images/bathroom_svg/RubberDuck.svg"  draggable="true" @dragstart="drag($event)" alt="">                                    
                                 </li>
                                 <li>
-                                    <img  name="anteater" src="images/wedding/wedding-cake.svg"  data-svg="images/wedding/wedding-cake.svg" alt="">                                    
+                                    <img  @click="addSvg('Sink')" name="Sink" src="images/bathroom_svg/sink.svg" draggable="true" @dragstart="drag($event)"  alt="">                                    
                                 </li>
                                 <li>
-                                    <img  name="anteater" src="images/wedding/wedding-rings.svg"  data-svg="images/wedding/wedding-rings.svg" alt="">                                    
+                                    <img  @click="addSvg('Toilet')" name="Toilet" src="images/bathroom_svg/toilet.svg" draggable="true" @dragstart="drag($event)"  alt="">                                    
+                                </li>
+                                <li>
+                                    <img  @click="addSvg('ToiletPaper')" name="ToiletPaper" src="images/bathroom_svg/ToiletPaper.svg" draggable="true" @dragstart="drag($event)"  alt="">                                    
+                                </li>
+                                <li>
+                                    <img  @click="addSvg('Toothbrush')" name="Toothbrush" src="images/bathroom_svg/toothbrush.svg"  draggable="true" @dragstart="drag($event)" alt="">                                    
+                                </li>
+                                <li>
+                                    <img  @click="addSvg('Towelonholder')" name="Towelonholder" src="images/bathroom_svg/towelonholder.svg" draggable="true" @dragstart="drag($event)"  alt="">                                    
                                 </li>
                             </ul>
-                            <!-- Wedding Svg -->
+                            <!-- England Svg -->
+                            <ul v-if="showTabMenu == 'England'">
+                                <li>
+                                    <img  @click="addSvg('BigBen')" name="BigBen" src="images/England_SVG/BigBen.svg" draggable="true" @dragstart="drag($event)"   alt="">                                    
+                                </li>
+                                <li>
+                                    <img  @click="addSvg('BritishPounds')" name="BritishPounds" src="images/England_SVG/BritishPoundsymbol.svg" draggable="true" @dragstart="drag($event)"   alt="">                                    
+                                </li>
+                                <li>
+                                    <img  @click="addSvg('BuckinghamPalace')" name="BuckinghamPalace" src="images/England_SVG/BuckinghamPalace.svg" draggable="true" @dragstart="drag($event)"   alt="">                                    
+                                </li>
+                                <li>
+                                    <img  @click="addSvg('Crown')" name="Crown" src="images/England_SVG/Crown.svg" draggable="true" @dragstart="drag($event)"   alt="">                                    
+                                </li>
+                                <li>
+                                    <img  @click="addSvg('Doubledeckerbus')" name="Doubledeckerbus" src="images/England_SVG/Doubledeckerbus.svg" draggable="true" @dragstart="drag($event)"   alt="">                                    
+                                </li>
+                                <li>
+                                    <img  @click="addSvg('FlagofEngland')" name="FlagofEngland" src="images/England_SVG/FlagofEngland.svg" draggable="true" @dragstart="drag($event)"   alt="">                                    
+                                </li>
+                                <li>
+                                    <img  @click="addSvg('Stonehenge')" name="Stonehenge" src="images/England_SVG/Stonehenge.svg" draggable="true" @dragstart="drag($event)"   alt="">                                    
+                                </li>
+                                <li>
+                                    <img  @click="addSvg('TowerBridge')" name="TowerBridge" src="images/England_SVG/TowerBridge.svg" draggable="true" @dragstart="drag($event)"   alt="">                                    
+                                </li>
+                                <li>
+                                    <img  @click="addSvg('UnionJackflag')" name="UnionJackflag" src="images/England_SVG/UnionJackflag.svg" draggable="true" @dragstart="drag($event)"   alt="">                                    
+                                </li>
+                                <li>
+                                    <img  @click="addSvg('Redtelephonebox')" name="Redtelephonebox" src="images/England_SVG/Redtelephonebox.svg" draggable="true" @dragstart="drag($event)"   alt="">                                    
+                                </li>
+                            </ul>
+                            <ul v-if="showTabMenu == 'AlcoholicDrinks'">
+                                <li v-for="(items, index) in AlcoholicDrinks" :key="index">
+                                     <img  @click="addSvg(items.name)" :name="items.name" :src="items.src" draggable="true" @dragstart="drag($event)"  alt=""> 
+                                </li>
+                            </ul>
+                            <ul v-if="showTabMenu == 'Birthday'">
+                                <li v-for="(items, index) in BirthdaySvg" :key="index">
+                                     <img  @click="addSvg(items.name)" :name="items.name" :src="items.src" draggable="true" @dragstart="drag($event)"  alt=""> 
+                                </li>
+                            </ul>
+                            <ul v-if="showTabMenu == 'Aviation'">
+                                <li v-for="(items, index) in AviationSvg" :key="index">
+                                     <img  @click="addSvg(items.name)" :name="items.name" :src="items.src" draggable="true" @dragstart="drag($event)"  alt=""> 
+                                </li>
+                            </ul>
+                            <ul v-if="showTabMenu == 'Easter'">
+                                <li v-for="(items, index) in EasterSvg" :key="index">
+                                     <img  @click="addSvg(items.name)" :name="items.name" :src="items.src" draggable="true" @dragstart="drag($event)"  alt=""> 
+                                </li>
+                            </ul>
+                            <ul v-if="showTabMenu == 'Zodiac'">
+                                <li v-for="(items, index) in ZodiacSvg" :key="index">
+                                     <img  @click="addSvg(items.name)" :name="items.name" :src="items.src" draggable="true" @dragstart="drag($event)"  alt=""> 
+                                </li>
+                            </ul>
+                            <ul v-if="showTabMenu == 'BugsAndInserts'">
+                                <li v-for="(items, index) in BugsAndInsertsSvg" :key="index">
+                                     <img  @click="addSvg(items.name)" :name="items.name" :src="items.src" draggable="true" @dragstart="drag($event)"  alt=""> 
+                                </li>
+                            </ul>
+                            <ul v-if="showTabMenu == 'FourthJuly'">
+                                <li v-for="(items, index) in FourthJulySvg" :key="index">
+                                     <img  @click="addSvg(items.name)" :name="items.name" :src="items.src" draggable="true" @dragstart="drag($event)"  alt=""> 
+                                </li>
+                            </ul>
+                            <ul v-if="showTabMenu == 'Autumn'">
+                                <li v-for="(items, index) in Autumn_Svg" :key="index">
+                                     <img  @click="addSvg(items.name)" :name="items.name" :src="items.src" draggable="true" @dragstart="drag($event)"  alt=""> 
+                                </li>
+                            </ul>
+                            <ul v-if="showTabMenu == 'BabyShower'">
+                                <li v-for="(items, index) in BabyShowerSvg" :key="index">
+                                     <img  @click="addSvg(items.name)" :name="items.name" :src="items.src" draggable="true" @dragstart="drag($event)"  alt=""> 
+                                </li>
+                            </ul>
+                            <ul v-if="showTabMenu == 'Egypt'">
+                                <li v-for="(items, index) in EgyptSvg" :key="index">
+                                     <img  @click="addSvg(items.name)" :name="items.name" :src="items.src" draggable="true" @dragstart="drag($event)"  alt=""> 
+                                </li>
+                            </ul>
+                            <ul v-if="showTabMenu == 'BabyGirls'">
+                                <li v-for="(items, index) in BabyGirlsSvg" :key="index">
+                                     <img  @click="addSvg(items.name)" :name="items.name" :src="items.src" draggable="true" @dragstart="drag($event)"  alt=""> 
+                                </li>
+                            </ul>
+                            <ul v-if="showTabMenu == 'Birds'">
+                                <li v-for="(items, index) in BirdsSvg" :key="index">
+                                     <img  @click="addSvg(items.name)" :name="items.name" :src="items.src" draggable="true" @dragstart="drag($event)"  alt=""> 
+                                </li>
+                            </ul>
+                            <ul v-if="showTabMenu == 'Kitchen'">
+                                <li v-for="(items, index) in KitchenSvg" :key="index">
+                                     <img  @click="addSvg(items.name)" :name="items.name" :src="items.src" draggable="true" @dragstart="drag($event)"  alt=""> 
+                                </li>
+                            </ul>
+                            <ul v-if="showTabMenu == 'Garden'">
+                                <li v-for="(items, index) in GardenSvg" :key="index">
+                                     <img  @click="addSvg(items.name)" :name="items.name" :src="items.src" draggable="true" @dragstart="drag($event)"  alt=""> 
+                                </li>
+                            </ul>
+                            <ul v-if="showTabMenu == 'Fruits'">
+                                <li v-for="(items, index) in FruitsSvg" :key="index">
+                                     <img  @click="addSvg(items.name)" :name="items.name" :src="items.src" draggable="true" @dragstart="drag($event)"  alt=""> 
+                                </li>
+                            </ul>
+                            <ul v-if="showTabMenu == 'Fitness'">
+                                <li v-for="(items, index) in FitnessSvg" :key="index">
+                                     <img  @click="addSvg(items.name)" :name="items.name" :src="items.src" draggable="true" @dragstart="drag($event)"  alt=""> 
+                                </li>
+                            </ul>
+                            <ul v-if="showTabMenu == 'FarmAnimals'">
+                                <li v-for="(items, index) in FarmAnimalsSvg" :key="index">
+                                     <img  @click="addSvg(items.name)" :name="items.name" :src="items.src" draggable="true" @dragstart="drag($event)"  alt=""> 
+                                </li>
+                            </ul>
+                            <ul v-if="showTabMenu == 'Dinosaurs'">
+                                <li v-for="(items, index) in DinosaursSvg" :key="index">
+                                     <img  @click="addSvg(items.name)" :name="items.name" :src="items.src" draggable="true" @dragstart="drag($event)"  alt=""> 
+                                </li>
+                            </ul>
+                            <ul v-if="showTabMenu == 'DayOfTheDead'">
+                                <li v-for="(items, index) in DayOfTheDeadSvg" :key="index">
+                                     <img  @click="addSvg(items.name)" :name="items.name" :src="items.src" draggable="true" @dragstart="drag($event)"  alt=""> 
+                                </li>
+                            </ul>
+                            <ul v-if="showTabMenu == 'Christmas'">
+                                <li v-for="(items, index) in ChristmasSvg" :key="index">
+                                     <img  @click="addSvg(items.name)" :name="items.name" :src="items.src" draggable="true" @dragstart="drag($event)"  alt=""> 
+                                </li>
+                            </ul>
+                            <ul v-if="showTabMenu == 'Medieval'">
+                                <li v-for="(items, index) in MedievalSvg" :key="index">
+                                     <img  @click="addSvg(items.name)" :name="items.name" :src="items.src" draggable="true" @dragstart="drag($event)"  alt=""> 
+                                </li>
+                            </ul>
+                             <ul v-if="showTabMenu == 'Graduations'">
+                                <li v-for="(items, index) in GraduationsSvg" :key="index">
+                                     <img  @click="addSvg(items.name)" :name="items.name" :src="items.src" draggable="true" @dragstart="drag($event)"  alt=""> 
+                                </li>
+                            </ul>
+                             <ul v-if="showTabMenu == 'India'">
+                                <li v-for="(items, index) in IndiaSvg" :key="index">
+                                     <img  @click="addSvg(items.name)" :name="items.name" :src="items.src" draggable="true" @dragstart="drag($event)"  alt=""> 
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -492,9 +669,9 @@ export default {
             SearchElement:'',
             groupIcons:[
                 {
-                   name: 'animal',
-                   img:'images/all_use_icon/animal_icon.png',
-                   text:'Animal Icon Collection'
+                   name: 'Dog',
+                   img:'images/all_use_icon/animal_icon.jpg',
+                   text:'Dogs'
                 },
                 {
                    name: 'schoolPack',
@@ -502,22 +679,142 @@ export default {
                    text:'School Elements'
                 },
                 {
-                   name: 'wedding',
-                   img:'images/all_use_icon/wedding_icon.png',
-                   text:'Wedding Set'
+                   name: 'Bathroom',
+                   img:'images/all_use_icon/bathroom_icon.jpg',
+                   text:'Bathroom Set'
                 },
                 {
-                   name: 'food',
-                   img:'images/all_use_icon/food_icon.png',
-                   text:'Food Set'
+                   name: 'AlcoholicDrinks',
+                   img:'images/all_use_icon/Alcoholic_icon.jpg',
+                   text:'AlcoholicDrinks Set'
                 },
                 {
-                   name: 'thanksgiving',
-                   img:'images/all_use_icon/thanksgiving.png',
-                   text:'Thanksgiving'
+                   name: 'Cooking',
+                   img:'images/all_use_icon/cooking_icon.jpg',
+                   text:'Cooking Set'
+                },
+                {
+                   name: 'Music',
+                   img:'images/all_use_icon/music_icon.jpg',
+                   text:'Music Set'
+                },
+                {
+                   name: 'England',
+                   img:'images/all_use_icon/england_icon.jpg',
+                   text:'England Set'
+                },
+                {
+                   name: 'Birthday',
+                   img:'images/all_use_icon/birthday_icon.jpg',
+                   text:'Birthday Set'
+                },
+                {
+                   name: 'Aviation',
+                   img:'images/all_use_icon/aviation_icon.jpg',
+                   text:'Aviation Set'
+                },
+                {
+                   name: 'Easter',
+                   img:'images/all_use_icon/easter_icon.jpg',
+                   text:'Easter Set'
+                },
+                {
+                   name: 'Zodiac',
+                   img:'images/all_use_icon/zodiac_sign_icon.jpg',
+                   text:'Zodiac Set'
+                },
+                {
+                   name: 'BugsAndInserts',
+                   img:'images/all_use_icon/bugs_and_insects_icon.jpg',
+                   text:'Bugs And Insects Set'
+                },
+                {
+                   name: 'FourthJuly',
+                   img:'images/all_use_icon/4th_july_icon.jpg',
+                   text:'4th July (Independence Day in USA)'
+                },
+                {
+                   name: 'Autumn',
+                   img:'images/all_use_icon/autumn_icon.jpg',
+                   text:'Autumn Set'
+                },
+                {
+                   name: 'BabyShower',
+                   img:'images/all_use_icon/baby_shower_icon.jpg',
+                   text:'BabyShower Set'
+                },
+                {
+                   name: 'Egypt',
+                   img:'images/all_use_icon/egypt_icon.jpg',
+                   text:'Egypt Set'
+                },
+                {
+                   name: 'BabyGirls',
+                   img:'images/all_use_icon/baby_girls_icon.jpg',
+                   text:'BabyGirls Set'
+                },
+                {
+                   name: 'Birds',
+                   img:'images/all_use_icon/birds_icon.jpg',
+                   text:'Birds Set'
+                },
+                {
+                   name: 'Kitchen',
+                   img:'images/all_use_icon/kitchen_icon.jpg',
+                   text:'Kitchen Set'
+                },
+                {
+                   name: 'Garden',
+                   img:'images/all_use_icon/garden_icon.jpg',
+                   text:'Garden Set'
+                },
+                {
+                   name: 'Fruits',
+                   img:'images/all_use_icon/fruits_icon.jpg',
+                   text:'Fruits Set'
+                },
+                {
+                   name: 'Fitness',
+                   img:'images/all_use_icon/fitness_icon.jpg',
+                   text:'Fitness Set'
+                },
+                {
+                    name: 'FarmAnimals',
+                   img:'images/all_use_icon/farm_animal_icon.jpg',
+                   text:'Farm Animals Set'
+                },
+                {
+                   name: 'Dinosaurs',
+                   img:'images/all_use_icon/dinosaur_icon.jpg',
+                   text:'Dinosaurs Set'
+                },
+                {
+                   name: 'DayOfTheDead',
+                   img:'images/all_use_icon/Day_of_the_Dead_icon.jpg',
+                   text:'Day Of The Dead Set'
+                },
+                {
+                   name: 'Christmas',
+                   img:'images/all_use_icon/christmas_icon.jpg',
+                   text:'Christmas Set'
+                },
+                {
+                    name: 'Graduations',
+                    img:'images/all_use_icon/graduations.jpg',
+                    text:'Graduations Set'
+                },
+                {
+                   name: 'Medieval',
+                   img:'images/all_use_icon/medieval_icon.jpg',
+                   text:'Medieval Set'
+                },
+                {
+                   name: 'India',
+                   img:'images/all_use_icon/india_icon.jpg',
+                   text:'India Set'
                 },
             ],
-            RandomArray:[
+            RandomArraySchool:[
                 {
                     name:'Atom', 
                 },
@@ -535,13 +832,1472 @@ export default {
                 },
                 
             ],
+            RandomArrayDog:[
+                {
+                    name:'Beagle', 
+                },
+                {
+                    name:'Boxer',
+                },
+                {
+                    name:'BullDog',
+                },
+                {
+                    name:'FrenchBullDog',
+                },
+                {
+                    name:'GermanShepherd',
+                },
+                
+            ],
+            RandomArrayBathRoom:[
+                {
+                    name:'Bathtub', 
+                },
+                {
+                    name:'FoldedTowels',
+                },
+                {
+                    name:'Handsoap',
+                },
+                {
+                    name:'Raser',
+                },
+                {
+                    name:'RubberDuck',
+                },
+                
+            ],
+            RandomArrayAllcoholic:[
+                {
+                    name:'BeerMug', 
+                },
+                {
+                    name:'BeerStein',
+                },
+                {
+                    name:'BottleBeer',
+                },
+                {
+                    name:'CannedBeer',
+                },
+                {
+                    name:'Champagne',
+                },
+                
+            ],
+            RandomArrayCooking:[
+                {
+                    name:'Boillingport', 
+                },
+                {
+                    name:'Butcherknife',
+                },
+                {
+                    name:'Cheesegrater',
+                },
+                {
+                    name:'ChefHat',
+                },
+                {
+                    name:'Cuttingboard',
+                },
+                
+            ],
+            RandomArrayMusic:[
+                {
+                    name:'CompactDisk', 
+                },
+                {
+                    name:'Drum',
+                },
+                {
+                    name:'Earbuds',
+                },
+                {
+                    name:'Guitar',
+                },
+                {
+                    name:'Headphones',
+                },
+                
+            ],
+            RandomArrayEngland:[
+                {
+                    name:'BigBen', 
+                },
+                {
+                    name:'BritishPounds',
+                },
+                {
+                    name:'BuckinghamPalace',
+                },
+                {
+                    name:'Crown',
+                },
+                {
+                    name:'Doubledeckerbus',
+                },
+                
+            ],
+            RandomArrayBirthday:[
+                {
+                    name:'Balloons', 
+                },
+                {
+                    name:'BirthdayBanner',
+                },
+                {
+                    name:'BirthdayCard',
+                },
+                {
+                    name:'Cake',
+                },
+                {
+                    name:'Candles',
+                },
+                
+            ],
+            RandomArrayAviation:[
+                {
+                    name:'AirBalloon', 
+                },
+                {
+                    name:'AirTrafficTower',
+                },
+                {
+                    name:'Blimp',
+                },
+                {
+                    name:'Bomber',
+                },
+                {
+                    name:'Cloud',
+                },
+                
+            ],
+            RandomArrayEaster:[
+                {
+                    name:'Bible', 
+                },
+                {
+                    name:'Chick',
+                },
+                {
+                    name:'Church',
+                },
+                {
+                    name:'Cross',
+                },
+                {
+                    name:'Daffodils',
+                },
+                
+            ],
+            RandomArrayZodiac:[
+                {
+                    name:'Aquarius', 
+                },
+                {
+                    name:'Aries',
+                },
+                {
+                    name:'Cancer',
+                },
+                {
+                    name:'Capricorn',
+                },
+                {
+                    name:'Gemini',
+                },
+                
+            ],
+            RandomArrayInsects:[
+                {
+                    name:'Ant', 
+                },
+                {
+                    name:'Centipede',
+                },
+                {
+                    name:'Cockroach',
+                },
+                {
+                    name:'Cricket',
+                },
+                {
+                    name:'Fly',
+                },
+                
+            ],
+            RandomArrayFourthJuly:[
+                {
+                    name:'BaldEagle', 
+                },
+                {
+                    name:'CookOut',
+                },
+                {
+                    name:'Fireworks',
+                },
+                {
+                    name:'Ribbon',
+                },
+                {
+                    name:'Stars',
+                },
+                            
+            ],
+
+            RandomArrayAutumn:[
+                {
+                    name:'CornucopiaBasket', 
+                },
+                {
+                    name:'FallingLeaves',
+                },
+                {
+                    name:'Harvest',
+                },
+                {
+                    name:'Hat',
+                },
+                {
+                    name:'Jacket',
+                },
+                            
+            ],
+            RandomArrayBabyShower:[
+                {
+                    name:'Alphabet', 
+                },
+                {
+                    name:'BabyFeet',
+                },
+                {
+                    name:'BalloonsBaby',
+                },
+                {
+                    name:'BibBaby',
+                },
+                {
+                    name:'CongratulationsBanner',
+                },
+                            
+            ],
+            RandomArrayEgypt:[
+                {
+                    name:'Anubis', 
+                },
+                {
+                    name:'Camel',
+                },
+                {
+                    name:'EgyptianCat',
+                },
+                {
+                    name:'Egyptianhieroglyphs',
+                },
+                {
+                    name:'EyeOfRa',
+                },
+                            
+            ],
+            RandomArrayBabyGirls:[
+                {
+                    name:'BabyBib', 
+                },
+                {
+                    name:'BabyBottle',
+                },
+                {
+                    name:'BabyDoll',
+                },
+                {
+                    name:'Cradle',
+                },
+                {
+                    name:'GirlBanner',
+                },
+                            
+            ],
+            RandomArrayBirds:[
+                {
+                    name:'Bluebird', 
+                },
+                {
+                    name:'BlueJay',
+                },
+                {
+                    name:'Cardinal',
+                },
+                {
+                    name:'Goldfinch',
+                },
+                {
+                    name:'Hawk',
+                },
+                            
+            ],
+            RandomArrayKitchen:[
+                {
+                    name:'Blender', 
+                },
+                {
+                    name:'CoffeeMachine',
+                },
+                {
+                    name:'Crockpot',
+                },
+                {
+                    name:'Dishwasher',
+                },
+                {
+                    name:'Microwave',
+                },
+                            
+            ],
+            RandomArrayGarden:[
+                {
+                    name:'Clippers', 
+                },
+                {
+                    name:'GardenHose',
+                },
+                {
+                    name:'GardeningGloves',
+                },
+                {
+                    name:'LawnMower',
+                },
+                {
+                    name:'PatchGrass',
+                },
+                            
+            ],
+            RandomArrayFruits:[
+                {
+                    name:'Apple', 
+                },
+                {
+                    name:'Banana',
+                },
+                {
+                    name:'Grapefruit',
+                },
+                {
+                    name:'Grapes',
+                },
+                {
+                    name:'Kiwi',
+                },
+                            
+            ],
+            RandomArrayFitness:[
+                {
+                    name:'AppleFitness', 
+                },
+                {
+                    name:'Barbells',
+                },
+                {
+                    name:'Bicycler',
+                },
+                {
+                    name:'GrapesFitness',
+                },
+                {
+                    name:'Muscle',
+                },
+                            
+            ],
+            RandomArrayFarmAnimals:[
+                {
+                    name:'Bull', 
+                },
+                {
+                    name:'Chicken',
+                },
+                {
+                    name:'Cow',
+                },
+                {
+                    name:'Donkey',
+                },
+                {
+                    name:'Goat',
+                },
+                            
+            ],
+            RandomArrayDinosaurs:[
+                {
+                    name:'Brontosaurus', 
+                },
+                {
+                    name:'Dimetrodon',
+                },
+                {
+                    name:'Parasaurolophus',
+                },
+                {
+                    name:'Plesiosaurus',
+                },
+                {
+                    name:'Pterodactyl',
+                },
+                            
+            ],
+            RandomArrayDayOfTheDead:[
+                {
+                    name:'Cactus', 
+                },
+                {
+                    name:'Coffin',
+                },
+                {
+                    name:'DrinkWater',
+                },
+                {
+                    name:'MaxicanSugarSkull',
+                },
+                {
+                    name:'MexicanMerigoldFlower',
+                },
+                            
+            ],
+            RandomArrayChristmas:[
+                {
+                    name:'Bells', 
+                },
+                {
+                    name:'ChristmasTree',
+                },
+                {
+                    name:'ChristmasWreath',
+                },
+                {
+                    name:'GingerbreadMan',
+                },
+                {
+                    name:'Mistletoe',
+                },
+                            
+            ],
+            RandomArrayIndia:[
+                {
+                    name:'Cobra', 
+                },
+                {
+                    name:'CowIndia',
+                },
+                {
+                    name:'Elephant',
+                },
+                {
+                    name:'IndianMan',
+                },
+                {
+                    name:'IndianWoman',
+                },
+                            
+            ],
+            RandomArrayGraduations:[
+                {
+                    name:'Balloon', 
+                },
+                {
+                    name:'Collage',
+                },
+                {
+                    name:'CongratsBanner',
+                },
+                {
+                    name:'DiplomaFull',
+                },
+                {
+                    name:'DiplomaScrolled',
+                },
+                            
+            ],
             inputImageWidth:this.$store.state.downloadImageWidth,
             inputImageHeight:this.$store.state.downloadImageHeight,
             imageFormat:'png',
             showLinkOne:true,
             showLinktwo:false,
             downloadProgressBar:false,
-
+            AlcoholicDrinks:[
+                {
+                   name: 'BeerMug',
+                   src:'images/Alcoholic_Drinks_SVG/Beer_Mug.svg',
+                },
+                {
+                   name: 'BeerStein',
+                   src:'images/Alcoholic_Drinks_SVG/Beer_Stein.svg',
+                },
+                {
+                   name: 'BottleBeer',
+                   src:'images/Alcoholic_Drinks_SVG/Bottle_beer.svg',
+                },
+                {
+                   name: 'CannedBeer',
+                   src:'images/Alcoholic_Drinks_SVG/Canned_beer.svg',
+                },
+                {
+                   name: 'Champagne',
+                   src:'images/Alcoholic_Drinks_SVG/Champagne.svg',
+                },
+                {
+                   name: 'Margarita',
+                   src:'images/Alcoholic_Drinks_SVG/Margarita.svg',
+                },
+                {
+                   name: 'Martini',
+                   src:'images/Alcoholic_Drinks_SVG/Martini.svg',
+                },
+                {
+                   name: 'MixedDrink',
+                   src:'images/Alcoholic_Drinks_SVG/Mixed_drink.svg',
+                },
+                {
+                   name: 'WineBottle',
+                   src:'images/Alcoholic_Drinks_SVG/Wine_Bottle.svg',
+                },
+                {
+                   name: 'WineGlass',
+                   src:'images/Alcoholic_Drinks_SVG/Wine_glass.svg',
+                },
+            ],
+            
+            BirthdaySvg:[
+                {
+                   name: 'Balloons',
+                   src:'images/Birthday_SVG/balloons.svg',
+                },
+                {
+                   name: 'BirthdayBanner',
+                   src:'images/Birthday_SVG/birthday-banner.svg',
+                },
+                {
+                   name: 'BirthdayCard',
+                   src:'images/Birthday_SVG/birthday-card.svg',
+                },
+                {
+                   name: 'Cake',
+                   src:'images/Birthday_SVG/cake.svg',
+                },
+                {
+                   name: 'Candles',
+                   src:'images/Birthday_SVG/candles.svg',
+                },
+                {
+                   name: 'ChampagneBottle',
+                   src:'images/Birthday_SVG/Champagne_bottle.svg',
+                },
+                {
+                   name: 'Clown',
+                   src:'images/Birthday_SVG/clown.svg',
+                },
+                {
+                   name: 'PartyHat',
+                   src:'images/Birthday_SVG/party-hat.svg',
+                },
+                {
+                   name: 'Present',
+                   src:'images/Birthday_SVG/Present.svg',
+                },
+                {
+                   name: 'Toy',
+                   src:'images/Birthday_SVG/toy.svg',
+                },
+            ],
+            AviationSvg:[
+                {
+                   name: 'AirBalloon',
+                   src:'images/Aviation_SVG/airBalloon.svg',
+                },
+                {
+                   name: 'AirTrafficTower',
+                   src:'images/Aviation_SVG/AirTrafficTower.svg',
+                },
+                {
+                   name: 'Blimp',
+                   src:'images/Aviation_SVG/Blimp.svg',
+                },
+                {
+                   name: 'Bomber',
+                   src:'images/Aviation_SVG/Bomber.svg',
+                },
+                {
+                   name: 'Cloud',
+                   src:'images/Aviation_SVG/Cloud.svg',
+                },
+                {
+                   name: 'FlightAttendant',
+                   src:'images/Aviation_SVG/FlightAttendant.svg',
+                },
+                {
+                   name: 'Helecoptor',
+                   src:'images/Aviation_SVG/Helecoptor.svg',
+                },
+                {
+                   name: 'JetPlane',
+                   src:'images/Aviation_SVG/Jet_Plane.svg',
+                },
+                {
+                   name: 'Pilot',
+                   src:'images/Aviation_SVG/Pilot.svg',
+                },
+                {
+                   name: 'PropPlane',
+                   src:'images/Aviation_SVG/PropPlane.svg',
+                },
+            ],
+            EasterSvg:[
+                {
+                   name: 'Bible',
+                   src:'images/Easter_SVG/bible.svg',
+                },
+                {
+                   name: 'Chick',
+                   src:'images/Easter_SVG/Chick.svg',
+                },
+                {
+                   name: 'Church',
+                   src:'images/Easter_SVG/church.svg',
+                },
+                {
+                   name: 'Cross',
+                   src:'images/Easter_SVG/CROSS.svg',
+                },
+                {
+                   name: 'Daffodils',
+                   src:'images/Easter_SVG/Daffodils.svg',
+                },
+                {
+                   name: 'EasterBunny',
+                   src:'images/Easter_SVG/easter_bunny.svg',
+                },
+                {
+                   name: 'EasterEgg',
+                   src:'images/Easter_SVG/Easter_egg.svg',
+                },
+                {
+                   name: 'EasterEggBasket',
+                   src:'images/Easter_SVG/EasterEggBasket.svg',
+                },
+                {
+                   name: 'RisenChrist',
+                   src:'images/Easter_SVG/RisenChrist.svg',
+                },
+                {
+                   name: 'Tulips',
+                   src:'images/Easter_SVG/tulips.svg',
+                },
+            ],
+            ZodiacSvg:[
+                {
+                    name: 'Aquarius',
+                    src:'images/Zodiac_Signs_svg/Aquarius.svg',
+                },
+                {
+                    name: 'Aries',
+                    src:'images/Zodiac_Signs_svg/Aries.svg',
+                },
+                {
+                    name: 'Cancer',
+                    src:'images/Zodiac_Signs_svg/Cancer.svg',
+                },
+                {
+                    name: 'Capricorn',
+                    src:'images/Zodiac_Signs_svg/Capricorn.svg',
+                },
+                {
+                    name: 'Gemini',
+                    src:'images/Zodiac_Signs_svg/Gemini.svg',
+                },
+                {
+                    name: 'Leo',
+                    src:'images/Zodiac_Signs_svg/leo.svg',
+                },
+                {
+                    name: 'Libra',
+                    src:'images/Zodiac_Signs_svg/Libra.svg',
+                },
+                {
+                    name: 'Pisces',
+                    src:'images/Zodiac_Signs_svg/Pisces.svg',
+                },
+                {
+                    name: 'Sagittarius',
+                    src:'images/Zodiac_Signs_svg/Sagittarius.svg',
+                },
+                {
+                    name: 'Scorpio',
+                    src:'images/Zodiac_Signs_svg/Scorpio.svg',
+                },
+                {
+                    name: 'Taurus',
+                    src:'images/Zodiac_Signs_svg/Taurus.svg',
+                },
+                {
+                    name: 'Virgo',
+                    src:'images/Zodiac_Signs_svg/Virgo.svg',
+                },
+            ],
+            BugsAndInsertsSvg:[
+                {
+                    name: 'Ant',
+                    src:'images/Bugs_and_Inserts_SVG/Ant.svg',  
+                },
+                {
+                    name: 'Centipede',
+                    src:'images/Bugs_and_Inserts_SVG/centipede.svg',  
+                },
+                {
+                    name: 'Cockroach',
+                    src:'images/Bugs_and_Inserts_SVG/cockroach.svg',  
+                },
+                {
+                    name: 'Cricket',
+                    src:'images/Bugs_and_Inserts_SVG/cricket.svg',  
+                },
+                {
+                    name: 'Fly',
+                    src:'images/Bugs_and_Inserts_SVG/Fly.svg',  
+                },
+                {
+                    name: 'Grasshopper',
+                    src:'images/Bugs_and_Inserts_SVG/Grasshopper.svg',  
+                },
+                {
+                    name: 'LadyBug',
+                    src:'images/Bugs_and_Inserts_SVG/Lady_bug.svg',  
+                },
+                {
+                    name: 'Spider',
+                    src:'images/Bugs_and_Inserts_SVG/Spider.svg',  
+                },
+                {
+                    name: 'Tick',
+                    src:'images/Bugs_and_Inserts_SVG/Tick.svg',  
+                },
+                {
+                    name: 'Worm',
+                    src:'images/Bugs_and_Inserts_SVG/worm.svg',  
+                },
+            ],
+            FourthJulySvg:[
+                {
+                    name: 'BaldEagle',
+                    src:'images/4th-july_SVG/Bald-Eagle.svg',
+                },
+                {
+                    name: 'CookOut',
+                    src:'images/4th-july_SVG/Cook-out.svg',
+                },
+                {
+                    name: 'Fireworks',
+                    src:'images/4th-july_SVG/fireworks.svg',
+                },
+                {
+                    name: 'Ribbon',
+                    src:'images/4th-july_SVG/ribbon.svg',
+                },
+                {
+                    name: 'Stars',
+                    src:'images/4th-july_SVG/stars.svg',
+                },
+                {
+                    name: 'StatueOfLiberty',
+                    src:'images/4th-july_SVG/Statue_of_Liberty.svg',
+                },
+                {
+                    name: 'Stripes',
+                    src:'images/4th-july_SVG/stripes.svg',
+                },
+                {
+                    name: 'UncleSam',
+                    src:'images/4th-july_SVG/Uncle-Sam.svg',
+                },
+                {
+                    name: 'UsaFlag',
+                    src:'images/4th-july_SVG/usa-flag.svg',
+                },
+            ],
+            Autumn_Svg:[
+                {
+                    name: 'CornucopiaBasket',
+                    src:'images/Autumn_SVG/Cornucopia_basket.svg',  
+                },
+                {
+                    name: 'FallingLeaves',
+                    src:'images/Autumn_SVG/falling_leaves.svg',  
+                },
+                {
+                    name: 'Harvest',
+                    src:'images/Autumn_SVG/Harvest.svg',  
+                },
+                {
+                    name: 'Hat',
+                    src:'images/Autumn_SVG/hat.svg',  
+                },
+                {
+                    name: 'Jacket',
+                    src:'images/Autumn_SVG/jacket.svg',  
+                },
+                {
+                    name: 'LeavesFalling',
+                    src:'images/Autumn_SVG/Leaves_falling.svg',  
+                },
+                {
+                    name: 'LeavesChangingColor',
+                    src:'images/Autumn_SVG/leaves-changing-color.svg',  
+                },
+                {
+                    name: 'Pumpkin',
+                    src:'images/Autumn_SVG/Pumpkin.svg',  
+                },
+                {
+                    name: 'PumpkinPie',
+                    src:'images/Autumn_SVG/Pumpkin_pie.svg',  
+                },
+                {
+                    name: 'Sweater',
+                    src:'images/Autumn_SVG/sweater.svg',  
+                },
+            ],
+            BabyShowerSvg:[
+                {
+                    name: 'Alphabet',
+                    src:'images/Baby_Shower_SVG/alphabet.svg',
+                },
+                {
+                    name: 'BabyFeet',
+                    src:'images/Baby_Shower_SVG/Baby_feet.svg',
+                },
+                {
+                    name: 'BalloonsBaby',
+                    src:'images/Baby_Shower_SVG/balloon.svg',
+                },
+                {
+                    name: 'BibBaby',
+                    src:'images/Baby_Shower_SVG/bib-baby.svg',
+                },
+                {
+                    name: 'CongratulationsBanner',
+                    src:'images/Baby_Shower_SVG/Congratulations-banner.svg',
+                },
+                {
+                    name: 'Crib',
+                    src:'images/Baby_Shower_SVG/crib.svg',
+                },
+                {
+                    name: 'PresentBaby',
+                    src:'images/Baby_Shower_SVG/Present.svg',
+                },
+                {
+                    name: 'Rattle',
+                    src:'images/Baby_Shower_SVG/Rattle.svg',
+                },
+                {
+                    name: 'Stork',
+                    src:'images/Baby_Shower_SVG/Stork.svg',
+                },
+                {
+                    name: 'TeddyBear',
+                    src:'images/Baby_Shower_SVG/Teddy-bear.svg',
+                },
+            ],
+            EgyptSvg:[
+                {
+                    name: 'Anubis',
+                    src:'images/Egypt_SVG/Anubis.svg',
+                },
+                {
+                    name: 'Camel',
+                    src:'images/Egypt_SVG/camel.svg',
+                },
+                {
+                    name: 'EgyptianCat',
+                    src:'images/Egypt_SVG/EgyptianCat.svg',
+                },
+                {
+                    name: 'Egyptianhieroglyphs',
+                    src:'images/Egypt_SVG/Egyptianhieroglyphs.svg',
+                },
+                {
+                    name: 'EyeOfRa',
+                    src:'images/Egypt_SVG/eye_of_ra.svg',
+                },
+                {
+                    name: 'Mummy',
+                    src:'images/Egypt_SVG/Mummy.svg',
+                },
+                {
+                    name: 'Pyramid',
+                    src:'images/Egypt_SVG/Pyramid.svg',
+                },
+                {
+                    name: 'QueenNefertiti',
+                    src:'images/Egypt_SVG/QueenNefertiti.svg',
+                },
+                {
+                    name: 'Scarab',
+                    src:'images/Egypt_SVG/Scarab.svg',
+                },
+                {
+                    name: 'Sphinx',
+                    src:'images/Egypt_SVG/Sphinx.svg',
+                },
+            ],
+            // baby girl
+            BabyGirlsSvg:[
+                {
+                    name: 'BabyBib',
+                    src:'images/Baby_Girls_SVG/Baby_Bib.svg',
+                },
+                {
+                    name: 'BabyBottle',
+                    src:'images/Baby_Girls_SVG/Baby_Bottle.svg',
+                },
+                {
+                    name: 'BabyDoll',
+                    src:'images/Baby_Girls_SVG/Baby_Doll.svg', 
+                },
+                {
+                    name: 'Cradle',
+                    src:'images/Baby_Girls_SVG/cradle.svg', 
+                },
+                {
+                    name: 'GirlBanner',
+                    src:'images/Baby_Girls_SVG/girl_banner.svg', 
+                },
+                {
+                    name: 'Pacifier',
+                    src:'images/Baby_Girls_SVG/Pacifier.svg', 
+                },
+                {
+                    name: 'RubberDucky',
+                    src:'images/Baby_Girls_SVG/Rubber_Ducky.svg', 
+                },
+                {
+                    name: 'StorkBaby',
+                    src:'images/Baby_Girls_SVG/Stork.svg', 
+                },
+                {
+                    name: 'SwaddledBaby',
+                    src:'images/Baby_Girls_SVG/Swaddled_Baby.svg', 
+                },
+                {
+                    name: 'TeddyBearGirl',
+                    src:'images/Baby_Girls_SVG/teddy_bear.svg', 
+                },
+            ],
+            // baby girl end
+            BirdsSvg:[
+                {
+                    name: 'Bluebird',
+                    src:'images/Birds_SVG/Bluebird.svg',
+                },
+                {
+                    name: 'BlueJay',
+                    src:'images/Birds_SVG/BlueJay.svg',
+                },
+                {
+                    name: 'Cardinal',
+                    src:'images/Birds_SVG/Cardinal.svg',
+                },
+                {
+                    name: 'Goldfinch',
+                    src:'images/Birds_SVG/Goldfinch.svg',
+                },
+                {
+                    name: 'Hawk',
+                    src:'images/Birds_SVG/hawk.svg',
+                },
+                {
+                    name: 'Hummingbird1',
+                    src:'images/Birds_SVG/Hummingbird1.svg',
+                },
+                {
+                    name: 'Owl',
+                    src:'images/Birds_SVG/owl.svg',
+                },
+                {
+                    name: 'Robin',
+                    src:'images/Birds_SVG/Robin.svg',
+                },
+                {
+                    name: 'Sparrow',
+                    src:'images/Birds_SVG/Sparrow.svg',
+                },
+                {
+                    name: 'Woodpecker',
+                    src:'images/Birds_SVG/Woodpecker.svg',
+                },
+            ],
+            KitchenSvg:[
+                {
+                    name: 'Blender',
+                    src:'images/kitchen_svg/blender.svg',
+                },
+                {
+                    name: 'CoffeeMachine',
+                    src:'images/kitchen_svg/Coffee_Machine.svg',
+                },
+                {
+                    name: 'Crockpot',
+                    src:'images/kitchen_svg/crockpot.svg',
+                },
+                {
+                    name: 'Dishwasher',
+                    src:'images/kitchen_svg/Dishwasher.svg',
+                },
+                {
+                    name: 'Microwave',
+                    src:'images/kitchen_svg/Microwave.svg',
+                },
+                {
+                    name: 'Mixer',
+                    src:'images/kitchen_svg/mixer.svg',
+                },
+                {
+                    name: 'Oven',
+                    src:'images/kitchen_svg/oven.svg',
+                },
+                {
+                    name: 'Refrigerator',
+                    src:'images/kitchen_svg/Refrigerator.svg',
+                },
+                {
+                    name: 'TeaPot',
+                    src:'images/kitchen_svg/tea-pot.svg',
+                },
+                {
+                    name: 'Toster',
+                    src:'images/kitchen_svg/toster.svg',
+                },
+            ],
+            GardenSvg:[
+                {
+                    name: 'Clippers',
+                    src:'images/Garden_SVG/Clippers.svg',
+                },
+                {
+                    name: 'GardenHose',
+                    src:'images/Garden_SVG/Garden_Hose.svg',
+                },
+                {
+                    name: 'GardeningGloves',
+                    src:'images/Garden_SVG/Gardening_Gloves.svg',
+                },
+                {
+                    name: 'LawnMower',
+                    src:'images/Garden_SVG/Lawn_Mower.svg',
+                },
+                {
+                    name: 'PatchGrass',
+                    src:'images/Garden_SVG/Patch_Grass.svg',
+                },
+                {
+                    name: 'RubberBoots',
+                    src:'images/Garden_SVG/Rubber_Boots.svg',
+                },
+                {
+                    name: 'Shovel',
+                    src:'images/Garden_SVG/Shovel.svg',
+                },
+                {
+                    name: 'Sunflower',
+                    src:'images/Garden_SVG/sunflower.svg',
+                },
+                {
+                    name: 'Trowel',
+                    src:'images/Garden_SVG/Trowel.svg',
+                },
+                {
+                    name: 'Wheelbarrow',
+                    src:'images/Garden_SVG/Wheelbarrow.svg',
+                },
+            ],
+            FruitsSvg:[
+                {
+                    name: 'Apple',
+                    src:'images/Fruits_SVG/apple.svg',
+                },
+                {
+                    name: 'Banana',
+                    src:'images/Fruits_SVG/Banana.svg',
+                },
+                {
+                    name: 'Grapefruit',
+                    src:'images/Fruits_SVG/Grapefruit.svg',
+                },
+                {
+                    name: 'Grapes',
+                    src:'images/Fruits_SVG/grapes.svg',
+                },
+                {
+                    name: 'Kiwi',
+                    src:'images/Fruits_SVG/kiwi.svg',
+                },
+                {
+                    name: 'Melon',
+                    src:'images/Fruits_SVG/melon.svg',
+                },
+                {
+                    name: 'Peach',
+                    src:'images/Fruits_SVG/Peach.svg',
+                },
+                {
+                    name: 'Pears',
+                    src:'images/Fruits_SVG/Pears.svg',
+                },
+                {
+                    name: 'Pineapple',
+                    src:'images/Fruits_SVG/Pineapple.svg',
+                },
+                {
+                    name: 'Strawberry',
+                    src:'images/Fruits_SVG/Strawberry.svg',
+                },
+            ],
+            FitnessSvg:[
+                {
+                    name: 'AppleFitness',
+                    src:'images/Fitness_SVG/apple.svg',
+                },
+                {
+                    name: 'Barbells',
+                    src:'images/Fitness_SVG/Barbells.svg',
+                },
+                {
+                    name: 'Bicycler',
+                    src:'images/Fitness_SVG/Bicycler.svg',
+                },
+                {
+                    name: 'GrapesFitness',
+                    src:'images/Fitness_SVG/Grapes.svg',
+                },
+                {
+                    name: 'Muscle',
+                    src:'images/Fitness_SVG/muscle.svg',
+                },
+                {
+                    name: 'Runner',
+                    src:'images/Fitness_SVG/Runner.svg',
+                },
+                {
+                    name: 'StationaryBike',
+                    src:'images/Fitness_SVG/stationary-bike.svg',
+                },
+                {
+                    name: 'Treadmill',
+                    src:'images/Fitness_SVG/Treadmill.svg',
+                },
+                {
+                    name: 'Weightlifer',
+                    src:'images/Fitness_SVG/Weightlifer.svg',
+                },
+                {
+                    name: 'Yoga',
+                    src:'images/Fitness_SVG/yoga.svg',
+                },
+            ],
+            GraduationsSvg:[
+                {
+                    name: 'Balloon',
+                    src:'images/Graduations_SVG/balloon.svg',
+                },
+                {
+                    name: 'Collage',
+                    src:'images/Graduations_SVG/collage.svg',
+                },
+                {
+                    name: 'CongratsBanner',
+                    src:'images/Graduations_SVG/Congrats_Banner.svg',
+                },
+                {
+                    name: 'DiplomaFull',
+                    src:'images/Graduations_SVG/Diploma (full).svg',
+                },
+                {
+                    name: 'DiplomaScrolled',
+                    src:'images/Graduations_SVG/Diploma (scrolled).svg',
+                },
+                {
+                    name: 'Flowers',
+                    src:'images/Graduations_SVG/Flowers.svg',
+                },
+                {
+                    name: 'GraduationRobe',
+                    src:'images/Graduations_SVG/Graduation_Robe.svg',
+                },
+                {
+                    name: 'GraduationBanner',
+                    src:'images/Graduations_SVG/GraduationBanner.svg',
+                },
+                {
+                    name: 'Mortarboard',
+                    src:'images/Graduations_SVG/Mortarboard.svg',
+                },
+                {
+                    name: 'ThrowingHats',
+                    src:'images/Graduations_SVG/throwing-hats.svg',
+                },                
+            ],
+            FarmAnimalsSvg:[
+                {
+                    name: 'Bull',
+                    src:'images/Farm_Animals_SVG/bull.svg',
+                },
+                {
+                    name: 'Chicken',
+                    src:'images/Farm_Animals_SVG/Chicken.svg',
+                },
+                {
+                    name: 'Cow',
+                    src:'images/Farm_Animals_SVG/COW.svg',
+                },
+                {
+                    name: 'Donkey',
+                    src:'images/Farm_Animals_SVG/Donkey.svg',
+                },
+                {
+                    name: 'Goat',
+                    src:'images/Farm_Animals_SVG/goat.svg',
+                },
+                {
+                    name: 'Goose',
+                    src:'images/Farm_Animals_SVG/goose.svg',
+                },
+                {
+                    name: 'Horse',
+                    src:'images/Farm_Animals_SVG/horse.svg',
+                },
+                {
+                    name: 'Pig',
+                    src:'images/Farm_Animals_SVG/pig.svg',
+                },
+                {
+                    name: 'Sheep',
+                    src:'images/Farm_Animals_SVG/sheep.svg',
+                },
+                {
+                    name: 'SheepDog',
+                    src:'images/Farm_Animals_SVG/Sheep_Dog.svg',
+                },                
+            ],
+            DinosaursSvg:[
+                {
+                    name: 'Brontosaurus',
+                    src:'images/Dinosaurs_SVG/Brontosaurus.svg',
+                },
+                {
+                    name: 'Dimetrodon',
+                    src:'images/Dinosaurs_SVG/Dimetrodon.svg',
+                },
+                {
+                    name: 'Parasaurolophus',
+                    src:'images/Dinosaurs_SVG/Parasaurolophus.svg',
+                },
+                {
+                    name: 'Plesiosaurus',
+                    src:'images/Dinosaurs_SVG/Plesiosaurus.svg',
+                },
+                {
+                    name: 'Pterodactyl',
+                    src:'images/Dinosaurs_SVG/Pterodactyl.svg',
+                },
+                {
+                    name: 'Spinosaurus',
+                    src:'images/Dinosaurs_SVG/Spinosaurus.svg',
+                },
+                {
+                    name: 'Stegosaurus',
+                    src:'images/Dinosaurs_SVG/Stegosaurus.svg',
+                },
+                {
+                    name: 'Triceratops',
+                    src:'images/Dinosaurs_SVG/Triceratops.svg',
+                },
+                {
+                    name: 'TyrannosaurusRex',
+                    src:'images/Dinosaurs_SVG/Tyrannosaurus_Rex.svg',
+                },
+                {
+                    name: 'Velociraptor',
+                    src:'images/Dinosaurs_SVG/Velociraptor.svg',
+                },                
+            ],
+            DayOfTheDeadSvg:[
+                {
+                    name: 'Cactus',
+                    src:'images/Day_of_the_Dead_SVG/Cactus.svg',
+                },
+                {
+                    name: 'Coffin',
+                    src:'images/Day_of_the_Dead_SVG/coffin.svg',
+                },
+                {
+                    name: 'DrinkWater',
+                    src:'images/Day_of_the_Dead_SVG/drink_water.svg',
+                },
+                {
+                    name: 'MaxicanSugarSkull',
+                    src:'images/Day_of_the_Dead_SVG/Maxican_Sugar_Skull.svg',
+                },
+                {
+                    name: 'MexicanMerigoldFlower',
+                    src:'images/Day_of_the_Dead_SVG/Mexican_Merigold_flower.svg',
+                },
+                {
+                    name: 'SaltDayOf',
+                    src:'images/Day_of_the_Dead_SVG/Salt.svg',
+                },
+                {
+                    name: 'Skeleton',
+                    src:'images/Day_of_the_Dead_SVG/skeleton.svg',
+                },
+                {
+                    name: 'Sombrero',
+                    src:'images/Day_of_the_Dead_SVG/Sombrero.svg',
+                },
+                {
+                    name: 'Tamales',
+                    src:'images/Day_of_the_Dead_SVG/Tamales.svg',
+                },
+                {
+                    name: 'Tombstone',
+                    src:'images/Day_of_the_Dead_SVG/Tombstone.svg',
+                },                
+            ],
+            ChristmasSvg:[
+                {
+                    name: 'Bells',
+                    src:'images/Christmas_SVG/Bells.svg',
+                },
+                {
+                    name: 'ChristmasWreath',
+                    src:'images/Christmas_SVG/Christmas_Wreath.svg',
+                },
+                {
+                    name: 'ChristmasTree',
+                    src:'images/Christmas_SVG/christmas-tree.svg',
+                },
+                {
+                    name: 'GingerbreadMan',
+                    src:'images/Christmas_SVG/gingerbread_man.svg',
+                },
+                {
+                    name: 'Mistletoe',
+                    src:'images/Christmas_SVG/Mistletoe.svg',
+                },
+                {
+                    name: 'Ornament',
+                    src:'images/Christmas_SVG/ornament.svg',
+                },
+                {
+                    name: 'PresentChristmas',
+                    src:'images/Christmas_SVG/present.svg',
+                },
+                {
+                    name: 'Reindeer',
+                    src:'images/Christmas_SVG/reindeer.svg',
+                },
+                {
+                    name: 'Snowflake',
+                    src:'images/Christmas_SVG/Snowflake.svg',
+                },
+                {
+                    name: 'Snowman',
+                    src:'images/Christmas_SVG/Snowman.svg',
+                },                
+            ],
+            MedievalSvg:[
+                {
+                    name: 'BowandArrow',
+                    src:'images/Medieval_SVG/BowandArrow.svg',
+                },
+                {
+                    name: 'Castle',
+                    src:'images/Medieval_SVG/Castle.svg',
+                },
+                {
+                    name: 'Catapult',
+                    src:'images/Medieval_SVG/catapult.svg',
+                },
+                {
+                    name: 'CrossedSwords',
+                    src:'images/Medieval_SVG/CrossedSwords.svg',
+                },
+                {
+                    name: 'FireBreathingDragon',
+                    src:'images/Medieval_SVG/FireBreathingDragon.svg',
+                },
+                {
+                    name: 'FlyingDragon',
+                    src:'images/Medieval_SVG/FlyingDragon.svg',
+                },
+                {
+                    name: 'Knight',
+                    src:'images/Medieval_SVG/Knight.svg',
+                },
+                {
+                    name: 'Lady',
+                    src:'images/Medieval_SVG/lady.svg',
+                },
+                {
+                    name: 'StandingDragon',
+                    src:'images/Medieval_SVG/StandingDragon.svg',
+                },
+                {
+                    name: 'Throne',
+                    src:'images/Medieval_SVG/Throne.svg',
+                },                
+            ],
+           IndiaSvg:[
+                {
+                    name: 'Cobra',
+                    src:'images/India_SVG/cobra.svg',
+                },
+                {
+                    name: 'CowIndia',
+                    src:'images/India_SVG/cow.svg',
+                },
+                {
+                    name: 'Elephant',
+                    src:'images/India_SVG/elephant.svg',
+                },
+                {
+                    name: 'IndianMan',
+                    src:'images/India_SVG/inadian_man.svg',
+                },
+                {
+                    name: 'IndianWoman',
+                    src:'images/India_SVG/indian_woman.svg',
+                },
+                {
+                    name: 'Lotus',
+                    src:'images/India_SVG/lotus.svg',
+                },
+                {
+                    name: 'Shiva',
+                    src:'images/India_SVG/shiva.svg',
+                },
+                {
+                    name: 'Sitar',
+                    src:'images/India_SVG/sitar.svg',
+                },
+                {
+                    name: 'TajMahal',
+                    src:'images/India_SVG/taj-mahal.svg',
+                },
+                {
+                    name: 'Yoga',
+                    src:'images/India_SVG/yoga.svg',
+                },                
+            ],
         }
     },
      methods:{
@@ -560,6 +2316,7 @@ export default {
             this.showSearchBar = true
             this.showBgBar = false
             this.enableSearch()
+            this.getPreviousSearch()
 
          }else if (value === 'bg'){
              this.ACTION_CHANGE_STATE(['OpenNavigationElement', value])
@@ -655,6 +2412,8 @@ export default {
             this.ACTION_CHANGE_STATE(['rightBodyBackground', result])
         },
         addSvg (SvgName) {
+            $('.modal').modal('hide');
+            $('svg').removeClass('active')
             var x = $('#bullDogSvg').val()
             this.ACTION_PUSH_TO_SVG(SvgName)
             this.ACTION_CHANGE_STATE(['dynamicIndex' ,x])
@@ -751,6 +2510,7 @@ export default {
 
         },
         clearAllSvg(){
+            this.showTabMenu = ''
             this.ACTION_CHANGE_STATE(['OpenNavigationElement', 'clear'])
             document.getElementById("mySidenav").style.width = "318px";
             document.getElementById("mySidenav").style.left = "-20%";
@@ -773,8 +2533,21 @@ export default {
             this.ACTION_CHANGE_STATE(['OpenNavigationElement', 'random'])
             document.getElementById("mySidenav").style.width = "318px";
             document.getElementById("mySidenav").style.left = "-20%";
-            this.clearAllSvg()
-            var items = this.RandomArray
+            // this.clearAllSvg()
+
+            /**
+             * For Clear All Data before Each Random Click 
+            */
+                this.ACTION_CHANGE_STATE(['OpenNavigationElement', 'clear'])
+                document.getElementById("mySidenav").style.width = "318px";
+                document.getElementById("mySidenav").style.left = "-20%";
+                document.getElementById("main").innerHTML = "";
+                this.$store.state.rightBodyBackground = '255, 255, 255,1'
+            /**
+             * For Clear All Data before Each Random Click 
+            */
+
+            // var items = this.RandomArraySchool
             // this.ACTION_CHANGE_STATE(['RandomClicked' , true])
             this.ACTION_CHANGE_STATE(['loaderDisplay' , true])
             var self = this
@@ -789,9 +2562,100 @@ export default {
                 
         },
         triggerRandom(){
-             var items = this.RandomArray
-              this.ACTION_CHANGE_STATE(['RandomClicked' , true])
-            if(this.showTabMenu =='' ||this.showTabMenu =='schoolPack' ){
+            var myArray = [
+                this.RandomArraySchool , 
+                this.RandomArrayDog , 
+                this.RandomArrayBathRoom , 
+                this.RandomArrayAllcoholic , 
+                this.RandomArrayCooking , 
+                this.RandomArrayMusic , 
+                this.RandomArrayEngland ,
+                this.RandomArrayBirthday,
+                this.RandomArrayAviation,
+                this.RandomArrayEaster,
+                this.RandomArrayZodiac,
+                this.RandomArrayInsects,
+                this.RandomArrayFourthJuly,
+                this.RandomArrayAutumn,
+                this.RandomArrayBabyShower,
+                this.RandomArrayEgypt,
+                this.RandomArrayBabyGirls,
+                this.RandomArrayBirds,
+                this.RandomArrayKitchen,
+                this.RandomArrayGarden,
+                this.RandomArrayFruits,
+                this.RandomArrayFitness,
+                this.RandomArrayFarmAnimals,
+                this.RandomArrayDinosaurs,
+                this.RandomArrayDayOfTheDead,
+                this.RandomArrayChristmas,
+                this.RandomArrayIndia,
+                this.RandomArrayGraduations,
+            ]
+            var AllRandomSelection = myArray[Math.floor(Math.random() * myArray.length)];
+            if(this.showTabMenu == ''){
+                var items = AllRandomSelection
+            }
+            if(this.showTabMenu == 'schoolPack' ){
+                 var items = this.RandomArraySchool
+            }else if(this.showTabMenu == 'Dog'){
+                 var items = this.RandomArrayDog 
+            }else if (this.showTabMenu == 'Music'){
+                 var items = this.RandomArrayMusic
+            }else if (this.showTabMenu == 'Bathroom'){
+                 var items = this.RandomArrayBathRoom
+            }else if (this.showTabMenu == 'AlcoholicDrinks'){
+                 var items = this.RandomArrayAllcoholic
+            }else if (this.showTabMenu == 'Cooking'){
+                 var items = this.RandomArrayCooking
+            }else if (this.showTabMenu == 'England'){
+                 var items = this.RandomArrayEngland
+            }else if (this.showTabMenu == 'Birthday'){
+                 var items = this.RandomArrayBirthday
+            }else if (this.showTabMenu == 'Aviation'){
+                 var items = this.RandomArrayAviation
+            }else if (this.showTabMenu == 'Easter'){
+                 var items = this.RandomArrayEaster
+            }else if (this.showTabMenu == 'Zodiac'){
+                 var items = this.RandomArrayZodiac
+            }else if (this.showTabMenu == 'BugsAndInserts'){
+                 var items = this.RandomArrayInsects
+            }else if (this.showTabMenu == 'FourthJuly'){
+                 var items = this.RandomArrayFourthJuly
+            }else if (this.showTabMenu == 'Autumn'){
+                 var items = this.RandomArrayAutumn
+            }else if (this.showTabMenu == 'BabyShower'){
+                 var items = this.RandomArrayBabyShower
+            }else if (this.showTabMenu == 'Egypt'){
+                 var items = this.RandomArrayEgypt
+            }else if (this.showTabMenu == 'BabyGirls'){
+                 var items = this.RandomArrayBabyGirls
+            }else if (this.showTabMenu == 'Birds'){
+                 var items = this.RandomArrayBirds
+            }else if (this.showTabMenu == 'Kitchen'){
+                 var items = this.RandomArrayKitchen
+            }else if (this.showTabMenu == 'Garden'){
+                 var items = this.RandomArrayGarden
+            }else if (this.showTabMenu == 'Fruits'){
+                 var items = this.RandomArrayFruits
+            }else if (this.showTabMenu == 'Fitness'){
+                 var items = this.RandomArrayFitness
+            }else if (this.showTabMenu == 'FarmAnimals'){
+                 var items = this.RandomArrayFarmAnimals
+            }else if (this.showTabMenu == 'Dinosaurs'){
+                 var items = this.RandomArrayDinosaurs
+            }else if (this.showTabMenu == 'DayOfTheDead'){
+                 var items = this.RandomArrayDayOfTheDead
+            }else if (this.showTabMenu == 'Christmas'){
+                 var items = this.RandomArrayChristmas
+            }else if (this.showTabMenu == 'India'){
+                 var items = this.RandomArrayIndia
+            }else if (this.showTabMenu == 'Graduations'){
+                 var items = this.RandomArrayGraduations
+            }
+            
+            this.ACTION_CHANGE_STATE(['RandomClicked' , true])
+            // if(this.showTabMenu =='' ||this.showTabMenu =='schoolPack' ){
                 // console.log('working two')
                 /* 
                 This is for Random Color for background
@@ -831,7 +2695,7 @@ export default {
                         this.CompleteRandom()
                     }
                 })
-            }   
+            // }   
         },
         CompleteRandom(){
             var self = this
@@ -909,7 +2773,15 @@ export default {
                     this.showLinktwo = false 
                     this.showLinkOne = true
             }
-        }   
+        },
+        getPreviousSearch(){
+            var self = this
+            $(document).ready(function(){
+                $("#groupSvgs li").filter(function () {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(self.SearchElement) > -1)
+                });
+            })
+        },   
     }
 }
 </script>
@@ -917,3 +2789,5 @@ export default {
 <style>
 
 </style>
+
+

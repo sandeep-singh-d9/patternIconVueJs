@@ -1,0 +1,770 @@
+<template>
+    <div style="height:0px">
+        <svg  @click="getCircle(dynamicIndexValue, $event)" v-for="(items , index) in dataloop" :key="index" version="1.1" baseProfile="basic"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" data-toggle="modal" :data-target="'#myModal'+dynamicIndexValue"  :style="{transform:'rotate('+sliderValue+'deg) scale('+scaleValue+') scaleX('+flipElement+')'}">
+                <g style="transform: scale(0.6);">
+                  <path style="fill:#1669AD;transform:scale(0.2)" :class="ValueId+'_color1'" d="M482.2,256.1c0,70.2-0.3,140.3,0.2,210.5c0.1,16.3-8.2,26.4-26.1,26.2c-43-0.4-86-0.1-129-0.1
+	c-89.8,0-179.7,0-269.5,0c-2.3,0-4.7,0-7-0.2c-12.9-0.7-20.8-9-20.8-22c0-45.7,0-91.3,0-137c0-96.2-0.1-192.3-0.1-288.5
+	c0-3.3-0.2-6.7,0.7-9.9c2.8-9.9,10.8-15.8,21.6-15.8c50.3,0,100.7,0,151,0c84.3,0,168.7,0,253,0c18.7,0,26.2,7.5,26.2,26.4
+	c0,70.2,0,140.3,0,210.5C482.3,256.1,482.2,256.1,482.2,256.1z"/>
+<path style="fill:#A3C8FE;transform:scale(0.2)" :class="ValueId+'_color2'" d="M255.6,126c-70.5,0-141-0.1-211.4,0.1c-5.2,0-6.3-1.4-6.2-6.4c0.3-25.7,0.1-51.3,0.1-77
+	c0-10,4.7-14.8,14.5-14.8c135.8,0,271.6,0,407.4,0c9.1,0,14.1,5.1,14.1,14.2c0,26.2-0.1,52.3,0.1,78.5c0,4.6-1.4,5.4-5.6,5.4
+	C397.6,126,326.6,126,255.6,126z M130.1,193.3c36.7-0.1,73.3-0.1,110-0.1c62.5,0,125,0,187.5,0c10.8,0,18,5.9,19.6,16
+	c-12.5,12.9-25.3,25.4-38,38.1c-0.7,0.7-1.5,1.3-2.6,1.2c-1.5-0.8-1.5-2.5-1.9-3.9c-4.3-15.8-14-27.2-29.2-33.1
+	c-9.4-3.7-18.7-8-28.9-9.2c-18.4-2.2-32.9,4.6-44.2,18.8c-6.6,8.2-8.9,18.5-12.5,28.1c-0.4,1-0.5,2.1,0.1,2.9c3,4.2,0.3,5.9-3.2,7.3
+	c-17.6,0.4-35.2,1.1-52.8-0.3c-2-1-2.4-3.1-3.1-4.9c-5.2-12.5-14.7-18.8-28.2-19.5c-1.5-0.1-3,0-4.5-0.1c-3.1-0.1-4.8-1.4-5.3-4.7
+	c-1.6-8.6-4.7-11.2-13.5-11.2c-17.1-0.1-34.3,0.2-51.4-0.1c-7.4-0.2-13,1.9-16.4,8.7c-3.9,1.7-6.8,4.6-9.7,7.6
+	c-7,7.1-14.2,14-21,21.3c-1.6,1.8-3.5,2.4-5.8,2.2c-4.2-0.3-5.5-2.8-3.2-6.5c0.6-1,1.4-1.8,2.2-2.7c17.9-18,36-35.9,53.9-53.9
+	C128.5,194.4,129.4,193.9,130.1,193.3z M130.1,193.3c-0.1,2.3-2,3.4-3.4,4.7c-16.8,16.9-33.7,33.7-50.5,50.5
+	c-0.8,0.8-1.8,1.6-2.4,2.5c-1.2,1.6-3.9,3.5-1.4,5.3c2,1.5,4.8,1.6,7.1-0.8c8.3-8.6,16.8-17.1,25.3-25.6c1.5-1.5,2.9-3.3,5.5-2.8
+	c2,2.8,1.3,5.9,0.8,8.9c-4.9,4.6-10,9-14.6,14c-1.4,1.5-3,3-3.8,5.2c3.1,1.3,5.1,0.2,7-1.7c1.8-1.9,3.6-3.9,5.7-5.6
+	c1.9-1.5,4-2.9,5.8,0.2c0.7,3.4,1.1,6.8-0.6,10c-2,1.7-4.4,1.4-6.7,1.4c-9,0.1-18,0-27,0c-1.7,0-3.3-0.1-5,0.3
+	c-2.4,0.6-3.9,2-3.8,4.5c0.1,2.4,1.6,3.5,3.8,4c1.8,0.4,3.7,0.1,5.2,1.5c-1,3.5-4.8,3.9-7,6.3c-2.7,3-4.2,5.8-3.1,10.6
+	c3.7-4.3,9.3-6.4,9.2-13c0-1.1-0.2-3.5,2.5-2.4c0.8,1.1,1.1,2.4,1.1,3.8c0,10.7,0.5,21.4-0.3,32.2c-1.6,4.2-6,5.6-8.9,8.4
+	c-3.3,3.2-4.8,6.4-3.8,11.1c5.3-4,9.2-9.2,13.4-14c3.4,1.4,5.7,4,7.4,7.2c-6.3,4.9-11.5,10.9-17.4,16.2c-3.1,2.8-4.3,5.7-3.3,9.8
+	c1.7,0.2,2.5-1.3,3.4-2.2c6.4-6.7,13.5-12.7,19.3-20c0.9-1.2,2-2.2,3.5-2.7c2.5-0.5,5.1-0.7,7.6,0.1c2.8,2.8,0,4.5-1.5,6.1
+	c-9.2,9.4-18.4,18.8-28,27.9c-3.8,3.6-5.5,7.3-4.5,12.2c12.5-12.5,24.9-25,37.5-37.4c3-2.9,5.2-6.5,8.7-8.8c2.6-0.6,5.1-0.7,7.6,0.1
+	c2.9,2.5,0.3,4.2-1.1,5.7c-4.3,4.6-8.9,9-13.3,13.5c-11.6,11.6-23.1,23.4-35,34.8c-3.7,3.6-5.5,7.2-4.4,12.2
+	c10.6-10.6,21.2-21.1,31.8-31.8c11-11.1,22.5-21.7,32.9-33.4c0.5-0.5,1-0.8,1.7-1.1c2.5-0.6,5.1-0.7,7.6,0.1
+	c2.1,1.3,1.2,2.8,0.2,4.2c-1.1,1.5-2.5,2.7-3.7,4c-18.5,18.5-36.9,36.9-55.4,55.4c-1.8,1.8-4,3.5-4.8,6.3c3.8,1.5,6.3-0.2,8.6-2.5
+	c5.3-5.3,10.5-10.7,15.9-15.8c1.7-1.6,3.5-4,6.3-1.6c0.5,3.9-1.5,7.2-2.8,10.6c-2.7,3-6.5,5-8,9.2c2.4,1.5,5.2,0,7.2,1.9
+	c0.6,1,0,1.5-0.8,1.9c-7.9,1.5-16,0.4-23.9,0.7c-2.3,0.1-4.7-0.1-7,0.3c-2.4,0.4-4,1.7-4.1,4.3c-0.1,2.4,1.5,3.5,3.6,4.1
+	c7.7,2.3,7.8,2.4,7.8,10.6c0,7.8-0.1,15.7,0,23.5c0.2,11.1,6.6,17.7,17.6,18.1c2,0.1,4,0,6,0c102.6,0,205.3,0,307.9,0c2,0,4,0,6,0
+	c10.6-0.5,17.7-7.4,18.2-18.1c0.3-8.3,0.1-16.7,0.1-25c0-4.5,0.4-8.3,5.8-9.5c2-0.4,2.9-2.2,2.7-4.3c-0.3-2.1-1.6-3.2-3.5-3.7
+	c-2-0.5-4-0.3-6-0.4c-11.3-0.3-22.6,0.6-33.9-0.4c-0.5-0.2-1-0.4-1.4-0.8c-0.2-0.4-0.5-1.1-0.1-1.4c15-10.9,26.4-25.6,40-38.1
+	c1.2-1.1,2.3-2.5,3.6-3.5c3.4-2.5,3.9-5.9,3-9.8c-2.2,0.8-3.3,2.5-4.7,3.9c-12,12-24,24-36,35.9c-1.6,1.6-3.1,4.2-6.3,2.5
+	c-1.6-1.9-1.8-4.1-1.5-6.4c0.6-2.5,2.9-3.6,4.5-5.2c13.9-13.9,27.7-27.9,41.8-41.6c2.8-2.7,2.7-5.8,2.3-9.3c-2.3,0.9-3.5,2.8-5,4.2
+	c-13.3,13.3-26.6,26.6-40,39.9c-1.6,1.6-2.9,3.8-5.6,3.7c-2.2-1.5-3.3-3.6-3.3-6.2c0.8-2.1,2.6-3.4,4.1-4.9
+	c15.7-15.7,31.3-31.6,47.2-47.1c3-2.9,2.9-6,2.7-10c-2,1.2-3.2,2.9-4.8,4.1c-1.5,1.1-3,2.5-4.6,0.2c-0.9-2.5-0.8-5.1-0.1-7.7
+	c1.1-2.6,3.5-3.8,5.5-5.5c3.4-2.8,4.9-6,3.8-10.7c-1.8,0.8-2.9,2.5-4.4,3.6c-1.4,1-2.9,2.4-4.7,0.4c-1-2.6-0.8-5.2-0.2-7.9
+	c1.8-3.2,5-5.4,6.5-8.8c3.3-5.8,1.6-9.2-5.1-9.4c-7.9-0.2-15.9,0-23.8-0.1c-2,0-4,0.1-5.9-0.6c-0.5-0.2-0.8-0.6-1.1-1.1
+	c1-2.9,3.6-2,5.5-1.9c3.7,0.2,6.1-1.3,8.7-3.9c7.5-7.6,14.7-15.4,22.8-22.4c1-0.9,2-1.8,2-3.3c0-1.3,0.7-2.9-0.8-3.6
+	c-1.2-0.6-2.1,0.8-2.8,1.6c-9,8.9-17.9,17.9-26.9,26.8c-1.2,1.2-2.3,2.4-3.7,3.4c-2.1,1.5-4,1.5-5.3-1.1c-0.5-1.9-0.7-3.7,0.8-5.3
+	c11.7-12.9,24.4-24.7,36.6-37.1c0.9-0.9,2.3-1.3,3.4-2c0.7,2.4,0.9,4.9,0.9,7.4c0,75.5,0,151,0,226.4c0,15.6-7.5,23.1-22.9,23.1
+	c-112.8,0-225.6,0-338.4,0c-14.6,0-22.3-7.6-22.4-22.1c0-76.5,0-153,0-229.4c0-2.2,0.3-4.3,1-6.4c4.4-5,9.3-9.3,13.9-14.1
+	c3.6-1.6,7.4-0.6,11.1-0.7c1.4,2.7-1,3.9-2.4,5.3c-6.2,6.3-12.3,12.6-18.7,18.7c-2.5,2.3-3.3,4.8-2.1,8.6
+	c11.6-10.7,21.9-22.2,33.2-32.6c3.3,0,6.7,0,10,0c1.4,3-1.3,4.2-2.7,5.7c-12.5,12.7-25.1,25.3-37.8,37.8c-2.5,2.4-4,4.8-2.9,8.6
+	c2-0.4,2.9-2,4.1-3.2C85.9,227.1,101,212,116,197c1.3-1.3,2.6-2.6,4-3.7C123.4,193.3,126.8,193.3,130.1,193.3z M120.1,193.3
+	c-0.1,2.3-2,3.4-3.4,4.7c-15.3,15.3-30.6,30.7-46,45.9c-1.4,1.4-3.3,5.2-5,3c-1.5-2-2-6.3,0.9-9.1c6.7-6.5,13.3-13.1,19.9-19.7
+	c6.9-6.8,13.7-13.6,20.5-20.5c1.3-1.3,3-2.3,3.1-4.4C113.4,193.3,116.8,193.3,120.1,193.3z M100.1,193.3c0,1.7-1.3,2.6-2.3,3.7
+	c-9.5,9.5-19.1,19.1-28.6,28.6c-0.9,0.9-1.7,2.5-3.1,2c-1.6-0.6-0.7-2.3-0.9-3.6c-0.4-3.2,0.6-5.4,3.1-7.7
+	c6.9-6.3,13.3-13.1,19.9-19.7c0.9-0.9,2-1.8,2-3.3C93.4,193.3,96.8,193.3,100.1,193.3z M79,194c-3.1,6.2-8.2,10.4-13.9,14.1
+	C66.7,200.3,71.3,195.6,79,194z M392.1,363.1c-6.9-11.1-15.8-20.1-27.7-25.7c-21.5-10.3-49.2-6.3-66.6,9.6c-2.2,2.1-3.4,2-5.7,0
+	c-23.8-20.5-57.6-20.5-81.3,0c-2.2,1.9-3.4,2.1-5.7,0.1c-25.7-22.1-62.6-20.2-85.9,4.4c-5.4,5.7-8.8,12.8-12.4,19.7
+	c-2.3-0.3-3.7,1.2-5.1,2.6c-5.3,5.3-10.6,10.6-15.9,15.9c-0.8,0.8-1.6,1.8-2.5,2.4c-2.7,1.9-6.6,2.1-8.4,0.5
+	c-1.7-1.5,1.2-4.2,2.9-5.8c19.8-19.9,39.7-39.8,59.6-59.7c1.4-1.4,3.3-2.4,3.4-4.7c36.7-0.1,73.3-0.1,110-0.1c54.3,0,108.6,0,163,0
+	c13.5,0,18.3-3.3,23.1-16c4.1-0.5,5.1-5.6,9.7-6.3c0.6,4.9,0.8,8.9-3.6,13c-16,15.2-31.4,31.1-47,46.7
+	C394.9,360.8,393.5,361.9,392.1,363.1z M121.1,322.3c3.7,0,7.3,0,11,0c-0.9,2-2.2,3.7-3.8,5.2c-19.2,19.2-38.4,38.4-57.6,57.6
+	c-1.4,1.4-2.6,3.1-5.2,3.4c-0.5-5-0.7-9,3.7-13.2c16.8-16,32.9-32.6,49.3-49C119.5,325.1,121,324.2,121.1,322.3z M398,377.3
+	c-1-2.7-1.9-5.4-2.9-8.2c11.4-11.2,22.7-22.4,34.1-33.6c4.3-4.2,8.5-8.5,12.7-12.7c1.3-1.3,2.4-2.8,4.9-3c0.4,4.9,0.8,8.9-3.7,13.1
+	c-12.9,12-25.1,24.8-37.5,37.2C403.1,372.6,400.5,374.9,398,377.3z M399.3,393.1c-0.1-3-0.1-6-0.2-9c2.3-0.1,3.4-2,4.7-3.4
+	c12.4-12.3,24.7-24.7,37.1-37c1.6-1.6,3.7-5.4,5.5-3.2c1.6,2,1.9,6.8-0.5,9.3c-13.9,14.1-28.1,27.9-42.1,41.9
+	C402.6,393.1,401,393.1,399.3,393.1z M101.1,322.3c3.7,0,7.3,0,11,0c-0.9,2-2.2,3.7-3.8,5.2c-12.6,12.6-25.2,25.2-37.8,37.8
+	c-1.4,1.4-2.5,3.2-5,3c-0.7-5-0.5-9.1,3.9-13.2c10.1-9.2,19.5-19.2,29.1-28.8C99.5,325.1,101,324.2,101.1,322.3z M407.2,257.1
+	c0-1,0-2,0.1-3c2.4,1.7,3.6-0.3,5-1.6c9.8-9.8,19.5-19.6,29.4-29.3c1.3-1.3,3.1-4.7,4.9-2.2c1.5,2.2,2.1,6.6-0.5,8.7
+	c-8.6,6.6-15.7,14.8-23.2,22.5c-3.6,3.6-7,5.6-12,4.9C409.5,257,408.3,257.1,407.2,257.1z M447.1,364.6c0.7,3.2-0.8,5.1-3.1,7.2
+	c-6.2,5.8-12.1,11.9-18.1,17.9c-0.8,0.8-1.6,1.9-2.5,2.4c-2.8,1.5-6.4,2-8.4,0.1c-1.3-1.3,1.5-3.9,3-5.5c7.9-8.1,16-16.1,24-24
+	c1.3-1.2,2.5-3.4,4.4-2.6C448,360.8,446.8,363.1,447.1,364.6z M87.3,320c1.6,0.6,3.3,1.3,4.9,1.9c-6.4,9.4-15.4,16.4-23.1,24.6
+	c-0.9,1-2,2.2-3.4,1.6c-1.3-0.5-0.4-2.1-0.6-3.1c-0.6-3.9,0.6-6.8,3.8-9.4c5.4-4.4,9.4-10.3,15.2-14.2C85.1,320.8,86,320.1,87.3,320
+	z M110.1,237.1c0,3.3,0,6.7,0,10c-4.9,0.2-6.4,4.8-9.6,7.2c-1,0.8-1.7,2.4-2.8,2.6c-2.2,0.5-5.3,1.2-6.6-0.3
+	c-1.5-1.8,1.1-3.8,2.5-5.2c4.1-4.4,8.4-8.5,12.6-12.7C107.2,237.5,108.5,237,110.1,237.1z M78.3,309.1c0.6,1.4,1.2,2.7,1.8,4.1
+	c-2.9,6.8-8.4,11.1-14,15.7C62.4,319.5,68.3,314.4,78.3,309.1z M447.1,245.2c1.6,4.8-3.2,5.2-5.1,7.4c-2.1,2.5-4.2,5-8.2,4.6
+	c-2.8-0.3-4.3-0.4-2-3.5c3.4-4.7,8-8.4,12-12.5c0.7-0.7,1.7-1.3,2.6-0.5C447.8,241.9,446.7,243.8,447.1,245.2z M65.4,308.5
+	c-0.7-8.9,3.4-15.7,11.2-18.5C77.9,298.4,74.3,304.5,65.4,308.5z M77.1,271.1c0,7.9-4.4,14.5-11.5,17.1
+	C64.2,279.1,69.4,271.3,77.1,271.1L77.1,271.1z M437.2,297.1c0-3.7,0-7.3,0-11c4-0.6,5-5.7,9.1-6.2
+	C448.5,288.2,446.5,291.9,437.2,297.1z M446.6,379.2c1.2,10.1-2.2,14.6-9.7,14c-2.3-0.2-3.1-0.7-1.5-2.9
+	C438.3,386,441.8,382.4,446.6,379.2z M104.1,382.1c-0.3,3.7-0.6,7.3-0.9,11c-2.9-0.4-7.3,1.6-8.2-1c-0.9-2.6,2.8-5.2,5-7.4
+	C101.2,383.6,102.2,382.1,104.1,382.1z M437.2,277.1c-1-4.9,0.2-7.8,5.9-7C442.2,273.3,440.1,275.6,437.2,277.1z M232.2,276.6
+	c14.2-0.5,28.5-0.6,42.7,0c0.4,1.1,0.2,2.3-0.1,3.4c-2.1,7.6-2.5,15.3-2.3,23.2c0.1,2.3,0.4,4.7-1.3,6.7
+	c-15.3,0.1-30.5,0.1-45.8,0.2c-2.7,0-3.5-1-3.4-3.5c0.2-4.8,0.1-9.6,0.2-14.4C225.7,287.1,229.7,282.3,232.2,276.6z M387.5,277.1
+	c0.7-1,1.7-0.8,2.7-0.8c10,0,20,0.1,30,0c3.5,0,5.1,1.1,5,4.9c-0.3,7.2,0,14.3-0.1,21.5c-0.1,4.4-2.8,7.3-7,7.4
+	c-9.7,0.1-19.3-0.1-29-0.2c-1.9-6-0.7-12.1-0.7-18.1c0-1.6,1.5-2.3,2.9-1.8c5,1.8,6.5-1.3,7.4-5.2c0.2-1,0.5-1.9,1-2.8
+	c1.2-2.7,0.2-3.4-2.5-3.5C393.9,278.3,390.4,279.4,387.5,277.1z M110.2,309.9c-4.5,0.1-9,0.3-13.4,0.1c-4.2-0.1-6.8-2.2-6.8-6.8
+	c0-7.8,0.1-15.6,0-23.4c0-2.5,0.9-3.6,3.5-3.5c5.8,0.2,11.6,0.2,17.4,0.3c1.7,7.3,0.6,14.8,0.7,22.2
+	C111.6,302.5,112.6,306.5,110.2,309.9z M194.2,257.9c0-1.5,0-3,0-4.5c0.2-9.3-1.6-8.2,8.2-8.2c8.9,0,15,4.5,18.5,12.7
+	C212,257.8,203.1,257.8,194.2,257.9z M194.2,310c0-10.6,0-10.6,10.4-10.8c1.8,0,3.6,0.1,5.3-0.8c0.6,11.8,0.6,11.8-11.2,11.8
+	C197.2,310.1,195.7,310,194.2,310z M209.9,286.2c-0.6,0.2-1.3,0.3-1.9,0.5c-3.9,1-8.3,1.5-11.8,0.2c-4.4-1.7-0.9-6.8-2.1-10.1
+	c4.1-0.9,8.2-0.1,12.2-0.4c3.1-0.3,4.1,1.1,3.8,4C209.9,282.2,210,284.2,209.9,286.2z M388.1,412.8c11.4-1.1,22.9-0.2,34.3-0.5
+	c2.3-0.1,2.7,1.3,2.7,3.2c0,8,0.2,16-0.1,23.9c-0.1,4-2.7,6.5-6.7,6.6c-9.3,0.2-18.6,0-27.9,0.1c-2.4,0-3.3-0.9-3.2-3.2
+	c0.2-4.6,0.2-9.3,0.2-13.9c1.5-5,5.2-9.1,6.6-14.5C392.2,413.6,389.4,415.2,388.1,412.8z M127,441c0.8,3.8-0.4,5.3-4.6,5.2
+	c-8.1-0.3-16.3,0-24.4-0.1c-6,0-8-2.1-8-8.1c0-7.3,0-14.6,0-22c0-1.9,0-3.7,2.7-3.7c11.1,0.1,22.3,0.1,33.4,0.1
+	c0.3,0,0.5,0.4,0.8,0.6c-3.7,2.7-8,1.1-12,1.3c-6.1,0.3-6.2,0.3-3.4,5.7c2.8,5.5,6.1,10.6,10.7,14.8
+	C124.1,436.6,125.9,438.6,127,441z M195.2,446c3.8-2.6,7.7-4.9,10.9-8.3c1.2-1.3,2.4-1.5,3.9-0.6c0.4,9,0.4,9.1-8.4,9
+	C199.4,446.1,197.3,446,195.2,446z M282.1,446c8.1-3.8,11.6-9.8,10.2-18.9c-0.7-4.5,0-9.3,0-13.9c1.6,10.3,0.4,20.7,0.6,31
+	c0,1.8-1.4,2-2.8,1.9C287.4,446.1,284.8,446,282.1,446z"/>
+<path style="fill:#000000;transform:scale(0.2)" :class="ValueId+'_color6'" d="M123.2,45.2c18.8,4.2,26.9,21.4,25.6,34.5c-1.9,18-15.5,30.3-32.4,30.4c-16.7,0.1-31.2-11.8-33.2-27.2
+	c-2.4-18.4,7.3-33,25-37.8c1.8,1.7,1.5,4,1.5,6.1c0.1,6.5,0,12.9,0,19.4c0,1.8,0,3.7,0.6,5.4c0.9,2.5,2.5,4.4,5.4,4.3
+	c3-0.1,4.8-1.9,5.6-4.8c0.4-1.6,0.4-3.3,0.4-4.9c0-6.5,0-12.9,0-19.4C121.7,49.1,121.3,46.8,123.2,45.2z M413.3,76.1
+	c1.3-8.6,0.3-17.2,0.6-25.8c0.2-5.6,0.2-5.7,5.5-3.3c15.5,6.9,23.5,24.4,18.3,40.2c-5.3,16.2-22.1,26.2-37.9,22.7
+	c-17.1-3.8-28.4-19.2-26.6-36.3c1.4-13.7,12.7-26.1,25.6-28.2c2.1,1.5,1.7,3.9,1.7,5.9c0.1,6.8,0,13.6,0.1,20.5
+	c0,3.1-0.3,6.6,3.3,8.2c3.8,1.7,6.3-0.7,8.6-3.3C412.7,76.3,413,76.2,413.3,76.1z"/>
+<path style="fill:#F7BE30;transform:scale(0.2)" :class="ValueId+'_color3'" d="M123.2,45.2c0,9.3-0.1,18.6-0.1,27.9c0,6-2.6,9.1-7.4,9.1s-7.4-3.2-7.4-9.2
+	c-0.1-9.3-0.1-18.6-0.2-27.9c0.3-7.6,3.2-10.8,9-10.1C121.5,35.6,122.9,37.9,123.2,45.2z M413.3,76.1c-0.8,4.6-3.7,6.6-8.1,6.1
+	c-4.6-0.5-6.3-3.7-6.3-8.1c0-9.6-0.1-19.2-0.1-28.9c0.1-1.2,0.1-2.3,0.3-3.5c0.5-4.8,2.7-6.8,7.3-6.8c4.6,0.1,6.7,2.3,6.8,7.2
+	C413.2,53.5,413.3,64.8,413.3,76.1z"/>
+<path style="fill:#FFFFFF;transform:scale(0.2)" :class="ValueId+'_color4'" d="M260.6,44.1c25.5,0,51,0.4,76.4-0.2c14.9-0.4,17.1,8.1,17,19.6c-0.1,8.7,0.2,17.4-0.1,26.1
+	c-0.2,6.5,1.2,13.6-5.4,18.2c-2.4,1.6-5,2.3-8,2.3c-53.3-0.1-106.6,0-159.8-0.1c-8.4,0-13.5-5.3-13.5-13.8c0-12.5,0-25,0-37.5
+	c0-9.9,4.8-14.8,14.5-14.8C207.9,44.1,234.3,44.1,260.6,44.1z M194.2,257.9c-28,0-56,0-83.9,0c-0.1-3.6-0.1-7.1-0.2-10.7
+	c-2.1-3.3-2.1-6.7,0-10c0.1-3.3,0.1-6.6,0.2-10c2.8-7.6,8.2-10.3,16.2-10.1c17.8,0.4,35.6,0.1,53.4,0.1c9.4,0,13.6,3.6,14.2,12.8
+	c0.3,3.7,2.4,3.3,4.7,3.2c10.5-0.5,19.7,2.3,27,10.3c3.7,4.1,6.5,8.8,7.2,14.5c-4,0-8.1,0-12.1,0c-1.5-0.6-2.3-1.9-3.1-3.1
+	c-4.2-6.1-10.1-8.5-17.4-8.4c-3.5,0.1-5.2,1.1-5,4.9C195.5,253.5,195.9,255.9,194.2,257.9z M260.7,174.3c-47.6,0-95.3,0-142.9,0
+	c-7.7,0-7.8-0.1-7.8-7.9c0-4.7,0.1-9.3,0-14c-0.2-4.3,2-6.1,6-6.1c1.5,0,3,0,4.5,0c93.6,0,187.2,0,280.9,0c8.8,0,9.8,1,9.8,9.6
+	c0,3.8,0,7.7,0,11.5c0,6.1-0.8,6.9-7,6.9c-35.3,0-70.6,0-105.9,0C285.6,174.3,273.1,174.3,260.7,174.3z M375,285
+	c0.1,7.3,0.1,14.6,0.2,21.9c0.1,2.4-0.9,3.1-3.2,3.1c-21.3-0.1-42.6-0.1-63.9,0c-2.8,0-3.3-1.2-3.3-3.6c0.1-8.8,0.1-17.6,0-26.5
+	c0-2.4,0.4-3.7,3.2-3.7c21.8,0.1,43.6,0,65.4,0.1c0.4,0,0.9,0.4,1.3,0.6c-5.6,2.8-11.4,1.2-16.8,0.8c4.2,0.9,8.5,2.4,12.8,4.1
+	C372.4,282.6,374.2,283.2,375,285z M194.2,310c-17.1,0-34.3,0-51.4,0.2c-2.9,0-3.7-1-3.6-3.8c0.1-8.7,0.1-17.3,0-26
+	c0-2.5,0.4-4.1,3.5-4.1c17.1,0.2,34.3,0.2,51.4,0.3c0.7,0.5,1,1.3,1.1,2.1c1.5,7.1,1.5,7.1,9,6.9c1.9-0.1,3.9-0.9,5.7,0.5
+	c0,4.1,0,8.1,0,12.2c-1.8,2.8-4.7,2.1-7.2,2.2c-6.3,0.2-6.3,0.1-7.3,6.7C195.2,308.3,195,309.2,194.2,310z M271.2,309.9
+	c0.1-9.6-0.8-19.3,1.9-28.7c0.5-1.6,1.2-3.1,1.8-4.6c4.8-0.1,9.6-0.1,14.5-0.3c2.6-0.1,3.5,1,3.5,3.6c-0.1,9-0.1,18,0,27
+	c0,2.3-0.8,3.3-3.2,3.2C283.5,310,277.4,310,271.2,309.9z M110.2,309.9c0.3-11.1-0.8-22.2,0.6-33.3c4.3-0.1,8.7-0.1,13-0.2
+	c2.6-0.1,3.5,0.9,3.5,3.5c-0.1,9-0.1,18,0,27c0,2.7-1.1,3.4-3.6,3.3C119.2,309.9,114.7,310,110.2,309.9z M232.2,276.6
+	c-0.8,6.8-4.8,11.6-10,15.6c0-3.9,0-7.9-0.2-11.8c-0.2-2.9,0.6-4.4,3.8-4C227.9,276.6,230.1,276.6,232.2,276.6z M303.1,393.8
+	c1.3-17,9-29.2,25.9-34.6c20.7-6.6,44,10.3,44.1,32.1c0,0.8,0,1.7,0,2.5C349.8,393.8,326.4,393.8,303.1,393.8z M130.1,393.8
+	c-1.7-24.9,26.6-45.2,51.7-31.3c2.7,1.5,5.2,3.5,7.6,5.5c3.1,2.5,4.2,5.4,2.9,9.7c-1.6,5.2-2.5,10.6-2.2,16.1
+	C170.1,393.8,150.1,393.8,130.1,393.8z M216.2,393.8c1.6-5,1.3-10.3,3.5-15.4c9.8-22.5,41.7-28.4,58.6-7.7c1.3,1.6,1.7,2.8,1.2,4.9
+	c-1.6,5.9-2.8,11.9-2.4,18.1C256.8,393.8,236.5,393.8,216.2,393.8z M291.9,413c-6.9-0.5-12.3,1.1-18.1,6.1
+	c-14.8,12.9-34.1,11.1-48.2-3c-1.1-1.1-2.2-2.1-3.3-3.1c0.7-1,1.8-0.7,2.7-0.7c21.3,0,42.6,0,64,0
+	C290.1,412.4,291.1,412.2,291.9,413z M374.8,413c-4.9-0.4-8.5,0.9-12.4,4.9c-12.7,13.2-35.3,12.7-48.3-0.3c-2.5-2.5-4.6-5.3-8.7-4.6
+	c0.8-0.9,1.8-0.7,2.8-0.7c21.3,0,42.6,0,63.8,0C373,412.4,374,412.1,374.8,413z M209.7,413c-0.7,0-1.3,0.1-2,0
+	c-8.2-0.5-15,0.6-21.9,7.1c-11.2,10.5-31.8,10.8-46.3-2.9c-0.6-2.8-0.5-4.9,3.3-4.9c21.9,0.1,43.7,0,65.6,0.1
+	C208.8,412.4,209.3,412.8,209.7,413z"/>
+<path style="fill:#FE4456;transform:scale(0.2)" :class="ValueId+'_color5'" d="M407,257.8c-35.7,0.1-71.4,0.1-107,0.1c-4,0-8-0.1-11.9-0.2c1-1.6,4.3-3.1,0-4.8
+	c-1-0.4-0.7-1.3-0.4-2.1c4.9-13.3,8.2-27.5,19.6-37.5c13.7-12,29.2-16,46.7-11.1c8.3,2.3,16.4,5.4,24.3,8.9
+	c15.4,6.9,24.8,19,28,35.7c0.1,0.4,0.5,0.8,0.8,1.2c0,2,0.1,4,0.1,6c0.6,1,0.7,2-0.1,3C407.1,257.3,407,257.6,407,257.8z
+	 M303.1,393.8c-8.7,0-17.3,0-26,0c-1.6-1.6-1.3-3.7-1.3-5.6c0-2,0.6-3.9,0.9-5.9c1.6-10.3,0.5-12.9-8.6-18.5
+	c-19.5-11.9-46.6,1.1-49.6,23.9c-0.3,2.2,0.5,4.8-2.3,6.1c-8.7,0-17.4,0-26.1,0c-1.8-1.8-1.4-4-1.1-6.1c0.3-2.3,0.4-4.8,1.2-6.9
+	c2.8-7.2-0.5-11.4-6.1-15.4c-20.7-14.5-50.1-1.3-52.6,23.8c-0.2,1.6,0,3.4-1.4,4.6c-8.7,0-17.4,0.1-26.1,0.1
+	c-0.3-0.3-0.5-0.5-0.8-0.8c-2.1-3.8-0.8-7.4,0.9-11c1-3.7,2-7.3,3-11c1-8.2,6-14.4,11.1-20.2c20.9-23.6,58-27.3,83.5-8.5
+	c0.9,0.7,2,1.3,2.8,2.1c2.5,2.4,4.8,2.2,7.4,0c6.7-5.7,14.4-9.8,22.9-11.8c19.4-4.7,37.6-2,54.1,10c6,4.4,6.2,4.3,12.1,0
+	c24.3-17.8,58.7-16.6,81,5.4c4.3,4.2,9.1,8.4,10.2,15c1,2,2,4,3,6c2.6,2.1,2.6,5.2,2.9,8.2c-0.1,2.4,0.4,4.6,1.2,6.9
+	c1.9,3,1.9,6,0.2,9c-0.1,0.2-0.2,0.5-0.2,0.8c-8.7,0-17.3,0-26-0.1c-1.7-1.6-1.2-3.7-1.5-5.6c-2.5-16.4-16.3-28.6-32.6-28.8
+	c-17.1-0.2-30.8,11.2-33.6,27.9C305,389.6,304.9,392,303.1,393.8z M387.5,277.1c0.8,0,1.7,0,2.5,0c14-0.1,14.5,0.8,8.1,13.8
+	c-1.5,3-3.3,1.3-4.9,0.7c-3-1.2-4.4-0.9-4.2,2.9c0.3,5.1,0.1,10.3,0.1,15.4c-1.7,0.2-1.8-1-1.8-2.2
+	C387.3,297.4,387.4,287.3,387.5,277.1z M375,285c-6.3-2.4-12.6-4.8-18.9-7.2c0-0.3,0.1-0.6,0.1-0.9c6.2,0,12.4,0,18.6,0
+	C375.6,279.7,375.2,282.4,375,285z M374.8,413c0.9,9.9,0.4,19.9,0.2,29.9c0,2.4-1.1,3-3.4,3c-21,0-41.9,0.1-62.9,0.2
+	c-2.2,0-4-0.4-4-3.2c0.3-9.9-0.7-19.9,0.5-29.9c3.4-1.2,6.2-0.2,8.5,2.5c12.2,14.4,37.7,14,49.9-0.6
+	C366.8,411.1,370.9,412.8,374.8,413z M282.1,446c-18.8,0-37.6,0.1-56.4,0.1c-2.2,0-3.8-0.1-3.7-3.1c0.2-10,0.3-19.9,0.4-29.9
+	c2.5-0.1,3.8,1.8,5.3,3.3c13.2,12.5,32.2,13.7,45.6,1.4c6-5.5,11.7-5.6,18.5-4.7l0.4,0.1c0.6,7.9,0.1,15.9,0.3,23.8
+	c0.1,4.3-3.3,5.8-6.2,7.7C285.1,445.4,283.5,445.4,282.1,446z M209.7,413c0.8,8,0.3,16,0.3,24c-2.7,1-4.7,3-6.9,4.8
+	c-2.3,1.9-4.8,3.5-7.8,4.1c-17.4,0-34.8,0.1-52.2,0.2c-2.7,0-3.9-0.6-3.8-3.6c0.2-8.4,0.2-16.9,0.3-25.3c2.6-0.2,4.2,1.7,6.1,3
+	c13.7,9.1,30.8,7.8,42.6-3.7c3-2.9,6-4.4,10.2-4C202.1,413,205.9,412.2,209.7,413z M127,441c-8.5-6.5-14.5-14.9-18.8-24.5
+	c-1.2-2.6-0.6-3.5,2.3-3.4c5.5,0.1,10.9,0,16.4,0C127.6,422.3,127.3,431.7,127,441z"/>
+                </g>
+        </svg>
+
+        <div class="modal inner_color_model w3-animate-left" :id="'myModal'+dynamicIndexValue">
+            <div v-if="ShowModalArea == 'myModal'+dynamicIndexValue">
+                <div class="modal-content">
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <!-- Nav pills -->
+                        <ul class="nav nav-pills nav-justified">
+                            <li class="nav-item" @click="disableDraggable(dynamicIndexValue)">
+                                <a class="nav-link" data-tooltip="Color"  @click="openElementInModal('palette')" ><img src="images/all_use_icon/paint.svg"></a>
+                            </li>
+                            <li class="nav-item" @click="disableDraggable(dynamicIndexValue)">
+                                <a class="nav-link" data-tooltip="Rotate"  @click="openElementInModal('rotate')" ><img src="images/all_use_icon/rotateicon.svg"></a>
+                            </li>
+                            <li class="nav-item" @click="disableDraggable(dynamicIndexValue)">
+                                <a class="nav-link" data-tooltip="Flip"  @click="openElementInModal('mirror')" ><img src="images/all_use_icon/flip_ltr.svg"></a>
+                            </li>
+                            <li class="nav-item" @click="disableDraggable(dynamicIndexValue)">
+                                <a class="nav-link" data-tooltip="Zoom"  @click="openElementInModal('opacity')" ><img src="images/all_use_icon/zoom-in.svg"></a>
+                            </li>
+                            <li class="nav-item" @click="disableDraggable(dynamicIndexValue)">
+                                <a class="nav-link" data-tooltip="Clone"   @click="openElementInModal('duplicate'), cloneElement($event)"><img src="images/all_use_icon/duplicate.svg"></a>
+                            </li>
+                            <!-- <li class="nav-item" @click="disableDraggable(dynamicIndexValue)">
+                                <a class="nav-link" data-tooltip="Layer"   @click="openElementInModal('layers')" ><img src="images/all_use_icon/layers.svg"></a>
+                            </li> -->
+                            <li class="nav-item" @click="removeElement(dynamicIndexValue)">
+                                <a class="nav-link" data-toggle="Delete"><img src="images/all_use_icon/remove.svg"></a>
+                            </li>
+                            <li class="nav-item">
+                                 <a class="nav-link"  data-dismiss="modal" @click="hideElement" title="Close"><img src="images/all_use_icon/close-circle.svg" alt=""></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                            <div :class="{'tab-pane':true, active:ActivePalette=='active'}" id="palette">
+                                <div class="bulldog_svg" :id="svgName+dynamicIndex" v-if="this.$store.state.dynamicName ===svgName+dynamicIndex">
+                                    <h2>Select Color</h2>
+                                    <button :style="{background:'rgba('+getterDishwasherBg1+')'}" @click="ShowElement(getterDishwasherBg1)" :class="this.ValueId+'_color1btn'"></button>
+                                    <button :style="{backgroundColor:'rgba('+getterDishwasherBg2+')'}" @click="ShowElement1(getterDishwasherBg2)" :class="this.ValueId+'_color2btn'"></button>
+                                    <button :style="{backgroundColor:'rgba('+getterDishwasherBg3+')'}" @click="ShowElement2(getterDishwasherBg3)" :class="this.ValueId+'_color3btn'"></button>
+
+                                    <button :style="{backgroundColor:'rgba('+getterDishwasherBg4+')'}" @click="ShowElement3(getterDishwasherBg4)" :class="this.ValueId+'_color4btn'"></button>
+ 
+                                    <button :style="{backgroundColor:'rgba('+getterDishwasherBg5 +')'}" @click="ShowElement4(getterDishwasherBg5 )" :class="this.ValueId+'_color5btn'"></button>
+
+                                    <button :style="{backgroundColor:'rgba('+getterDishwasherBg6+')'}" @click="ShowElement5(getterDishwasherBg6)" :class="this.ValueId+'_color6btn'"></button>
+
+                                    <!-- <button :style="{backgroundColor:'rgba('+getterDishwasherBg7+')'}" @click="ShowElement6(getterDishwasherBg7)" :class="this.ValueId+'_color7btn'"></button> -->
+
+                                    <!-- <button :style="{backgroundColor:'rgba('+getterDishwasherBg8+')'}" @click="ShowElement7(getterDishwasherBg8)" :class="this.ValueId+'_color8btn'"></button> -->
+                                </div>
+
+                                <Colorpicker class="color_bulldog" v-if="this.showColorPicker" :colorElement="this.colorValue" :valueElement="this.clickedInput" />
+                            </div>
+                             <div :class="{'tab-pane':true, active:ActiveRotate=='active'}" id="rotate">
+                                <div class="bulldog_svg">
+                                    <div class="row">
+                                        <div class="col-md-5">
+                                            <h2>Rotate</h2>
+                                            <circle-slider v-model="sliderValue" :side="150" :min="0" :max="368" :step-size="2"></circle-slider>
+                                        </div>
+                                         <button @click="resetRotate()" type="button" class="btn btn-warning rotate_btn">Reset Rotate</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div :class="{'tab-pane':true, active:ActiveMirror=='active'}" id="mirror">
+                                <div class="bulldog_svg">
+                                    <div class="row">
+                                        <div class="col-md-7">
+                                            <h2>flip</h2>
+                                            <label for="fip-icon" :class="{flip_icon:true , active:rotateLeft=='active' }">
+                                                <input  value="-1" type="radio" name="fipIcon" id="fip-icon" checked="" @click="sentFlip('-1')">
+                                                <span class="title btn"><img src="images/all_use_icon/flip_icon.svg" style="transform:scaleX(-1)" alt="" title=""></span>
+                                            </label>
+                                            <label for="fip-icon" :class="{flip_icon:true , active:rotateRight=='active' }">
+                                                <input  type="radio" value="1" name="fipIcon" id="fip-icon" checked=""  @click="sentFlip('1')">
+                                                <span class="title btn"><img src="images/all_use_icon/flip_icon.svg" alt="" title=""></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div :class="{'tab-pane':true , active:ActiveOpacity =='active'}" id="opacity">
+                                <div class="bulldog_svg">
+                                    <h2>Zoom</h2>
+                                    <vue-slider ref="slider" v-model="scaleValue" v-bind="options">
+                                    </vue-slider>
+                                    <h3 class="text-right">{{ scaleValue * 10}}%</h3>
+                                </div>
+                            </div>
+                            <!-- <div class="tab-pane fade" id="duplicate">
+                                <div class="bulldog_svg">
+                                    <h2>Image Duplicate</h2>
+                                    <img src="images/all_use_icon/copy.svg" class="svg_popup" alt="" title="">
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="layers">
+
+                            </div> -->
+
+                        </div>
+                    </div>
+                    <!-- Modal footer -->
+                    <!-- <div class="modal-footer" v-if="this.showColorPicker">
+                        <button class="btn_grey" data-dismiss="modal" @click="hideElement">Close</button>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+
+<script>
+    import Colorpicker from '../colorPickerComponent'
+    import VueSlider from 'vue-slider-component'
+    import {
+        mapState,
+        mapActions,
+        mapGetters,
+        mapMutations
+    }
+    from 'vuex';
+    export default {
+        //   props:['dynamicBackground' ,'dynamicBackgroundOne', 'dynamicBackgroundTwo' , 'dynamicIndex', 'ValueId' , 'svgName'],
+        props: ['dynamicBackground', 'dynamicBackgroundOne', 'dynamicBackgroundTwo', 'dynamicIndexValue', 'ValueId', 'svgName', 'NavClicked'],
+        components: {
+            Colorpicker,
+            VueSlider,
+        },
+        mounted() {
+            /*
+                This will get these from SvgComponentArray
+            */
+                this.sliderValue = this.$store.state.SvgComponent[this.dynamicIndexValue][0].circleSlider
+
+                this.scaleValue = this.$store.state.SvgComponent[this.dynamicIndexValue][0].zoomValue
+                
+                this.flipElement = this.$store.state.SvgComponent[this.dynamicIndexValue][0].flipValue
+            /*
+                End
+            */
+            var width = window.innerWidth;
+            var height = window.innerWidth
+        var Dishwasher= [
+                {top:472 ,left:44},
+            {top:464 ,left:57},
+            {top:18 ,left:151},
+            {top:294 ,left:104},
+            {top:310 ,left:36},
+            {top:21 ,left:79},
+            {top:466 ,left:93},
+            {top:512 ,left:41},
+            {top:418 ,left:125},
+            {top:294 ,left:52},
+            ]        
+        
+        
+         if(this.$store.state.randomIndexElement == '4'){
+             this.scaleValue = '1.2'
+         }
+
+        if(this.$store.state.RandomClicked == true){
+            var randomNumber = Dishwasher[this.$store.state.randomIndexElement].left
+            var randomNumberTop  =  Dishwasher[this.$store.state.randomIndexElement].top
+            if(this.$store.state.randomFirstSvg == 'Dishwasher'){
+                //  console.log(randomNumber ,'---', randomNumberTop)
+                 this.ACTION_CHANGE_STATE(['randomYAxis' , randomNumberTop])
+                 this.ACTION_CHANGE_STATE(['randomXAxis' , randomNumber])
+            }
+            var randomWidth = randomNumber
+            var randomHeight = randomNumberTop
+        }else{    
+            var randomWidth = Math.floor(Math.random()*200);
+            var randomHeight = Math.floor(Math.random()*500);
+        }
+            var x = this.dynamicIndexValue
+            $('#' + x).css({
+                left: randomWidth,
+                top: randomHeight
+            })
+            $("#myModal").modal({
+                focus: false,
+                // Do not show modal when innitialized.
+                show: false,
+                backdrop: 'static', // For static modal
+                keyboard: false // prevent click outside of the modal
+            });
+            var DynamicIDs = this.dynamicIndexValue
+            $(function() { 
+            var isDragging = false;
+            var test= $( "#"+DynamicIDs).draggable({
+             zIndex: 100,
+             cursor: "move",
+            })
+            // Getter
+            var zIndex = $( "#"+DynamicIDs ).draggable( "option", "zIndex" );
+            // Setter
+            $( "#"+DynamicIDs ).draggable( "option", "zIndex", 100 );
+            })
+            
+            // Getter
+            var cursor = $( ".selector" ).draggable( "option", "cursor" );
+
+            // Setter
+            $( ".selector" ).draggable( "option", "cursor", "move" );
+            var isDragging = false;
+            var self = this  
+            $( "#"+DynamicIDs).draggable({
+                start: function( event, ui ) {},
+                stop: function( event, ui ) {}
+            });
+            $( "#"+DynamicIDs).on( "dragstart", function( event, ui ) {
+                // console.log(event)
+                self.returnDrag = true
+            });
+             $( "#"+DynamicIDs).on( "dragstop", function( event, ui ) {
+                setTimeout(function(){
+                     self.returnDrag = false
+                },500)
+            }); 
+
+        },
+        computed: {
+            ...mapState([
+                    'background',
+                    'background1',
+                    'background2',
+                    'dynamicIndex',
+                    'dynamicName',
+                    'newDisableIndex',
+                    'randomYAxis',
+                    'randomXAxis'
+                ]),
+                getterDishwasherBg1: {
+                    get() {
+                        // console.log(this.$store.state.SvgComponent[this.$store.state.dynamicIndex][0])
+                        if (this.$store.state.SvgComponent[this.$store.state.dynamicIndex][0].name === 'Dishwasher') {
+                            return this.$store.state.SvgComponent[this.$store.state.dynamicIndex][0].background
+                        }
+
+                    },
+                    set(newValue) {
+                        console.log(newValue)
+                    }
+                },
+                getterDishwasherBg2: {
+                    get() {
+                        if (this.$store.state.SvgComponent[this.$store.state.dynamicIndex][0].name === 'Dishwasher') {
+                            return this.$store.state.SvgComponent[this.$store.state.dynamicIndex][0].background1
+                        }
+                    },
+                    set(newValue) {
+                        console.log(newValue)
+                    }
+                },
+                getterDishwasherBg3: {
+                    get() {
+                        if (this.$store.state.SvgComponent[this.$store.state.dynamicIndex][0].name === 'Dishwasher') {
+                            return this.$store.state.SvgComponent[this.$store.state.dynamicIndex][0].background2
+                        }
+                    },
+                    set(newValue) {
+                        console.log(newValue)
+                    }
+                },
+                getterDishwasherBg4: {
+                    get() {
+                        return this.$store.state.SvgComponent[this.$store.state.dynamicIndex][0].background3
+                    },
+                    set(newValue) {
+                            console.log(newValue)
+                    }
+                },
+                getterDishwasherBg5 : {
+                    get() {
+                        return this.$store.state.SvgComponent[this.$store.state.dynamicIndex][0].background4
+                    },
+                    set(newValue) {
+                        console.log(newValue)
+                    }
+                },
+                getterDishwasherBg6: {
+                    get() {
+                        return this.$store.state.SvgComponent[this.$store.state.dynamicIndex][0].background5
+                    },
+                    set(newValue) {
+                        console.log(newValue)
+                    }
+                },
+                getterDishwasherBg7: {
+                    get() {
+                        return this.$store.state.SvgComponent[this.$store.state.dynamicIndex][0].background6
+                    },
+                    set(newValue) {
+                        console.log(newValue)
+                    }
+                },
+                getterDishwasherBg8: {
+                    get() {
+                        return this.$store.state.SvgComponent[this.$store.state.dynamicIndex][0].background7
+                    },
+                    set(newValue) {
+                        console.log(newValue)
+                    }
+                }
+
+        },
+        data() {
+            return {
+                colorValue: '',
+                showColorPicker: false,
+                clickedInput: '',
+                value: 100,
+                ShowModalArea: '',
+                sliderValue: 0,
+                options: {
+                    dotSize: 14,
+                    width: 'auto',
+                    height: 10,
+                    contained: false,
+                    direction: 'ltr',
+                    data: null,
+                    min: 0.8,
+                    max: 10,
+                    interval: 0.2,
+                    disabled: false,
+                    clickable: true,
+                    duration: 0.5,
+                    tooltip: 'focus',
+                    tooltipPlacement: 'top',
+                    tooltipFormatter: void 0,
+                    useKeyboard: false,
+                    enableCross: true,
+                    fixed: false,
+                    minRange: void 0,
+                    maxRange: void 0,
+                    order: true,
+                    marks: false,
+                    dotOptions: void 0,
+                    process: true,
+                    dotStyle: void 0,
+                    railStyle: void 0,
+                    processStyle: void 0,
+                    tooltipStyle: void 0,
+                    stepStyle: void 0,
+                    stepActiveStyle: void 0,
+                    labelStyle: void 0,
+                    labelActiveStyle: void 0,
+                },
+                scale: '0.2',
+                scaleValue: '0.8',
+                flipElement: '1',
+                rotateLeft:'',
+                rotateRight:'active',
+                ActivePalette:'',
+                ActiveRotate:'',
+                ActiveMirror:'',
+                ActiveOpacity:'',
+                ActiveDuplicate:'',
+                ActiveLayers:'',
+                returnDrag:'',
+                dataloop:[1 , 2, 3, 4, 5],
+
+            }
+        },
+        watch: { 
+            ShowModalArea: function(newVal, oldVal) { // watch it
+                //console.log('Prop changed: ', newVal, ' | was: ', oldVal)
+            },
+            returnDrag: function(newVal, oldVal) { // watch it
+                //console.log('Prop changed: ', newVal, ' | was: ', oldVal)
+                this.returnDrag =newVal
+            },
+
+        },
+        methods: {
+            ...mapActions([
+                    'ACTION_CHANGE_STATE',
+                ]),
+                ...mapMutations([
+
+                ]),
+
+                ShowElement(value) {
+                    //   this.colorValue = value
+                   // console.log(value, 'ssss')
+                    var ColorValue = this.$store.state.SvgComponent[this.$store.state.dynamicIndex][0].background
+                    this.colorValue = 'rgba(' + ColorValue + ')'
+                    this.showColorPicker = true
+                    this.clickedInput = 'One'
+                        //  console.log( , 'value')
+                },
+                ShowElement1(value) {
+                    this.colorValue = 'rgba(' + this.$store.state.SvgComponent[this.$store.state.dynamicIndex][0].background1 + ')'
+                    //console.log('sjahsja')
+                    this.clickedInput = 'Two'
+                    this.showColorPicker = true
+                },
+                ShowElement2(value) {
+                    this.colorValue = 'rgba(' + this.$store.state.SvgComponent[this.$store.state.dynamicIndex][0].background2 + ')'
+                    //console.log('sjahsja')
+                    this.clickedInput = 'Third'
+                    this.showColorPicker = true
+                },
+                ShowElement3(value) {
+                    this.colorValue = 'rgba(' + this.$store.state.SvgComponent[this.$store.state.dynamicIndex][0].background3 + ')'
+                    this.clickedInput = 'forth'
+                    this.showColorPicker = true
+                },
+                ShowElement4(value) {
+                    this.colorValue = 'rgba(' + this.$store.state.SvgComponent[this.$store.state.dynamicIndex][0].background4 + ')'
+                    this.clickedInput = 'five'
+                    this.showColorPicker = true
+                },
+                ShowElement5(value) {
+                    this.colorValue = 'rgba(' + this.$store.state.SvgComponent[this.$store.state.dynamicIndex][0].background5 + ')'
+                    this.clickedInput = 'six'
+                    this.showColorPicker = true
+                },
+                ShowElement6(value) {
+                    this.colorValue = 'rgba(' + this.$store.state.SvgComponent[this.$store.state.dynamicIndex][0].background6 + ')'
+                    this.clickedInput = 'seven'
+                    this.showColorPicker = true
+                },
+                ShowElement7(value) {
+                    this.colorValue = 'rgba(' + this.$store.state.SvgComponent[this.$store.state.dynamicIndex][0].background7 + ')'
+                    this.clickedInput = 'eight'
+                    this.showColorPicker = true
+                },
+                hideElement() {
+                    this.showColorPicker = false
+                    this.ShowModalArea = false
+                    this.enableDragData()
+                    $("svg").removeClass("active");
+                    //Null Active element of modal-body 
+                        this.ActiveOpacity =''
+                        this.ActiveRotate =''
+                        this.ActiveMirror =''
+                        this.ActiveDuplicate =''
+                        this.ActiveLayers=''
+                        this.ActivePalette =''
+                    //Null Active element of modal-body       
+                },
+                getCircle(value, e){
+                   // console.log(e.currentTarget)
+                    if(this.returnDrag != true){
+                        $("svg").removeClass("active");
+                        $("#"+value+" svg").removeClass("active");
+                        $(e.currentTarget).addClass('active')
+                         //Null Active element of modal-body 
+                            this.ActiveOpacity =''
+                            this.ActiveRotate =''
+                            this.ActiveMirror =''
+                            this.ActiveDuplicate =''
+                            this.ActiveLayers=''
+                            this.ActivePalette =''
+                        //Null Active element of modal-body   
+                        this.ShowModalArea = false
+                        var hideElementValueModal = ($('#hiddenModal').val())
+                    if(hideElementValueModal !=''){
+                            $('#myModal'+hideElementValueModal).hide()
+                            $("#"+hideElementValueModal).draggable("enable")
+                            $('#myModal'+hideElementValueModal).modal("hide");
+                            $('#myModal'+value).css('display', 'block')
+                    }
+                        var closeModal= $('#hiddenModal').val(value)
+                    
+                        this.ShowModalArea = 'myModal'+value
+                        this.ACTION_CHANGE_STATE(['dynamicIndex' ,value ])
+                        this.ACTION_CHANGE_STATE(['tempModalIndex', value])
+                        this.ACTION_CHANGE_STATE(['dynamicName' ,this.$store.state.SvgComponent[this.$store.state.dynamicIndex][0].name+value ])
+                        this.ACTION_CHANGE_STATE(['editSvgClicked' ,true])
+                    
+                    }
+                },
+                disableDraggable(value) {
+                    // alert(value)
+                    $("#" + value).draggable("disable")
+                    this.ACTION_CHANGE_STATE(['newDisableIndex', value])
+                },
+                enableDragData() {
+                    if(this.$store.state.newDisableIndex !=''){
+                        $("#"+this.$store.state.newDisableIndex).draggable("enable")
+                    }else{
+                        $("#"+this.dynamicIndexValue).draggable("enable")
+                    }
+                },
+                sentFlip(value) {
+                    this.flipElement = value
+                    if(value ==  '-1'){
+                        this.rotateRight = ''
+                        this.rotateLeft ='active'
+                    }else{
+                            this.rotateLeft =''
+                        this.rotateRight = 'active'
+                    }
+                },
+                removeElement(value){
+                $('#'+this.$store.state.dynamicIndex).remove()
+                  //After this remove from array to SvgComponent  from store
+                },
+                openElementInModal(value){
+                 
+                    if(value =='palette'){
+                        this.ActiveOpacity =''
+                        this.ActiveMirror =''
+                        this.ActiveDuplicate =''
+                        this.ActiveLayers=''
+                        this.ActiveRotate =''
+                        this.ActivePalette ='active'
+                    }else if( value == 'rotate'){
+                        this.ActiveDuplicate =''
+                        this.ActiveLayers=''
+                        this.ActivePalette =''
+                        this.ActiveOpacity =''
+                        this.ActiveRotate ='active'
+                        this.ActiveMirror =''
+                    }else if( value == 'mirror'){
+                        this.ActiveDuplicate =''
+                        this.ActiveLayers=''
+                        this.ActivePalette =''
+                        this.ActiveOpacity =''
+                        this.ActiveRotate =''
+                        this.ActiveMirror ='active'
+                    }else if( value == 'opacity'){
+                        this.ActiveMirror =''
+                        this.ActiveDuplicate =''
+                        this.ActiveLayers=''
+                        this.ActivePalette =''
+                        this.ActiveRotate =''
+                        this.ActiveOpacity ='active'
+                    }else if( value == 'duplicate'){
+                        this.ActiveMirror =''
+                        this.ActiveLayers=''
+                        this.ActivePalette =''
+                        this.ActiveOpacity =''
+                        this.ActiveRotate =''
+                        this.ActiveDuplicate ='active'
+                    }else if( value == 'layers'){
+                        this.ActiveMirror =''
+                        this.ActivePalette =''
+                        this.ActiveOpacity =''
+                        this.ActiveRotate =''
+                        this.ActiveDuplicate ='active'
+                        this.ActiveLayers ='active'
+                    }
+                },
+                resetRotate(){
+                    this.sliderValue = 0
+                },
+                cloneElement(e){
+                    var number = e.currentTarget.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.id
+                    var cloneElementId = number.split('l')
+                    var elemntId = cloneElementId[1]
+                    var styleAttrClone = $('#'+elemntId).find( "svg" ).attr('style')
+                    /* 
+                    This is for color dynamic on clone 
+                    */
+                    var tempArrayClone = this.$store.state.SvgComponent[elemntId][0]
+                    var backgroundClone = tempArrayClone.background 
+                    var background1Clone =tempArrayClone.background1 
+                    var background2Clone =tempArrayClone.background2 
+                    var background3Clone =tempArrayClone.background3 
+                    var background4Clone =tempArrayClone.background4 
+                    var background5Clone =tempArrayClone.background5 
+                    var background6Clone =tempArrayClone.background6 
+                    var background7Clone =tempArrayClone.background7 
+                    var circleSliderClone = this.sliderValue
+                    var scaleValueClone =this.scaleValue 
+                    var flipElementClone = this.flipElement
+                    var tempArray = []
+                
+                        tempArray = [
+                            {
+                            name:'Dishwasher',
+                            background :  backgroundClone,
+                            background1:  background1Clone,
+                            background2:  background2Clone,
+                            background3:  background3Clone,
+                            background4:  background4Clone,
+                            background5:  background5Clone,
+                            background6:  background6Clone,
+                            background7:  background7Clone,
+                            circleSlider: circleSliderClone,
+                            zoomValue:scaleValueClone,
+                            flipValue:flipElementClone,
+                        }
+                        ]
+                        this.$store.state.SvgComponent.push(tempArray)
+                        var cloneIndex = this.$store.state.SvgComponent.length-1 
+                        $(document).ready(function(){
+                           // console.log($('.Svg_'+cloneIndex+'_color1') , 'length')
+                            $('.Svg_'+cloneIndex+'_color1').css({fill: 'rgba('+backgroundClone+')'})
+                            $('.Svg_'+cloneIndex+'_color2').css({fill: 'rgba('+background1Clone+')'})
+                            $('.Svg_'+cloneIndex+'_color3').css({fill: 'rgba('+background2Clone+')'})
+                            $('.Svg_'+cloneIndex+'_color4').css({fill: 'rgba('+background3Clone+')'})
+                            $('.Svg_'+cloneIndex+'_color5').css({fill: 'rgba('+background4Clone+')'})
+                            $('.Svg_'+cloneIndex+'_color6').css({fill: 'rgba('+background5Clone+')'})
+                            $('.Svg_'+cloneIndex+'_color7').css({fill: 'rgba('+background6Clone+')'})
+                            $('.Svg_'+cloneIndex+'_color8').css({fill: 'rgba('+background7Clone+')'})
+                            
+                            $('#'+cloneIndex).find("svg").attr('style',styleAttrClone);
+                        })
+                    /* 
+                    End
+                    */
+                }
+        }
+    }
+</script>
+
+<style>
+
+</style>
