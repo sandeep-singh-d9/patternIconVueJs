@@ -1,0 +1,655 @@
+<template>
+    <div style="height:0px">
+        <svg  @click="getCircle(dynamicIndexValue, $event)" v-for="(items , index) in dataloop" :key="index" version="1.1" baseProfile="basic"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" data-toggle="modal" :data-target="'#myModal'+dynamicIndexValue"  :style="{transform:'rotate('+sliderValue+'deg) scale('+scaleValue+') scaleX('+flipElement+')'}">
+                <g style="transform: scale(0.7);">
+                    <path style="fill:#FEE566; transform:scale(0.2)" :class="ValueId+'_color3'" d="M326.3,555.5c-10.2-6-19.3-13.2-27.1-22.1c2.7-2.5,6-2,9.2-2c14.7-0.1,29.4,0,44-0.1
+	c7.5,0,8.1-0.6,8.1-8.1c0.1-15.1-0.1-30.2,0.1-45.3c0.1-5.3-1.9-7.3-7.2-7.2c-15.5,0.2-31.1,0.1-46.6,0c-5,0-6.9,2-6.9,6.9
+	c0.1,15.1,0.1,30.2,0,45.3c0,3.2,0.5,6.6-2,9.2c-7.9-6.8-15.2-14.1-22-22c-1.5-10.4-0.4-20.9-0.7-31.4c-0.2-7.6-0.5-7.8-8-8
+	c-10.5-0.3-21,0.8-31.4-0.7c-7.9-6.8-15.2-14.2-22-22c2.6-2.5,6-2,9.2-2c14.4-0.1,28.8,0,43.3-0.1c8.5,0,8.9-0.5,8.9-8.6
+	c0-14.9,0.1-29.7,0-44.6c0-6.8-0.6-7.4-7.4-7.4c-15.3-0.1-30.6-0.1-45.9,0c-6.6,0-7.2,0.7-7.3,7.6c-0.1,14.9,0,29.7-0.1,44.6
+	c0,3.2,0.5,6.5-2,9.2c-8.3-7.5-15.6-15.7-20.7-25.7c-2.9-5.7-1.8-11.8-2-17.7c-0.1-3.2,0-6.4,0-9.7c-0.1-7.9-0.4-8.1-8.5-8.3
+	c-3-0.1-6-0.1-8.7-1.9c-3.5-7.5-5.4-15.4-6.5-23.5c5.8,0.5,11.6,0.8,17.4,0.7c4.3,0,6.3-1.6,6.3-6.1c0-16.4,0-32.7,0-49.1
+	c0-4.2-2.2-5.4-6-5.7c-5.9-0.4-12.1,1.6-17.7-1.8c0.5-7.3,3.4-14,4.8-21.1c0.3-0.2,0.6-0.5,0.9-0.7c2.6-1.2,5.5-0.9,8.2-1
+	c9.8-0.1,9.7-0.1,9.8-10.2c0.1-8.8-0.2-17.6,0.2-26.3c0.1-2.4,0.9-4.6,2.3-6.6c10.8-15.7,24.1-29,39.8-39.8c2-1.4,4.2-2.2,6.6-2.3
+	c9.7-0.4,19.3-0.1,29-0.2c7.1-0.1,7.5-0.6,7.7-7.8c0.1-3.4-0.5-6.9,1-10.2c0.2-0.3,0.5-0.6,0.7-0.9c7.1-1.4,13.8-4.4,21.1-4.8
+	c3.1,4.3,1.7,9.2,1.8,13.8c0.2,9.9,0.1,9.9,10.2,9.9c13.8,0,27.6,0,41.4,0c9,0,9.1-0.3,9.3-9.6c0.1-4.8-0.7-9.4-0.7-14.1
+	c8.1,1.2,16,3,23.5,6.5c2.1,3.1,2,6.6,1.8,10c-0.3,5.2,1.8,7.4,7.1,7.3c6.4-0.2,12.9-0.1,19.3,0c3.3,0,6.4,0.4,9.4,2
+	c10,5.2,18.2,12.5,25.7,20.7c-2.6,2.5-6,2-9.2,2c-14.4,0.1-28.8,0-43.3,0.1c-8.5,0-8.9,0.5-8.9,8.6c0,14.9-0.1,29.7,0,44.6
+	c0,6.8,0.6,7.4,7.4,7.4c15.1,0.1,30.1,0.1,45.2,0c7.4,0,7.9-0.6,7.9-8.3c0.1-14.6,0-29.3,0.1-43.9c0-3.2-0.5-6.5,2-9.2
+	c7.8,6.8,15.2,14.1,22,22c1.5,10.4,0.4,20.9,0.7,31.4c0.2,7.6,0.5,7.8,8,8c10.5,0.3,21-0.8,31.4,0.7c7.9,6.8,15.2,14.1,22,22
+	c-2.7,2.5-6,2-9.2,2c-14.7,0.1-29.4,0-44,0.1c-7.5,0-8.1,0.6-8.1,8.1c-0.1,15.1,0.1,30.2-0.1,45.3c-0.1,5.3,1.9,7.3,7.2,7.2
+	c15.5-0.2,31.1-0.1,46.6,0c5,0,6.9-2,6.9-6.9c-0.1-15.1-0.1-30.2,0-45.3c0-3.2-0.5-6.6,2-9.2c8.9,7.8,16.1,17,22.1,27.1
+	c1,9.2,0.6,18.4,0.5,27.7c-0.1,5,2,7,6.9,6.8c3.2-0.2,6.5-0.3,9.7,0.4c3.1,7.1,5.6,14.4,6.1,22.3c-4.9,3.3-10.4,1.7-15.7,1.8
+	c-4.8,0.1-7,1.7-6.9,6.8c0.2,15.9,0.1,31.8,0,47.6c0,4.6,1.9,6.5,6.5,6.5c5.8,0,11.5-0.3,17.3-0.7c-1.1,8-2.5,16-6.2,23.4
+	c-3.4,2.7-7.4,2-11.2,1.9c-4.7-0.1-6.5,1.9-6.5,6.5c0,10.1,0.5,20.2-0.7,30.3c-6,9.8-12.8,18.8-21.8,26.1c-2.5-2.6-2.2-6-2.2-9.2
+	c-0.1-15.1,0-30.2,0-45.3c0-7.9-0.5-8.3-8.5-8.4c-14.9,0-29.7-0.1-44.6,0c-6.8,0-7.4,0.6-7.4,7.4c-0.1,15.1-0.1,30.2,0,45.3
+	c0,7.2,0.6,7.8,7.7,7.9c15.3,0.1,30.6,0,45.9,0.1c3.2,0,6.5-0.3,9.2,2.2c-7.3,8.9-16.3,15.8-26.1,21.8c-9.9,1.2-19.8,0.8-29.7,0.7
+	c-5.3-0.1-7.5,1.8-7.2,7.2c0.2,3.6,0.7,7.4-1.9,10.6c-7.4,3.6-15.3,5.1-23.4,6.2c0.4-6,0.8-11.9,0.7-17.9c-0.1-4-1.8-5.8-5.9-5.8
+	c-16.3,0-32.6,0-48.9,0c-4.5,0-5.9,2-6.1,6.3c-0.2,5.5,1.5,11.2-1.9,16.3c-7.9-0.5-15.2-3-22.3-6.1c-0.7-3.2-0.6-6.4-0.4-9.7
+	c0.3-4.9-1.7-7-6.8-6.9C344.7,556.2,335.5,556.5,326.3,555.5z"/>
+<path style="fill:#299422; transform:scale(0.2)" :class="ValueId+'_color1'" d="M236.7,191.3c-18.6,11.6-33.7,26.7-45.3,45.3c-0.4,1.7-1.6,2.7-3.3,3.1c-13.2,1-26.2-1.2-39.2-2.6
+	c-1.1-0.1-2-0.7-2.7-1.6c-13.2-3.3-26.7-5.7-39.7-10.3c-32.7-11.6-61.6-29.2-87.9-54.8c13,2.3,24.2,4.2,35.5,6.2
+	c27.7,4.9,55.3,9.9,83,14.8c3-2.4,6.2-1,9.3-0.6c13.7,1.9,27.3,3.9,41.1,3.9c6.8,0,7.3-0.6,7.4-7.4c0.3-11.5-1.8-22.7-2.8-34.1
+	c-0.2-2.5-1.2-5.1,0.7-7.5c-7.3-41.8-14.5-83.6-22.1-126.7c9.1,8.3,15.9,16.9,22.4,25.8c21.7,30.2,36.4,63.3,41.6,100.4
+	c0.1,0.6,0.5,1.2,0.7,1.8c0.9,0.6,1.6,1.5,1.7,2.6c1.7,12.7,3.5,25.4,2.7,38.3C239.4,189.7,238.4,190.9,236.7,191.3z"/>
+<path style="fill:#23801D; transform:scale(0.2)" :class="ValueId+'_color2'" d="M192.7,145.8c2.3,14.8,4.2,29.7,4.2,44.8c0,4.8-1.3,6.3-6.2,6.3c-16.6-0.1-32.9-2-49.2-5
+	c-1.5-0.3-3-0.3-4.5-0.4c-3.6-5.7-9.3-9.5-14-14.2C90.8,145,69,106.7,57.1,62.7c-0.2-0.8-0.1-1.6-0.2-3.1
+	c22.2,5.4,42.8,13.8,62.4,24.7c26.8,15,50,34.5,69.9,57.9C190.2,143.5,191.5,144.6,192.7,145.8z M242.6,188.8
+	c9.8-5.1,19.5-10.7,30.1-14.2c1.6-0.6,3.1-1.5,3.8-3.2c-0.1-0.4,0.1-0.6,0.4-0.6c-8.7-33.6-5.3-67,1.2-100.5
+	c-20.5,22.2-35.6,47.3-42.6,76.8c0.8,14.2,3,28.2,3,42.4C239.9,190.2,241.3,189.5,242.6,188.8z M68.6,278.8c8-1.5,14.1-2.8,20.2-3.8
+	c27.4-4.3,54.8-5.5,82,1.8c0.1-0.4,0.3-0.5,0.6-0.4c0.6-0.3,1.4-0.5,1.6-1c4.9-12.3,11.6-23.7,16.8-35.8c0.1-0.3-0.1-0.8-0.3-1.2
+	c-14.5-0.9-28.9-1.9-43.4-2.8C117,242.8,92.1,257.6,68.6,278.8z"/>
+<path style="fill:#FED300; transform:scale(0.2)" :class="ValueId+'_color4'" d="M212.3,446.7c0-19,0.1-38-0.1-56.9c-0.1-4.9,1-6.8,6.4-6.7c17.7,0.4,35.4,0.2,53,0.1
+	c4.2,0,5.6,1.2,5.5,5.5c-0.2,17.9-0.2,35.8,0,53.7c0.1,4.7-1.6,5.8-6,5.7c-19.2-0.2-38.4-0.1-57.6-0.1
+	C213.2,447.6,212.8,447.1,212.3,446.7z M446.7,212.3c-19.2,0-38.4,0.1-57.6-0.1c-4.3,0-6.1,1-6,5.7c0.3,17.9,0.2,35.8,0,53.7
+	c0,4.2,1.2,5.6,5.5,5.5c17.9-0.2,35.8-0.2,53.7,0c4.7,0.1,5.8-1.6,5.7-6c-0.2-19.2-0.1-38.4-0.1-57.6
+	C447.6,213.2,447.2,212.7,446.7,212.3z M299.1,533.5c19.2,0,38.4-0.1,57.6,0.1c4.4,0,6-1.1,6-5.7c-0.2-17.9-0.2-35.8,0-53.7
+	c0-4.3-1.3-5.5-5.5-5.5c-17.7,0.2-35.4,0.3-53-0.1c-5.4-0.1-6.4,1.8-6.4,6.7c0.2,19,0.1,37.9,0.1,56.9
+	C298.2,532.6,298.7,533.1,299.1,533.5z M532.2,297.8c-19.2,0-38.4,0.1-57.6-0.1c-4.3,0-6.1,1-6,5.7c0.3,17.9,0.2,35.8,0,53.7
+	c0,4.2,1.2,5.6,5.5,5.5c17.9-0.2,35.8-0.2,53.7,0c4.7,0.1,5.8-1.6,5.7-6c-0.2-19.2-0.1-38.4-0.1-57.6
+	C533.1,298.6,532.6,298.2,532.2,297.8z M297.9,165.9c0,6.9,0.1,13.8-0.2,20.6c-0.2,4,1.4,5.1,5.2,5.1c14.6-0.2,29.3-0.1,43.9-0.1
+	c15.7,0,15.8,0,15.6-15.8c0-3.4,1.5-7.4-2.6-9.9C339.2,162.1,318.6,162,297.9,165.9z M165.9,359.9c1.2,1.5,2.4,2.8,4.7,2.7
+	c5.6-0.2,11.2-0.2,16.8,0c3.6,0.1,4.2-1.7,4.2-4.8c-0.1-18.5-0.1-37,0-55.5c0-3.9-1.7-4.7-5.1-4.6c-6.9,0.2-13.8,0.1-20.6,0.2
+	C162,318.6,162.1,339.2,165.9,359.9z M578.7,383.3c-6.3,0-12.5,0.2-18.7-0.1c-4.5-0.2-6,1.2-5.9,5.8c0.3,14.4,0.1,28.9,0.1,43.3
+	c0,15.7,0,15.8,15.9,15.7c3.4,0,7.5,1.5,9.9-2.6C583.4,424.6,583.8,403.9,578.7,383.3z M445.4,580c1.2-1.2,2.7-2,2.7-4.1
+	c-0.1-6-0.1-12.1,0-18.1c0.1-3.5-2.2-3.6-4.7-3.6c-18.5,0-37.1,0.1-55.6,0c-3.4,0-4.6,1.2-4.5,4.5c0.2,6.7,0.1,13.4,0.1,20
+	C403.9,583.8,424.6,583.4,445.4,580z M470,235.6c-0.4,0.5-1.1,1-1.1,1.5c-0.1,12.3-0.1,24.5-0.2,36.8c0,3.2,2.2,3.2,4.4,3.2
+	c7.5,0,15.1,0.3,22.6-0.1c4.8-0.2,9.8,1.6,14.4-1.2C496.8,262.4,483.4,249,470,235.6z M275.8,510.2c0.3-0.3,0.8-0.6,0.8-0.9
+	c0.2-12.5,0.3-24.9,0.4-37.4c0-3.2-2.2-3.2-4.4-3.2c-8,0-15.9-0.2-23.9,0.1c-4.4,0.2-9-1.4-13.1,1.2
+	C249,483.4,262.4,496.8,275.8,510.2z M573.8,468.7c-0.2,0-0.4,0-0.6,0c-6.1,0.5-13.9-2.7-17.8,1.4c-3.7,3.7-1.2,11.4-1,17.3
+	c0.2,6.7-1.7,13.5,1.1,20.1C563.2,495.4,569.8,482.7,573.8,468.7z M507.5,555.4c-6.3-2.7-13-0.9-19.4-1.1c-6.1-0.2-14.1-2.7-17.9,1
+	c-4.1,4.1-0.9,12.2-1.4,18.5C482.7,569.8,495.4,563.2,507.5,555.4z M383.4,172.4c-0.1,4.7,0.1,9.4-0.2,14.1
+	c-0.2,3.9,1.2,5.2,5.1,5.2c10.9-0.2,21.8-0.1,32.7-0.1C409.7,182.7,396.8,177.1,383.4,172.4z M191.6,421c0-10.9-0.1-21.8,0.1-32.7
+	c0.1-3.9-1.2-5.4-5.2-5.1c-4.7,0.3-9.4,0.2-14.1,0.2C177.1,396.8,182.8,409.7,191.6,421z M555.6,326.2c-2.9,11.3-0.8,22.8-1.2,34.2
+	c0,1.2,0.9,2.1,2.1,2c5.4-0.5,11,1.8,16.2-1.4C568.6,348.6,562.8,337.1,555.6,326.2z M361,572.7c3-5.6,2.6-12.1,0.5-17.2
+	c-1.3-3.2-7.4-1-11.4-1.2c-4.5-0.3-9-0.3-13.5,0c-3.5,0.2-7.3-1.4-10.4,1.3C337.1,562.8,348.6,568.6,361,572.7z M297.7,443.1
+	c-0.1,3.5,1,5,4.8,4.9c18.6-0.1,37.1-0.1,55.7,0c3.4,0,4.5-1.3,4.4-4.6c-0.1-18.6-0.1-37.1,0-55.7c0-3.3-1-4.6-4.4-4.6
+	c-18.6,0.1-37.1,0.1-55.7,0c-3.7,0-4.8,1.3-4.8,4.9c0.2,9.1,0.1,18.1,0.1,27.2C297.8,424.6,297.9,433.8,297.7,443.1z M443.5,448
+	c3.3,0,4.6-1,4.6-4.5c-0.1-18.6-0.1-37.1,0-55.7c0-3.1-0.7-4.8-4.3-4.7c-18.8,0.1-37.5,0.1-56.3,0c-3,0-4.2,1-4.2,4.1
+	c0.1,18.8,0.1,37.5,0,56.3c0,3.5,1.4,4.5,4.6,4.4c9.3-0.1,18.6,0,27.8,0C424.9,448,434.2,447.9,443.5,448z M474.2,383.2
+	c-4.2-0.1-5.6,1.2-5.5,5.5c0.2,17.9,0.2,35.8,0,53.7c0,4,0.8,5.8,5.3,5.7c18.1-0.2,36.2-0.2,54.4,0c3.9,0,5.3-1.2,5.2-5.2
+	c-0.2-18.1-0.2-36.2,0-54.4c0.1-4.4-1.6-5.5-5.7-5.4c-8.8,0.2-17.7,0.1-26.5,0.1C492.3,383.2,483.2,383.4,474.2,383.2z M212.3,272.2
+	c-0.1,3.5,1,5,4.7,5c18.6-0.1,37.1-0.1,55.7,0c3.4,0,4.5-1.3,4.4-4.6c-0.1-18.6-0.1-37.1,0-55.7c0-3.3-1-4.6-4.4-4.6
+	c-18.6,0.1-37.1,0.1-55.7,0c-3.7,0-4.8,1.3-4.8,4.9c0.2,9.1,0.1,18.1,0.1,27.2C212.3,253.6,212.4,262.9,212.3,272.2z M362.6,217.1
+	c0.1-3.6-1.1-4.9-4.8-4.9c-18.6,0.1-37.1,0.1-55.7,0c-3.5,0-4.4,1.4-4.4,4.6c0.1,18.6,0.1,37.1,0,55.7c0,3.3,1,4.6,4.4,4.6
+	c18.6-0.1,37.1-0.1,55.7,0c3.8,0,4.8-1.4,4.7-5c-0.2-9.3-0.1-18.6-0.1-27.8C362.5,235.3,362.4,226.2,362.6,217.1z M442.4,533.6
+	c4.1,0.1,5.7-0.9,5.7-5.4c-0.2-18.1-0.2-36.2,0-54.4c0-4-1.3-5.2-5.2-5.2c-18.1,0.2-36.2,0.1-54.4,0c-3.7,0-5.4,0.9-5.3,5
+	c0.2,18.3,0.2,36.7,0,55c0,3.6,1.2,4.9,4.9,4.8c9.1-0.2,18.1-0.1,27.2-0.1C424.3,533.5,433.4,533.3,442.4,533.6z M533.7,533.6
+	c-0.1-19.8-0.2-39.6-0.1-59.4c0-4.2-1.2-5.6-5.5-5.6c-17.9,0.2-35.7,0.2-53.6,0c-4.5-0.1-5.9,1.3-5.8,5.8c0.2,17.7,0.3,35.3,0,53
+	c-0.1,4.9,1.5,6.2,6.2,6.1C494.4,533.4,514,533.6,533.7,533.6C533.6,533.6,533.7,533.6,533.7,533.6z M272.5,362.6
+	c3.3,0,4.6-1,4.6-4.4c-0.1-18.6-0.1-37.1,0-55.7c0-3.1-0.7-4.8-4.3-4.7c-18.8,0.1-37.5,0.1-56.3,0c-3,0-4.3,1-4.2,4.1
+	c0.1,18.8,0.1,37.5,0,56.3c0,3.5,1.3,4.5,4.6,4.4c9.1-0.1,18.1,0,27.2,0C253.6,362.5,263,362.4,272.5,362.6z M362.6,303.2
+	c0.1-4.3-1.3-5.6-5.5-5.5c-17.9,0.2-35.8,0.2-53.7,0c-4,0-5.7,0.9-5.7,5.3c0.2,18.1,0.2,36.2,0,54.4c0,3.9,1.2,5.2,5.2,5.2
+	c18.1-0.2,36.2-0.2,54.4,0c4.4,0.1,5.5-1.6,5.4-5.7c-0.2-8.8-0.1-17.7-0.1-26.5C362.5,321.3,362.4,312.3,362.6,303.2z M443.5,362.6
+	c3.3,0,4.6-1,4.6-4.4c-0.1-18.6-0.1-37.1,0-55.7c0-3.1-0.7-4.8-4.3-4.7c-18.8,0.1-37.5,0.1-56.3,0c-3,0-4.3,1-4.2,4.1
+	c0.1,18.8,0.1,37.5,0,56.3c0,3.5,1.3,4.5,4.6,4.4c9.1-0.1,18.1,0,27.2,0C424.5,362.5,434,362.4,443.5,362.6z M236.7,191.3
+	c12,0.1,23.9,0.1,35.9,0.2c2.6,0,4.7-0.3,4.5-3.7c-0.3-5.5,0.7-11.1-0.7-16.5c-13.4,4.6-25.9,10.9-38,18.1
+	C237.8,190.1,237.2,190.7,236.7,191.3z M186.8,277.1c3.7,0.3,4.9-1.2,4.8-4.8c-0.2-11.9-0.2-23.7-0.3-35.6c-0.6,0.6-1.2,1.1-1.9,1.7
+	c-7.2,12.1-13.5,24.7-18.1,38C176.5,277.8,181.7,276.6,186.8,277.1z"/>       
+    </g>
+        </svg>
+
+        <div class="modal inner_color_model w3-animate-left" :id="'myModal'+dynamicIndexValue">
+            <div v-if="ShowModalArea == 'myModal'+dynamicIndexValue">
+                <div class="modal-content">
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <!-- Nav pills -->
+                        <ul class="nav nav-pills nav-justified">
+                            <li class="nav-item" @click="disableDraggable(dynamicIndexValue)">
+                                <a class="nav-link" data-tooltip="Color"  @click="openElementInModal('palette')" ><img src="images/all_use_icon/paint.svg"></a>
+                            </li>
+                            <li class="nav-item" @click="disableDraggable(dynamicIndexValue)">
+                                <a class="nav-link" data-tooltip="Rotate"  @click="openElementInModal('rotate')" ><img src="images/all_use_icon/rotateicon.svg"></a>
+                            </li>
+                            <li class="nav-item" @click="disableDraggable(dynamicIndexValue)">
+                                <a class="nav-link" data-tooltip="Flip"  @click="openElementInModal('mirror')" ><img src="images/all_use_icon/flip_ltr.svg"></a>
+                            </li>
+                            <li class="nav-item" @click="disableDraggable(dynamicIndexValue)">
+                                <a class="nav-link" data-tooltip="Zoom"  @click="openElementInModal('opacity')" ><img src="images/all_use_icon/zoom-in.svg"></a>
+                            </li>
+                            <li class="nav-item" @click="disableDraggable(dynamicIndexValue)">
+                                <a class="nav-link" data-tooltip="Clone"   @click="openElementInModal('duplicate'), cloneElement($event)"><img src="images/all_use_icon/duplicate.svg"></a>
+                            </li>
+                            <!-- <li class="nav-item" @click="disableDraggable(dynamicIndexValue)">
+                                <a class="nav-link" data-tooltip="Layer"   @click="openElementInModal('layers')" ><img src="images/all_use_icon/layers.svg"></a>
+                            </li> -->
+                            <li class="nav-item" @click="removeElement(dynamicIndexValue)">
+                                <a class="nav-link" data-toggle="Delete"><img src="images/all_use_icon/remove.svg"></a>
+                            </li>
+                            <li class="nav-item">
+                                 <a class="nav-link"  data-dismiss="modal" @click="hideElement" title="Close"><img src="images/all_use_icon/close-circle.svg" alt=""></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                            <div :class="{'tab-pane':true, active:ActivePalette=='active'}" id="palette">
+                                <div class="bulldog_svg" :id="svgName+dynamicIndex" v-if="this.$store.state.dynamicName ===svgName+dynamicIndex">
+                                    <h2>Select Color</h2>
+                                    <button :style="{background:'rgba('+getterPineappleBg1+')'}" @click="ShowElement(getterPineappleBg1)" :class="this.ValueId+'_color1btn'"></button>
+                                    <button :style="{backgroundColor:'rgba('+getterPineappleBg2+')'}" @click="ShowElement1(getterPineappleBg2)" :class="this.ValueId+'_color2btn'"></button>
+                                    <button :style="{backgroundColor:'rgba('+getterPineappleBg3+')'}" @click="ShowElement2(getterPineappleBg3)" :class="this.ValueId+'_color3btn'"></button>
+
+                                    <button :style="{backgroundColor:'rgba('+getterPineappleBg4+')'}" @click="ShowElement3(getterPineappleBg4)" :class="this.ValueId+'_color4btn'"></button>
+
+                                    <!-- <button :style="{backgroundColor:'rgba('+getterPineappleBg5+')'}" @click="ShowElement4(getterPineappleBg5)" :class="this.ValueId+'_color5btn'"></button> -->
+                                </div>
+
+                                <Colorpicker class="color_bulldog" v-if="this.showColorPicker" :colorElement="this.colorValue" :valueElement="this.clickedInput" />
+                            </div>
+                             <div :class="{'tab-pane':true, active:ActiveRotate=='active'}" id="rotate">
+                                <div class="bulldog_svg">
+                                    <div class="row">
+                                        <div class="col-md-5">
+                                            <h2>Rotate</h2>
+                                            <circle-slider v-model="sliderValue" :side="150" :min="0" :max="368" :step-size="2"></circle-slider>
+                                        </div>
+                                         <button @click="resetRotate()" type="button" class="btn btn-warning rotate_btn">Reset Rotate</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div :class="{'tab-pane':true, active:ActiveMirror=='active'}" id="mirror">
+                                <div class="bulldog_svg">
+                                    <div class="row">
+                                        <div class="col-md-7">
+                                            <h2>flip</h2>
+                                            <label for="fip-icon" :class="{flip_icon:true , active:rotateLeft=='active' }">
+                                                <input  value="-1" type="radio" name="fipIcon" id="fip-icon" checked="" @click="sentFlip('-1')">
+                                                <span class="title btn"><img src="images/all_use_icon/flip_icon.svg" style="transform:scaleX(-1)" alt="" title=""></span>
+                                            </label>
+                                            <label for="fip-icon" :class="{flip_icon:true , active:rotateRight=='active' }">
+                                                <input  type="radio" value="1" name="fipIcon" id="fip-icon" checked=""  @click="sentFlip('1')">
+                                                <span class="title btn"><img src="images/all_use_icon/flip_icon.svg" alt="" title=""></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div :class="{'tab-pane':true , active:ActiveOpacity =='active'}" id="opacity">
+                                <div class="bulldog_svg">
+                                    <h2>Zoom</h2>
+                                    <vue-slider ref="slider" v-model="scaleValue" v-bind="options">
+                                    </vue-slider>
+                                    <h3 class="text-right">{{ scaleValue * 10}}%</h3>
+                                </div>
+                            </div>
+                            <!-- <div class="tab-pane fade" id="duplicate">
+                                <div class="bulldog_svg">
+                                    <h2>Image Duplicate</h2>
+                                    <img src="images/all_use_icon/copy.svg" class="svg_popup" alt="" title="">
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="layers">
+
+                            </div> -->
+
+                        </div>
+                    </div>
+                    <!-- Modal footer -->
+                    <!-- <div class="modal-footer" v-if="this.showColorPicker">
+                        <button class="btn_grey" data-dismiss="modal" @click="hideElement">Close</button>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+
+<script>
+    import Colorpicker from '../colorPickerComponent'
+    import VueSlider from 'vue-slider-component'
+    import {
+        mapState,
+        mapActions,
+        mapGetters,
+        mapMutations
+    }
+    from 'vuex';
+    export default {
+        //   props:['dynamicBackground' ,'dynamicBackgroundOne', 'dynamicBackgroundTwo' , 'dynamicIndex', 'ValueId' , 'svgName'],
+        props: ['dynamicBackground', 'dynamicBackgroundOne', 'dynamicBackgroundTwo', 'dynamicIndexValue', 'ValueId', 'svgName', 'NavClicked'],
+        components: {
+            Colorpicker,
+            VueSlider,
+        },
+        mounted() {
+            /*
+                This will get these from SvgComponentArray
+            */
+                this.sliderValue = this.$store.state.SvgComponent[this.dynamicIndexValue][0].circleSlider
+
+                this.scaleValue = this.$store.state.SvgComponent[this.dynamicIndexValue][0].zoomValue
+                
+                this.flipElement = this.$store.state.SvgComponent[this.dynamicIndexValue][0].flipValue
+            /*
+                End
+            */
+            var width = window.innerWidth;
+            var height = window.innerWidth
+        var Pineapple= [
+                {top:254 ,left:50},
+                {top:9 ,left:185},
+                {top:478 ,left:118},
+                {top:476 ,left:112},
+                {top:330 ,left:143},
+                {top:254 ,left:50},
+                {top:8 ,left:49},
+                {top:28 ,left:15},
+                {top:41 ,left:127},
+                {top:155 ,left:73},
+            ]        
+        
+        
+         if(this.$store.state.randomIndexElement == '4'){
+             this.scaleValue = '1.2'
+         }
+
+        if(this.$store.state.RandomClicked == true){
+            var randomNumber = Pineapple[this.$store.state.randomIndexElement].left
+            var randomNumberTop  =  Pineapple[this.$store.state.randomIndexElement].top
+            if(this.$store.state.randomFirstSvg == 'Pineapple'){
+                //  console.log(randomNumber ,'---', randomNumberTop)
+                 this.ACTION_CHANGE_STATE(['randomYAxis' , randomNumberTop])
+                 this.ACTION_CHANGE_STATE(['randomXAxis' , randomNumber])
+            }
+            var randomWidth = randomNumber
+            var randomHeight = randomNumberTop
+        }else{    
+            var randomWidth = Math.floor(Math.random()*200);
+            var randomHeight = Math.floor(Math.random()*500);
+        }
+            var x = this.dynamicIndexValue
+            $('#' + x).css({
+                left: randomWidth,
+                top: randomHeight
+            })
+            $("#myModal").modal({
+                focus: false,
+                // Do not show modal when innitialized.
+                show: false,
+                backdrop: 'static', // For static modal
+                keyboard: false // prevent click outside of the modal
+            });
+            var DynamicIDs = this.dynamicIndexValue
+            $(function() { 
+            var isDragging = false;
+            var test= $( "#"+DynamicIDs).draggable({
+             zIndex: 100,
+             cursor: "move",
+            })
+            // Getter
+            var zIndex = $( "#"+DynamicIDs ).draggable( "option", "zIndex" );
+            // Setter
+            $( "#"+DynamicIDs ).draggable( "option", "zIndex", 100 );
+            })
+            
+            // Getter
+            var cursor = $( ".selector" ).draggable( "option", "cursor" );
+
+            // Setter
+            $( ".selector" ).draggable( "option", "cursor", "move" );
+            var isDragging = false;
+            var self = this  
+            $( "#"+DynamicIDs).draggable({
+                start: function( event, ui ) {},
+                stop: function( event, ui ) {}
+            });
+            $( "#"+DynamicIDs).on( "dragstart", function( event, ui ) {
+                // console.log(event)
+                self.returnDrag = true
+            });
+             $( "#"+DynamicIDs).on( "dragstop", function( event, ui ) {
+                setTimeout(function(){
+                     self.returnDrag = false
+                },500)
+            }); 
+
+        },
+        computed: {
+            ...mapState([
+                    'background',
+                    'background1',
+                    'background2',
+                    'dynamicIndex',
+                    'dynamicName',
+                    'newDisableIndex',
+                    'randomYAxis',
+                    'randomXAxis'
+                ]),
+                getterPineappleBg1: {
+                    get() {
+                        // console.log(this.$store.state.SvgComponent[this.$store.state.dynamicIndex][0])
+                        if (this.$store.state.SvgComponent[this.$store.state.dynamicIndex][0].name === 'Pineapple') {
+                            return this.$store.state.SvgComponent[this.$store.state.dynamicIndex][0].background
+                        }
+
+                    },
+                    set(newValue) {
+                        console.log(newValue)
+                    }
+                },
+                getterPineappleBg2: {
+                    get() {
+                        if (this.$store.state.SvgComponent[this.$store.state.dynamicIndex][0].name === 'Pineapple') {
+                            return this.$store.state.SvgComponent[this.$store.state.dynamicIndex][0].background1
+                        }
+                    },
+                    set(newValue) {
+                        console.log(newValue)
+                    }
+                },
+                getterPineappleBg3: {
+                    get() {
+                        if (this.$store.state.SvgComponent[this.$store.state.dynamicIndex][0].name === 'Pineapple') {
+                            return this.$store.state.SvgComponent[this.$store.state.dynamicIndex][0].background2
+                        }
+                    },
+                    set(newValue) {
+                        console.log(newValue)
+                    }
+                },
+                getterPineappleBg4: {
+                    get() {
+                        return this.$store.state.SvgComponent[this.$store.state.dynamicIndex][0].background3
+                    },
+                    set(newValue) {
+                            console.log(newValue)
+                    }
+                },
+                getterPineappleBg5: {
+                    get() {
+                        return this.$store.state.SvgComponent[this.$store.state.dynamicIndex][0].background4
+                    },
+                    set(newValue) {
+                        console.log(newValue)
+                    }
+                }
+
+        },
+        data() {
+            return {
+                colorValue: '',
+                showColorPicker: false,
+                clickedInput: '',
+                value: 100,
+                ShowModalArea: '',
+                sliderValue: 0,
+                options: {
+                    dotSize: 14,
+                    width: 'auto',
+                    height: 10,
+                    contained: false,
+                    direction: 'ltr',
+                    data: null,
+                    min: 0.8,
+                    max: 10,
+                    interval: 0.2,
+                    disabled: false,
+                    clickable: true,
+                    duration: 0.5,
+                    tooltip: 'focus',
+                    tooltipPlacement: 'top',
+                    tooltipFormatter: void 0,
+                    useKeyboard: false,
+                    enableCross: true,
+                    fixed: false,
+                    minRange: void 0,
+                    maxRange: void 0,
+                    order: true,
+                    marks: false,
+                    dotOptions: void 0,
+                    process: true,
+                    dotStyle: void 0,
+                    railStyle: void 0,
+                    processStyle: void 0,
+                    tooltipStyle: void 0,
+                    stepStyle: void 0,
+                    stepActiveStyle: void 0,
+                    labelStyle: void 0,
+                    labelActiveStyle: void 0,
+                },
+                scale: '0.2',
+                scaleValue: '0.8',
+                flipElement: '1',
+                rotateLeft:'',
+                rotateRight:'active',
+                ActivePalette:'',
+                ActiveRotate:'',
+                ActiveMirror:'',
+                ActiveOpacity:'',
+                ActiveDuplicate:'',
+                ActiveLayers:'',
+                returnDrag:'',
+                dataloop:[1 , 2, 3, 4, 5],
+
+            }
+        },
+        watch: { 
+            ShowModalArea: function(newVal, oldVal) { // watch it
+                //console.log('Prop changed: ', newVal, ' | was: ', oldVal)
+            },
+            returnDrag: function(newVal, oldVal) { // watch it
+                //console.log('Prop changed: ', newVal, ' | was: ', oldVal)
+                this.returnDrag =newVal
+            },
+
+        },
+        methods: {
+            ...mapActions([
+                    'ACTION_CHANGE_STATE',
+                ]),
+                ...mapMutations([
+
+                ]),
+
+                ShowElement(value) {
+                    //   this.colorValue = value
+                   // console.log(value, 'ssss')
+                    var ColorValue = this.$store.state.SvgComponent[this.$store.state.dynamicIndex][0].background
+                    this.colorValue = 'rgba(' + ColorValue + ')'
+                    this.showColorPicker = true
+                    this.clickedInput = 'One'
+                        //  console.log( , 'value')
+                },
+                ShowElement1(value) {
+                    this.colorValue = 'rgba(' + this.$store.state.SvgComponent[this.$store.state.dynamicIndex][0].background1 + ')'
+                    //console.log('sjahsja')
+                    this.clickedInput = 'Two'
+                    this.showColorPicker = true
+                },
+                ShowElement2(value) {
+                    this.colorValue = 'rgba(' + this.$store.state.SvgComponent[this.$store.state.dynamicIndex][0].background2 + ')'
+                    //console.log('sjahsja')
+                    this.clickedInput = 'Third'
+                    this.showColorPicker = true
+                },
+                ShowElement3(value) {
+                    this.colorValue = 'rgba(' + this.$store.state.SvgComponent[this.$store.state.dynamicIndex][0].background3 + ')'
+                    this.clickedInput = 'forth'
+                    this.showColorPicker = true
+                },
+                ShowElement4(value) {
+                    this.colorValue = 'rgba(' + this.$store.state.SvgComponent[this.$store.state.dynamicIndex][0].background4 + ')'
+                    this.clickedInput = 'five'
+                    this.showColorPicker = true
+                },
+                hideElement() {
+                    this.showColorPicker = false
+                    this.ShowModalArea = false
+                    this.enableDragData()
+                    $("svg").removeClass("active");
+                    //Null Active element of modal-body 
+                        this.ActiveOpacity =''
+                        this.ActiveRotate =''
+                        this.ActiveMirror =''
+                        this.ActiveDuplicate =''
+                        this.ActiveLayers=''
+                        this.ActivePalette =''
+                    //Null Active element of modal-body       
+                },
+                getCircle(value, e){
+                   // console.log(e.currentTarget)
+                    if(this.returnDrag != true){
+                        $("svg").removeClass("active");
+                        $("#"+value+" svg").removeClass("active");
+                        $(e.currentTarget).addClass('active')
+                         //Null Active element of modal-body 
+                            this.ActiveOpacity =''
+                            this.ActiveRotate =''
+                            this.ActiveMirror =''
+                            this.ActiveDuplicate =''
+                            this.ActiveLayers=''
+                            this.ActivePalette =''
+                        //Null Active element of modal-body   
+                        this.ShowModalArea = false
+                        var hideElementValueModal = ($('#hiddenModal').val())
+                    if(hideElementValueModal !=''){
+                            $('#myModal'+hideElementValueModal).hide()
+                            $("#"+hideElementValueModal).draggable("enable")
+                            $('#myModal'+hideElementValueModal).modal("hide");
+                            $('#myModal'+value).css('display', 'block')
+                    }
+                        var closeModal= $('#hiddenModal').val(value)
+                    
+                        this.ShowModalArea = 'myModal'+value
+                        this.ACTION_CHANGE_STATE(['dynamicIndex' ,value ])
+                        this.ACTION_CHANGE_STATE(['tempModalIndex', value])
+                        this.ACTION_CHANGE_STATE(['dynamicName' ,this.$store.state.SvgComponent[this.$store.state.dynamicIndex][0].name+value ])
+                        this.ACTION_CHANGE_STATE(['editSvgClicked' ,true])
+                    
+                    }
+                },
+                disableDraggable(value) {
+                    // alert(value)
+                    $("#" + value).draggable("disable")
+                    this.ACTION_CHANGE_STATE(['newDisableIndex', value])
+                },
+                enableDragData() {
+                    if(this.$store.state.newDisableIndex !=''){
+                        $("#"+this.$store.state.newDisableIndex).draggable("enable")
+                    }else{
+                        $("#"+this.dynamicIndexValue).draggable("enable")
+                    }
+                },
+                sentFlip(value) {
+                    this.flipElement = value
+                    if(value ==  '-1'){
+                        this.rotateRight = ''
+                        this.rotateLeft ='active'
+                    }else{
+                            this.rotateLeft =''
+                        this.rotateRight = 'active'
+                    }
+                },
+                removeElement(value){
+                $('#'+this.$store.state.dynamicIndex).remove()
+                  //After this remove from array to SvgComponent  from store
+                },
+                openElementInModal(value){
+                 
+                    if(value =='palette'){
+                        this.ActiveOpacity =''
+                        this.ActiveMirror =''
+                        this.ActiveDuplicate =''
+                        this.ActiveLayers=''
+                        this.ActiveRotate =''
+                        this.ActivePalette ='active'
+                    }else if( value == 'rotate'){
+                        this.ActiveDuplicate =''
+                        this.ActiveLayers=''
+                        this.ActivePalette =''
+                        this.ActiveOpacity =''
+                        this.ActiveRotate ='active'
+                        this.ActiveMirror =''
+                    }else if( value == 'mirror'){
+                        this.ActiveDuplicate =''
+                        this.ActiveLayers=''
+                        this.ActivePalette =''
+                        this.ActiveOpacity =''
+                        this.ActiveRotate =''
+                        this.ActiveMirror ='active'
+                    }else if( value == 'opacity'){
+                        this.ActiveMirror =''
+                        this.ActiveDuplicate =''
+                        this.ActiveLayers=''
+                        this.ActivePalette =''
+                        this.ActiveRotate =''
+                        this.ActiveOpacity ='active'
+                    }else if( value == 'duplicate'){
+                        this.ActiveMirror =''
+                        this.ActiveLayers=''
+                        this.ActivePalette =''
+                        this.ActiveOpacity =''
+                        this.ActiveRotate =''
+                        this.ActiveDuplicate ='active'
+                    }else if( value == 'layers'){
+                        this.ActiveMirror =''
+                        this.ActivePalette =''
+                        this.ActiveOpacity =''
+                        this.ActiveRotate =''
+                        this.ActiveDuplicate ='active'
+                        this.ActiveLayers ='active'
+                    }
+                },
+                resetRotate(){
+                    this.sliderValue = 0
+                },
+                cloneElement(e){
+                    var number = e.currentTarget.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.id
+                    var cloneElementId = number.split('l')
+                    var elemntId = cloneElementId[1]
+                    var styleAttrClone = $('#'+elemntId).find( "svg" ).attr('style')
+                    /* 
+                    This is for color dynamic on clone 
+                    */
+                    var tempArrayClone = this.$store.state.SvgComponent[elemntId][0]
+                    var backgroundClone = tempArrayClone.background 
+                    var background1Clone =tempArrayClone.background1 
+                    var background2Clone =tempArrayClone.background2 
+                    var background3Clone =tempArrayClone.background3 
+                    var background4Clone =tempArrayClone.background4 
+                    var background5Clone =tempArrayClone.background5 
+                    var circleSliderClone = this.sliderValue
+                    var scaleValueClone =this.scaleValue 
+                    var flipElementClone = this.flipElement
+                    var tempArray = []
+                
+                        tempArray = [
+                            {
+                            name:'Pineapple',
+                            background :  backgroundClone,
+                            background1:  background1Clone,
+                            background2:  background2Clone,
+                            background3:  background3Clone,
+                            background4:  background4Clone,
+                            circleSlider: circleSliderClone,
+                            zoomValue:scaleValueClone,
+                            flipValue:flipElementClone,
+                        }
+                        ]
+                        this.$store.state.SvgComponent.push(tempArray)
+                        var cloneIndex = this.$store.state.SvgComponent.length-1 
+                        $(document).ready(function(){
+                           // console.log($('.Svg_'+cloneIndex+'_color1') , 'length')
+                            $('.Svg_'+cloneIndex+'_color1').css({fill: 'rgba('+backgroundClone+')'})
+                            $('.Svg_'+cloneIndex+'_color2').css({fill: 'rgba('+background1Clone+')'})
+                            $('.Svg_'+cloneIndex+'_color3').css({fill: 'rgba('+background2Clone+')'})
+                            $('.Svg_'+cloneIndex+'_color4').css({fill: 'rgba('+background3Clone+')'})
+                            $('.Svg_'+cloneIndex+'_color5').css({fill: 'rgba('+background4Clone+')'})
+                            
+                            $('#'+cloneIndex).find("svg").attr('style',styleAttrClone);
+                        })
+                    /* 
+                    End
+                    */
+                }
+        }
+    }
+</script>
+
+<style>
+
+</style>

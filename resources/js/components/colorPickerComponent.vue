@@ -99,6 +99,34 @@ export default {
                   $('.Svg_'+this.$store.state.dynamicIndex+'_color6').css({fill: 'rgba('+value.rgba.r+','+value.rgba.g+','+value.rgba.b+','+value.rgba.a+')'})
                    $('.Svg_'+this.$store.state.dynamicIndex+'_color6btn').css({background: 'rgba('+value.rgba.r+','+value.rgba.g+','+value.rgba.b+','+value.rgba.a+')'})
                
+          }else if(this.valueElement == "seven" ){
+            
+                this.$store.state.SvgComponent[this.$store.state.dynamicIndex][0].background6 = value.rgba.r+','+value.rgba.g+','+value.rgba.b+','+value.rgba.a
+                
+                  $('.Svg_'+this.$store.state.dynamicIndex+'_color7').css({fill: 'rgba('+value.rgba.r+','+value.rgba.g+','+value.rgba.b+','+value.rgba.a+')'})
+                   $('.Svg_'+this.$store.state.dynamicIndex+'_color7btn').css({background: 'rgba('+value.rgba.r+','+value.rgba.g+','+value.rgba.b+','+value.rgba.a+')'})
+               
+          }else if(this.valueElement == "eight" ){
+            
+                this.$store.state.SvgComponent[this.$store.state.dynamicIndex][0].background7 = value.rgba.r+','+value.rgba.g+','+value.rgba.b+','+value.rgba.a
+                
+                  $('.Svg_'+this.$store.state.dynamicIndex+'_color8').css({fill: 'rgba('+value.rgba.r+','+value.rgba.g+','+value.rgba.b+','+value.rgba.a+')'})
+                  $('.Svg_'+this.$store.state.dynamicIndex+'_color8btn').css({background: 'rgba('+value.rgba.r+','+value.rgba.g+','+value.rgba.b+','+value.rgba.a+')'})
+               
+          }else if(this.valueElement == "nine" ){
+            
+                this.$store.state.SvgComponent[this.$store.state.dynamicIndex][0].background8 = value.rgba.r+','+value.rgba.g+','+value.rgba.b+','+value.rgba.a
+                
+                  $('.Svg_'+this.$store.state.dynamicIndex+'_color9').css({fill: 'rgba('+value.rgba.r+','+value.rgba.g+','+value.rgba.b+','+value.rgba.a+')'})
+                  $('.Svg_'+this.$store.state.dynamicIndex+'_color9btn').css({background: 'rgba('+value.rgba.r+','+value.rgba.g+','+value.rgba.b+','+value.rgba.a+')'})
+               
+          }else if(this.valueElement == "ten" ){
+            
+                this.$store.state.SvgComponent[this.$store.state.dynamicIndex][0].background9 = value.rgba.r+','+value.rgba.g+','+value.rgba.b+','+value.rgba.a
+                
+                $('.Svg_'+this.$store.state.dynamicIndex+'_color10').css({fill: 'rgba('+value.rgba.r+','+value.rgba.g+','+value.rgba.b+','+value.rgba.a+')'})
+                $('.Svg_'+this.$store.state.dynamicIndex+'_color10btn').css({background: 'rgba('+value.rgba.r+','+value.rgba.g+','+value.rgba.b+','+value.rgba.a+')'})
+               
           }
       }
     }

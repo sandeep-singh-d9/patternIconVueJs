@@ -6,7 +6,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+            <!-- <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                 <div class="navbar-nav"></div>
                 <div class="navbar-nav">
                     <div class="nav-item dropdown">
@@ -17,7 +17,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </nav>
     </div>
 </template>
